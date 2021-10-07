@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Trang Chủ</title>
+        <link href="https://w7.pngwing.com/pngs/303/535/png-transparent-berry-cherry-ico-fruit-icon-cherry-s-natural-foods-food-superfood.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <title>Sản Phẩm</title>
         <style>
             nav a {
                 color: dimgray;
@@ -25,9 +26,51 @@
                 <a href="#">Đăng Ký</a>
                 <a href="#">Liên Hệ</a>
             </nav>
+            
+            <button onclick="topFunction()" id="button" title="Go to top">Up</button>
 
-            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2F1502826406%2F1708w-getty-fruit-closeup-CarstenSchanter-EyeEm.jpg" width="100%" height="70%">
-
+            <style>
+            
+            #button {
+                display: none;
+                position: fixed;
+                bottom: 10px;
+                right: 43px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+            }
+            
+            #button:hover {
+              background-color: #555;
+            }
+            </style>
+            
+            
+            <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("button").style.display = "block";
+                } else {
+                    document.getElementById("button").style.display = "none";
+                }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            </script>
         </header>
 
         <main>
@@ -35,28 +78,58 @@
             <article>
 
                 <section>
-                    <h2>Loại Trái Cây Nổi Bậc Trong Tuần</h2>
-                    <h4>Dâu Tây Nhật Bản</h4>
-                    <img src="http://cayhoacanh.com/wp-content/uploads/2015/05/dau-tay-nhat-ban-2.jpg" width="50%" height="50%">
-                    <p>Vị ngọt thanh, hương thơm hấp dẫn, căng tròn mọng nước, đó là những đặc điểm nổi bật của quả dâu tây Nhật Bản. 
-                        Dâu tây là loại trái cây được cả người lớn tuổi và trẻ nhỏ ở xứ hoa anh đào ưa thích nhất. 
-                        Người Nhật không chỉ sử dụng dâu tây làm hoa quả tươi mà còn làm nguyên liệu chế biến bánh ngọt hoặc mứt.
-                        <a href="http://cayhoacanh.com/doi-net-ve-cay-dau-tay-nhat-ban/">Chi tiết</a>
-                    </p>
+                    <div>
+                        <h2>Dâu Tây</h2>
+                        <img src="https://cdn.tgdd.vn/2020/10/CookProduct/1-1200x676-37.jpg" width="50%" height="50%">
+                        <p>Vị ngọt thanh, hương thơm hấp dẫn, căng tròn mọng nước và là nguyên liệu chế biến bánh ngọt hoặc mứt.
+                            <a href="https://vi.wikipedia.org/wiki/D%C3%A2u_t%C3%A2y">Chi tiết</a>
+                        </p>
+                        <input type="number" max="100" min="0" value="0" size="3">
+                        <button>Mua</button>
+                    </div>
                 </section>
 
                 <section>
-                    <h2>Món Ngon Mỗi Tuần</h2>
-                    <h4>Kem Dâu Tây</h4>
-                    <img src="data:image/jpeg;base64,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
-                    cwObnZBI94RdPyF5Dm8r+n3aoHcOxE8rgz/iPrKsDh1Z0ZiPMNgplgoV5ZJHUGkjPynciYPpstCi10iC13d1zHxlMw2Bf+pxPmtKhRyplgfyxHmXwFGhDsxDfQfyFdaAowlDldMKfRXVOvZKEuZRhyQPTEEkpc6hLkZkwFhtVSNxCpByMykU0m1lKKiy2vKla8ptkF5yrVUiFIhVcmIQgYRK1CEoorAnFCEDISEFCEAMcmloQhQSNc0JcglCFBIjmj5JoFkIQSK5KhCCByEiEAPQClQgkGlIhCAApEIUgIUoQhSQS01O1CExB//9k=" width="50%" height="50%">
-                    <p>Kem dâu mát lạnh, ngọt dịu, thanh nhẹ là món kem khoái khấu của nhiều người. <a href="https://www.dienmayxanh.com/vao-bep/cach-lam-kem-dau-don-gian-01009">Chi tiết</a></p>
+                    <div>
+                        <h2>Kiwi</h2>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrHCPjn_TXZaOhGmY0tdTVlqR58g-bX2Uvmw&usqp=CAU" width="50%" height="50%">
+                        <p>Thành phần dinh dưỡng có trong quả kiwi do Đại học Rutgers phân tích cho thấy nhiều hợp chất polyphenol, chất dinh dưỡng thực vật (phytonutrients), 
+                            acid folic, vitamin C (1 khẩu phần kiwi cung cấp 230% lượng vitamin C cần thiết cho cơ thể), vitamin E, nhiều khoáng tố như Ca, Cr, Cu, Fe, Mg, K, Zn.
+                            <a href="https://en.wikipedia.org/wiki/Kiwifruit">Chi tiết</a>
+                        </p>
+                        <input type="number" max="100" min="0" value="0" size="3">
+                        <button>Mua</button>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div>
+                        <h2>Nho</h2>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3bkhSTtAgbV1_RZ09wiQ_VX1UWA7PZNNu34G1umfWixR5XYOP9PEPEaN6vJDcTX1d0rc&usqp=CAU" width="50%" height="50%">
+                        <p>Nho là loại quả chứa nhiều chất dinh dưỡng, chất xơ, kali... Nho cung cấp rất nhiều lợi ích sức khỏe do hàm lượng chất dinh dưỡng và chất chống oxy hóa cao
+                            <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/dinh-duong/12-loi-ich-suc-khoe-cua-viec-nho-hang-ngay/">Chi tiết</a>
+                        </p>
+                        <input type="number" max="100" min="0" value="0" size="3">
+                        <button>Mua</button>
+                    </div>
+                </section>
+
+                <br>
+                <br>
+                <button style="color: royalblue; ">Xem thêm...</button>
+                <hr color="red">
+
+
+                <section>
+                    <a href="https://twitter.com/?lang=en"><img src="https://play-lh.googleusercontent.com/x3XxTcEYG6hYRZwnWAUfMavRfNNBl8OZweUgZDf2jUJ3qjg2p91Y8MudeXumaQLily0" width="5%" height="5%"></a>
                 </section>
             </article>
         </main>
 
         <footer>
             Make by BestFruitsUS - 2021
+            <a href="#">Return Top</a>
         </footer>
     </body>
 </html>
