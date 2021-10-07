@@ -1,0 +1,169 @@
+@import url(#);
+#id {
+    text-align: center;
+}
+
+
+/*font-family*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*kiểu chữ*/
+.class01 {
+    font-weight: lighter;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-stretch: ultra-condensed;
+}
+
+
+/*kích cỡ chữ*/
+#one {
+    font-size: larger;
+}
+
+
+/*màu chữ*/
+p {
+    color: aquamarine;
+}
+
+
+/*customize font*/
+@font-face {
+    font-family: unset;
+    src: url();
+}
+
+
+/*text line adjustment*/
+#two {
+    line-height: 5rem;
+    text-indent: 2.5rem;
+}
+
+
+/*horizontal text alignment*/
+#three {
+    text-align: justify;
+    text-decoration: underline red;
+}
+
+
+/*text transform*/
+.class02 {
+    text-transform: capitalize;
+}
+
+
+/*spacing*/
+.class03 {
+    letter-spacing: 8px;
+    word-spacing: 2px;
+    text-shadow: 0.2em 0.15em red;
+}
+
+
+/*Định dạng liên kết*/
+a:hover {
+    background-color: aquamarine;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:active {
+    background-color: gold;
+}
+
+
+/*Định dạng bảng*/
+table {
+    border-collapse: separate;
+    border-spacing: 25px 10px;
+    border: 10px solid red;
+    empty-cells: hide;
+}
+
+
+/*Định dạng vị trí*/
+div {
+    position: relative;
+    background-color: bisque;
+    top: 8px;
+    left: 8px;
+}
+
+
+/*Định dạng danh sách*/
+.ul, ol {
+    list-style-type: circle;
+    list-style-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif);
+    list-style-position: inside;
+}
+
+
+/*Các thuộc tính css3*/
+
+/*Borders*/
+.borders {
+    color: red;
+    background-color: gold;
+    border-radius: 20%;
+    text-align: center;
+    border: 5px greenyellow solid;
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+}
+
+
+/*padding*/
+.padding01 {
+    padding: 2% 4% 2% 4%;
+    border: 2px red solid;
+}
+
+.padding02 {
+    padding: 10%;
+    border: 2px red solid;
+}
+
+.padding03 {
+    padding: 10px 0px;
+    border: 2px red solid;
+}
+
+.padding04 {
+    padding: 0px 10px;
+    border: 2px red solid;
+}
+
+/*margin*/
+.margin01 {
+    margin: 0% 20%;
+    border: 2px greenyellow solid;
+}
+
+.margin02 {
+    margin: 20% 0%;
+    border: 2px greenyellow solid;
+}
+
+.margin03 {
+    margin: 20%;
+    border: 2px greenyellow solid;
+}
+
+
+/*Gradients*/
+.gradient {
+    width: 40%;
+    border: 5px greenyellow solid;
+    color: black;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(gold));
+    padding: 10px;
+}
