@@ -14,8 +14,16 @@
 		B541C813271005A500766CBC = {
 			isa = PBXGroup;
 			children = (
+				B541C81F27101ADB00766CBC /* New Group */,
+			);
+			sourceTree = "<group>";
+		};
+		B541C81F27101ADB00766CBC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
 				B541C81A2710119A00766CBC /* test.html */,
 			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
