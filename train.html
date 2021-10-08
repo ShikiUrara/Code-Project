@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trying</title>
+    <head>
+        
+    <header>
+        <style>
+            
+            
+            #id1 {
+                width: 20%;
+                height: 20%;
+                background: greenyellow;
+                transition-timing-function: ease-in;
+                transition-duration: 3s;
+                /*transition: width 2s;*/
+            }
+            #id1:hover {
+                width: 100%;
+            }
+            
+            @keyframes effect {
+                form {
+                    background-color: red;
+                }
+                
+                to {
+                    background-color: greenyellow;
+                }
+            }
+            
+            #id2 {
+                width: 30%;
+                height: 30%;
+                background-color: red;
+                animation-name: effect;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                transition: 5s;
+            }
+            #id2:hover {
+                width: 100%;
+            }
+            
+        </style>
+    </header>
+        
+        
+    <body>
+        
+        <p id="id1">Test transitions</p>
+        <p id="id2"><br>Animation effect</p>
+    </body>
+        
+<html>
