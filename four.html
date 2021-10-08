@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>Vidu01chuong3</title>
+        <head>
+            <h1 style="font-size: x-larger; border: solid 1px; padding: 5px; display: inline-block;"><b>welcome to my wed</b></h1> <br>
+            <style type="text/css">
+                h6 {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: small;
+                    color: green;
+                }
+            </style>
+        </head>
+
+        <fieldset>
+            <legend>css - Inline styles</legend>
+            <h7 style="color: burlywood; font-style: unset; text-align: left;">
+                <ul>
+                    <li>Inline style làm cho mã html dễ hiểu hơn</li>
+                    <li>Gây sự mất đồng bộ, thiếu sự nhất quán trong cách định dạng trên toàn site</li>
+                    <li>Khi cần có sự thay đổi, phải chỉnh sửa lại tất cả những phần có thay đổi -> mất thời gian và công sức</li>
+                    <li>Không thể kế thừa hay sử dụng lại mã</li>
+                    <li>Phải lặp lại các định dạng trên các phần tử có chung định dạng</li>
+                    <li>Khó bảo trì</li>
+                </ul>
+            </h7>
+        </fieldset>
+
+        <fieldset>
+            <legend>css - Embedded styles</legend>
+            <h6>
+                <ul>
+                    <li>Viết mã nhanh không cần liên kết ngoài</li>
+                    <li>Dễ quản lý thay đổi</li>
+                    <li>Không thể áp dụng cho nhiều trang</li>
+                    <li>Định dạng không đồng bộ trên toàn site</li>
+                    <li>Không thể kế thừa style từ trang khác</li>
+                    <li>Làm kích thước tài liệu html tăng lên</li>
+                    <li>Làm chậm tốc độ tải trang</li>
+                </ul>
+            </h6>
+        </fieldset>
+
+        <fieldset>
+            <legend>css- linked styles</legend>
+            <link href="Chuong3-01.css" type="text/css" rel="stylesheet">
+            <ul>
+                <li>Dễ bảo trì, thích hợp cho dự án lớn</li>
+                <li>Áp dụng cho nhiều trang</li>
+                <li>Dễ dàng đồng bộ định dạng</li>
+                <li>Dễ dàng sửa đổi, cập nhật</li>
+                <li>Dễ dàng kế thừa định dạng</li>
+                <li>Tải trang nhanh hơn do trình duyệt có cơ chế cache file css</li>
+                <li>Cần có kinh nghiệm để quản lý các file trong dự án lớn</li>
+            </ul>
+        </fieldset>
+        
+
+        <p style="color: red; font-size: large; border: solid 1px; padding: 5px; display: inline-block;">Selector</p>
+        <fieldset style="color: aqua;">
+            <ul>
+                <li>Là các định danh, nhằm xác định đối tượng sẽ áp dụng các property css</li>
+                <li>Trình duyệt sẽ dựa vào selector để định dạng các đối tượng liên quan trên trang html</li>
+                <li>Mỗi declaration block có thể sử dụng chung cho nhiều selector trong trường hợp các đối tượng có chung một số định dạng</li>
+                <li>selector kết hợp với declaration block gọi là ruleset hoặc rule</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">element selector</legend>
+            <span>element selector sẽ chọn tất cả các element có trong tài liệu html để áp dụng các rule đã định nghĩa</span>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">id selector</legend>
+            <ul>
+                <p id="unique-1">
+                    <li>id selector là selector dựa vào thuộc tính id</li>
+                    <li>Nó được định nghĩa bởi dấu # theo sau là tên</li>
+                </p>
+                <div id="unique-2">
+                    <li>rule chỉ áp dụng trên phần tử có id chỉ định, không phân biệt element type</li>
+                    <li>Nếu muốn áp dụng trên loại phần tử cụ thể, phải chỉ định element type cụ thể</li>
+                    <li>id là định danh của phần tử, là unique trên trang</li>
+                    <li>id selector dùng để áp dụng rule trên một phần tử duy nhất</li>
+                </div>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">class selector</legend>
+            <h5 class="one">
+                <ul>
+                    <li>Áp dụng rule lên một hoặc nhiều phần tử có chung tên lớp, xác định bởi thuộc tính class="className"</li>
+                    <li>class selector định nghĩa bởi dấu chấm (.) theo sau tên lớp</li>
+                    <li>Một phần tử có thể thuộc nhiều lớp, tên lớp cách nhau bởi dấu phẩy (,)</li>
+                    <li>Nếu các lớp có trùng thuộc tính, giá trị sẽ ghi đè bởi lớp định nghĩa sau cùng</li>
+                </ul>
+            </h5>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">list</legend>
+            <ul>
+                <li>selector list là một nhóm các selector gom chung với nhau để định nghĩa các thuộc tính chung khi không thể gom vào cùng một lớp</li>
+                <li>selector list là một tập hợp của tất cả các selector (id, class, element)</li>
+                <li>selector trong list phân cách bởi dấu phẩy (,)</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend><a href="https://en.wikipedia.org/wiki/HTML_attribute">attribute selector</a></legend>
+            <p>attribute selector là cách chọn phần tử dựa vào sự hiện diện hoặc giá trị thuộc tính</p>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">adjacent sibling combinator</legend>
+            <ul>
+                <li>adjacent sibling combinator là sự kết hợp của các phần tử có quan hệ anh - em liền kề</li>
+                <li id="first">Chọn phần tử là anh em theo sau liền kề, là phần tử khớp selector sau dấu +</li>
+                <li>Hai phần tử phải có cùng phần tử cha</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">general sibling combinator</legend>
+            <ul>
+                <li id="second">Tương tự như adjacent sibling combinator nhưng chọn phần tử anh em theo sau không bắt buộc liền kề</li>
+                <li>Các phần tử phải có cùng phần tử cha</li>
+                <li>Dùng ký hiệu ~ để kết hợp</li>
+                <li>selector có thể trả về nhiều phần tử anh em thay vì chỉ một như adjacent sibling combinator</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">child combinator</legend>
+            <ul>
+                <li>child combinator ( > ) dùng để chọn các phần tử con dựa vào phần tử cha</li>
+                <li>Các phần tử được chọn là phần tử con trực tiếp, không bao gồm các phần tử hậu duệ</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">descendant combinator</legend>
+            <ol>
+                <li>descendant combinator selector ( cách nhau bởi khoảng trắng ) dùng để chọn các phần tử con dựa vào phần tử cha</li>
+                <li>Các phần tử được chọn là phần tử con, bao gồm tất cả các phần tử hậu duệ</li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">universal selector</legend>
+            <p id="last">universal selector sẽ khớp với tất cả các phần tử không phân biệt loại phần tử</p>
+        </fieldset>
+
+        <fieldset>
+            <legend style="color: red;">pseudo class & pseudo element</legend>
+            <ul>
+                <li id="time">pseudo class là từ khóa được thêm vào sau selector để áp dụng rule dựa vào trạng thái của phần tử</li>
+                <li>pseudo element là từ khóa được thêm vào sau selector để áp dụng rule chỉ một phần của phần tử đó</li>
+            </ul>
+        </fieldset>
+
+        <footer>
+
+            <!--Content footer-->
+            <p>NoCopyRight<br>
+                <b>Make by Phan Trung Thành B1906764</b>
+            </p>
+
+        </footer>
+    </body>
+</html>
