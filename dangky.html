@@ -2,73 +2,69 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="https://w7.pngwing.com/pngs/303/535/png-transparent-berry-cherry-ico-fruit-icon-cherry-s-natural-foods-food-superfood.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
-        <title>Đăng Ký</title>
-        <style>
-            nav a {
-                color: dimgray;
-                background-color: greenyellow;
-                border: 5px solid whitesmoke;
-            }
-            td {
-                text-align: left;
-            }
-        </style>
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <title>Đăng Ký Thành Viên</title>
     </head>
-
     <body>
         <header>
-            <h1 style="color: red; text-align: center;">Best Fruits</h1>
-
+            <a href="trangchu.html" target="_blank"><img src="images/logo.png" alt="logo.png" id="logo"></a>
             <nav>
-                <a href="trangchu.html">Trang Chủ</a>
-                <a href="gioithieu.html">Giới Thiệu</a>
-                <a href="sanpham.html">Sản Phẩm</a>
-                <a href="tintuc.html">Tin Tức</a>
-                <a href="dangnhap.html">Đăng Nhập</a>
-                <a href="dangky.html">Đăng Ký</a>
-                <a href="lienhe.html">Liên Hệ</a>
+                <a href="trangchu.html" target="_blank">Trang chủ</a>
+                <a href="gioithieu.html" target="_blank">Giới Thiệu</a>
+                <a href="sanpham.html" target="_blank">Sản Phẩm</a>
+                <a href="tintuc.html" target="_blank">Tin Tức</a>
+                <a href="dangnhap.html" target="_blank">Đăng Nhập</a>
+                <a href="dangky.html" target="_blank">Đăng Ký</a>
+                <a href="lienhe.html" target="_blank">Liên Hệ</a>
             </nav>
         </header>
-
         <main>
-
-            <br>
-            <article>
-                <fieldset style="text-align: center; font-size: larger;">
-                    <legend style="color: red;">Đăng ký</legend>
-                    <table>
-                        <tr>
-                            
-                            <td><label>Email <br><input type="email" name="email" placeholder="Hãy nhập email của bạn"></label></td>
-                        </tr>
-
-                        <tr>
-                            
-                            <td><label>PassWord <br><input type="password" name="pass" placeholder="Hãy nhập password của bạn"></label></td>
-                        </tr>
-
-                        <tr>
-                            
-                            <td><label>PassWord Verify <br><input type="password" name="passagain" placeholder="Hãy nhập password của bạn lần nữa"></label></td>
-                        </tr>
-
-                        <tr>
-                            <td>Tạo tài khoản, bạn sẽ đồng ý <a href="#">Điều khoản & Quyền riêng tư của chúng tôi.</a></td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2"><input type="submit" value="Đăng Ký"> <input type="reset" value="Hủy"></td>
-                        </tr>
-
-                    </table>
-                </fieldset>
-            </article>
+            <fieldset>
+                <legend>Đăng Ký</legend>
+                <table>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="Vui lòng nhập email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw">Mật khẩu</label></td>
+                        <td><input type="password" name="psw" id="psw" placeholder="Vui lòng nhập mật khẩu"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw2">Nhập lại mật khẩu</label></td>
+                        <td><input type="password" name="psw2" id="psw2" placeholder="Vui lòng nhập mật khẩu"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Cấp độ thành viên</label></td>
+                        <td>
+                            <input type="radio" name="memberType"> Bạc
+                            <input type="radio" name="memberType"> Vàng
+                            <input type="radio" name="memberType"> Bạch Kim
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="file">Ảnh đại diện</label></td>
+                        <td><input type="file" name="file" id="file"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Thông qua việc tạo tài khoản bạn đồng ý với, <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="Hủy">
+                            <input type="submit" value="Đăng Ký">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
         </main>
-
         <footer>
-            Make by BestFruitsUS - 2021
-            <a href="#">Return Top</a>
+            &copy2021 Bản quyền thuộc về FreeezeVN.
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Printerest</a>
+            <a href="#logo">Về Đầu Trang</a>
+            <h3>Tạo bởi Phan Trung Thành B1906764</h3>
         </footer>
     </body>
 </html>
