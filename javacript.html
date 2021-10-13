@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            console.error("Welcome to...")
+            function giaiBac1() {
+                var a = document.getElementById("aId").value;
+                var b = document.getElementById("bId").value;
+
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                if(a==0) {
+                    if(b==0)
+                        alert("Vo so nghiem");
+                    else
+                        alert("Vo nghiem");
+                } else {
+                    alert("Ngiem x = " + (-b/a));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>ax + b = 0</h1>
+        <input type="text" id="aId" placeholder="a ="/>
+        <input type="text" id="bId" placeholder="b ="/>
+        <input type="button" value="Giai" onclick="giaiBac1()"/>
+    </body>
+</html>
