@@ -25,9 +25,14 @@
                 var body = document.getElementById("bodyId")
                 body.style.backgroundColor = color
             }
+            
+            function init() {
+                var c = document.getElementById("colorName");
+                c.style.border = "1px solid red"
+            }
         </script>
     </head>
-    <body id="bodyId">
+    <body id="bodyId" onload="init()">
         <input type="text" id="colorName" 
             onchange="doiMauNen(this)" 
             placeholder="Nhap ten mau va bam enter"/>
