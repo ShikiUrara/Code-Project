@@ -4,24 +4,33 @@
         <script>
             console.error("Welcome to...")
             function giaiBac1() {
-                var a = document.getElementById("aId").value;
-                var b = document.getElementById("bId").value;
+                var a = document.getElementById("aId").value
+                var b = document.getElementById("bId").value
 
-                a = parseFloat(a);
-                b = parseFloat(b);
+                a = parseFloat(a)
+                b = parseFloat(b)
 
                 if(a==0) {
                     if(b==0)
-                        alert("Vo so nghiem");
+                        alert("Vo so nghiem")
                     else
-                        alert("Vo nghiem");
+                        alert("Vo nghiem")
                 } else {
-                    alert("Ngiem x = " + (-b/a));
+                    alert("Ngiem x = " + (-b/a))
                 }
+            }
+
+            function doiMauNen(obj) {
+                var color = obj.value //document.getElementById("colorName").value
+                var body = document.getElementById("bodyId")
+                body.style.backgroundColor = color
             }
         </script>
     </head>
-    <body>
+    <body id="bodyId">
+        <input type="text" id="colorName" 
+            onchange="doiMauNen(this)" 
+            placeholder="Nhap ten mau va bam enter"/>
         <h1>ax + b = 0</h1>
         <input type="text" id="aId" placeholder="a ="/>
         <input type="text" id="bId" placeholder="b ="/>
