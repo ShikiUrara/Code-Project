@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.item {
+                width: 50%;
+                
+            }
+
+            div.item img {
+                width: 100%;
+            }
+
+            div.thumb {
+                display: flex;
+            }
+
+            div.thumb > div {
+                width: 20%;
+            }
+        </style>
+        <script>
+            function changeImage(obj) {
+                var path = obj.src
+                var img = document.getElementById("mainImage")
+                //img.src = path
+                img.setAttribute("src", path)
+            }
+
+            function init() {
+                var images = document.querySelectorAll("div.thumb img")
+                for (var i = 0; i < images.length; i++)
+                    images[i].onclick = function() {
+                        var path = this.src
+                        var img = document.getElementById("mainImage")
+                        img.setAttribute("src", path)
+                    }
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <div class="item">
+            <img src="images/trangchu/order_1.png" id="mainImage" alt="image" />
+            <div class="thumb">
+                <div><img src="images/trangchu/order_1.png" alt="1" /></div>
+                <div><img src="images/trangchu/order_2.png" alt="2" /></div>
+                <div><img src="images/trangchu/order_3.png" alt="3" /></div>
+                <div><img src="images/trangchu/order_4.png" alt="4" /></div>
+            </div>
+        </div>
+    </body>
+</html>
