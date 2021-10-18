@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            /* List */
+            li {
+                list-style-type: disc;
+                list-style-image: url(#);
+                background-color: lightblue;
+                list-style-position: outside;
+
+                /* list-style: type position image; */
+            }
+
+            /* Table */
+            table.table {
+                border-collapse: collapse;
+                vertical-align: middle;
+            }
+
+            table.table tr:nth-child(even) {
+                background-color: darkkhaki;
+                color: lightgreen;
+            }
+
+            table.table tr:nth-child(odd) {
+                background-color: aqua;
+                color: #000;
+            }
+
+            table.table tr:first-child {
+                text-align: center;
+                font-weight: bold;
+                background-color: burlywood;
+            }
+
+            table.table tr:last-child {
+                font-size: larger;
+            }
+
+            table.table tr:nth-child(4) {
+                background-color: aquamarine;
+            }
+
+            table.table tr:hover {
+                background-color: lightblue;
+                color: red;
+            }
+
+            a {
+                text-decoration: none;
+            }
+            a:visited {
+                color: gold;
+            }
+            a:link {
+                color: lightgreen;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <a href="https://www.google.com">Google</a>
+        </h1>
+        <ul>
+            <li>Test 1</li>
+            <li>Test 1</li>
+            <li>Test 1</li>
+            <li>Test 1</li>
+            <li>Test 1</li>
+        </ul>
+
+        <table class="table" border="1" width="100%">
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--Một liên kết có 4 trạng thái
+    a:hover phải nằm sau a:link và a:visited
+    a:active phải nằm sau a:hover
+-->
