@@ -2,10 +2,119 @@
 <html>
     <head>
         <script>
+            /* Tổng s các số nguyên dương chẳn n sao cho s > 100 dừng */
+            var s = 0, i = 1;
+            while (s<100) {
+                if(i%2===0) {
+                    s=s+i;
+                }
+                i++;
+            }
+            document.writeln("Tổng các số nguyên dương chẳn n sao cho s > 100 Stop là " + s);
+
+            /*  Giải phương trình bậc 1: ax + b = 0 */
+            function giaiBac1() {
+                var a = document.getElementById("aId").value
+                var b = document.getElementById("bId").value
+
+                a = parseFloat(a)
+                b = parseFloat(b)
+
+                if(a==0) {
+                    if(b==0)
+                        alert("Phương trình đã cho có vô số nghiệm")
+                    else
+                        alert("Phương trình đã cho vô nghiệm")
+                } else {
+                    alert("Phương trình đã cho có nghiệm x = " + (-b/a))
+                }
+            }
+
+            /* Giải phương trình bậc 2: ax^2 + bx + c = 0 */
+            function giaiBac2() {
+                var a = document.getElementById("AID").value;
+                var b = document.getElementById("BID").value;
+                var c = document.getElementById("CID").value;
+
+                // Ép kiểu float
+                a = parseFloat(a);
+                b = parseFloat(b);
+                c = parseFloat(c);
+
+                if(a==0) {
+                    if(b==0) {
+                        if(c==0)
+                            alert("Phương trình đã cho có vô số nghiệm");
+                        else 
+                            alert("Phương trình đã cho vô nghiệm");
+                    }
+                    else
+                        alert("Phương trình đã cho có nghiệm x = " + (-c/b))
+                }
+                else {
+                    var delta = parseFloat(delta);
+                    delta = b*b - 4*a*c;
+                    alert(delta)
+                    if(delta<0)
+                        alert("Phương trình đã cho vô nghiệm với delta = " + delta);
+
+                    else if(delta==0)
+                        alert("Phương trình đã cho có nghiệm kép: x = " + (-b/(2*a)))
+                    else 
+                        alert("Phương trình đã cho có 2 nghiệm kép\nx1 = " + ((-b+Math.sqrt(delta))/2*a) + "\nx2 = " + ((-b-Math.sqrt(delta))/2*a));
+                }
+            }
+
+            /* Kiểm tra a, b, c có tạo thành tam giác không!
+                Nếu có tính: chu vi, diện tích */
+            function tamGiac() {
+                var a = document.getElementById("aid").value;
+                var b = document.getElementById("bid").value;
+                var c = document.getElementById("cid").value;
+
+                // Ép kiểu float
+                a = parseFloat(a);
+                b = parseFloat(b);
+                c = parseFloat(c);
+                var p = parseFloat((a+b+c)/2)
+
+                if(a+b>c && b+c>a && c+a>b) {
+                    if(a==b && a==c) {
+                        alert("Tam giác đều")
+                    }
+                    else
+                        alert("Tam giác")
+                    alert("Diện tích: " + (Math.sqrt(p*(p-a)*(p-b)*(p-c))) + "\nChu vi: " + (p*2));
+                }
+                else
+                    alert("Không phải tam giác")
+            }
+            
 
         </script>
     </head>
     <body>
-        
+        <br>
+        <br>
+        <h1>Giải phương trình bậc 1: ax + b = 0</h1>
+        <input type="text" id="aId" placeholder="a ="/>
+        <input type="text" id="bId" placeholder="b ="/>
+        <input type="button" value="Giai" onclick="giaiBac1()"/>
+
+        <h1>Giải phương trình bậc 2: ax<sup>2</sup> + bx + c = 0</h1>
+        <input type="text" id="AID" placeholder="a ="/>
+        <input type="text" id="BID" placeholder="b ="/>
+        <input type="text" id="CID" placeholder="c ="/>
+        <input type="button" value="Giải" onclick="giaiBac2()"/>
+
+        <h1>Kiểm tra 3 cạnh có tạo thành tam giác?</h1>
+        <input type="text" id="aid" placeholder="Nhập cạnh a ="/>
+        <input type="text" id="bid" placeholder="Nhập cạnh b ="/>
+        <input type="text" id="cid" placeholder="Nhập cạnh c ="/>
+        <input type="button" value="Check" onclick="tamGiac()"/>
+
+        <footer>
+            Tạo bởi Phan Trung Thành B1906764
+        </footer>
     </body>
 </html>
