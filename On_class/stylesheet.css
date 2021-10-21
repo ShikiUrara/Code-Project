@@ -14,7 +14,6 @@ main {
     display: grid;
     /* grid-area: main-cell; */
     border: 1px #ccc7c8;
-    border-radius: 5px;
     padding: 0px 5px;
     background-color: #fff;
 }
@@ -28,14 +27,47 @@ aside {
 
 header {
     height: 100px;
-    grid-area: header-cell;
-    
-
-    background-image: url("images/header.png")
+    /* grid-area: header-cell; */
+    background-image: url("images/header.png");
 }
 nav {
-    grid-area: nav-cell;
+    /* grid-area: nav-cell; */
+    margin-top: 20px;
+}
+nav > a {
+    height: 20px;
+    color: #ed4190;
+    font-size: 17px;
+    background-color: #ffffff80;
+
+    margin: 3px;
+    border: 1px solid #fff;
+    padding: 2px 4px;
+
+    /* text-shadow: 0 0 3px 0 #00000066; */
+    text-shadow: 0 0 2px 0 #0000004d;
+    
+}
+nav > a:hover {
+    color:#fff;
+    background-color: #ed4190;
 }
 footer {
-    grid-area: footer-cell;
+    /* grid-area: footer-cell; */
+}
+
+nav > div {
+    padding-top: 3px;
+    float: right;
+}
+
+nav > div > a.search, a.cart {
+    padding: 4px;
+    min-width: 30px;
+    color: #fff;
+    background-color: #cddc39;
+}
+
+nav > div > a.cart:hover {
+    color: #ed4190;
 }
