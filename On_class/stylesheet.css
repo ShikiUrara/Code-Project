@@ -1,3 +1,41 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    width: 1024px;
+    font-size: 1.2em;
+
+    position: 0px;
+    display: grid;
+    margin: 0px auto;
+    border: 1px;
+    padding: 0px 5px;
+}
+main {
+
+    
+    display: grid;
+    /* grid-area: main-cell; */
+    border: 1px #ccc7c8;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: #fff;
+}
+aside {
+    margin: 2px;
+    padding: 5px;
+    color: #000;
+}
+
+
+
+header {
+    height: 100px;
+    grid-area: header-cell;
+    
+
+    background-image: url("images/header.png")
+}
+nav {
+    grid-area: nav-cell;
+}
+footer {
+    grid-area: footer-cell;
 }
