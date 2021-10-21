@@ -7,6 +7,7 @@ body {
     margin: 0px auto;
     border: 1px;
     padding: 0px 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 main {
 
@@ -29,6 +30,8 @@ header {
     height: 100px;
     /* grid-area: header-cell; */
     background-image: url("images/header.png");
+    
+    border-radius: 5px;
 }
 nav {
     /* grid-area: nav-cell; */
@@ -54,6 +57,11 @@ nav > a:hover {
 }
 footer {
     /* grid-area: footer-cell; */
+    margin: 2px;
+    color: #000;
+    border: 1px #ccc7c8;
+    padding: 0px 5px;
+
 }
 
 nav > div {
@@ -70,4 +78,24 @@ nav > div > a.search, a.cart {
 
 nav > div > a.cart:hover {
     color: #ed4190;
+}
+
+body img, video, footer, nav a, footer, h1 {
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer a {
+    color:#ed4190;
+    text-decoration: none;;
+}
+
+a.top {
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    padding: 10px;
+    background-image: url("images/top.png");
+    background-size: 100%;
+    z-index: 100;
 }
