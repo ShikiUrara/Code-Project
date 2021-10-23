@@ -3,11 +3,13 @@ body {
     font-size: 1.2em;
 
     position: 0px;
-    display: grid;
+    /* display: grid; */
     margin: 0px auto;
     border: 1px;
     padding: 0px 5px;
     font-family: Arial, Helvetica, sans-serif;
+
+    overflow: auto;
 }
 main {
 
@@ -29,7 +31,13 @@ aside {
 header {
     height: 100px;
     /* grid-area: header-cell; */
-    background-image: url("images/header.png");
+    background: url("images/header-img1.png"), url("images/header-img2.png"), url("images/header-img3.png"), url("images/header.png");;
+    background-position: 20% 0px, 50% 0, 80% 0, 0 0;
+    animation-name: background_animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    background-size: contain;
+    background-repeat: no-repeat;
     
     border-radius: 5px;
 }
@@ -96,6 +104,14 @@ a.top {
     bottom: 5px;
     padding: 10px;
     background-image: url("images/top.png");
-    background-size: 100%;
     z-index: 100;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 10%;
+}
+
+@keyframes background_animation {
+    70% { background-image: url("images/header.png"); }
+    30% { background-image: url("images/header-img1.png"), url("images/header-img2.png"), url("images/header-img3.png"), url("images/header.png"); }
 }
