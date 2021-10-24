@@ -82,6 +82,10 @@
                     if(a==b && a==c) {
                         alert("Tam giác đều")
                     }
+                    else if(a==b | a==c | b==c)
+                        alert("Tam giác cân")
+                    else if(a*a==b*b+c*c | b*b==a*a+c*c | c*c==a*a+b*b)
+                        alert("Tam giác vuông")
                     else
                         alert("Tam giác")
                     alert("Diện tích: " + (Math.sqrt(p*(p-a)*(p-b)*(p-c))) + "\nChu vi: " + (p*2));
