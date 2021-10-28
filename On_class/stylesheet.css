@@ -1,119 +1,154 @@
 body {
-    width: 1024px;
-    font-size: 1.2em;
-
-    position: 0px;
-    display: grid;
-    margin: 0px auto;
+    top: 0;
+    margin: 0 auto;
     border: 1px;
-    padding: 0px 5px;
+    padding: 0 5px;
+    max-width: 1024px;
+    font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
-}
-main {
-
-    
-    /* grid-area: main-cell; */
-    border: 1px #ccc7c8;
-    padding: 0px 5px;
-    background-color: #fff;
-}
-aside {
-    margin: 2px;
-    padding: 5px;
-    color: #000;
+    display: grid;
+    grid-template-areas:
+    "header-cell"
+    "nav-cell"
+    "main-cell"
+    "footer-cell";
 }
 
 
 
 header {
-    flex: auto;
+    grid-area: header-cell;
+    margin-bottom: 2px;
+    background-color: #ccc7c8;
     height: 100px;
-    border: 1px #ccc7c8;
-    padding: 0px 5px;
-    margin: 2px;
-    /* grid-area: header-cell; */
-    background: url("images/header-img1.png"), url("images/header-img2.png"), url("images/header-img3.png"), url("images/header.png");;
-    background-position: 20% 0px, 50% 0, 80% 0, 0 0;
-    animation-name: background_animation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-    border-radius: 5px;
+    background-image: url("images/header.png");
 }
-nav {
-    /* grid-area: nav-cell; */
-    margin-top: 20px;
-}
-nav > a {
-    height: 20px;
-    color: #ed4190;
-    font-size: 17px;
-    background-color: #ffffff80;
 
+.img1 {
+    height: 100px;
+    position: absolute;
+    top: -30px;
+    animation-name: img1;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes img1 {
+    from {
+        left: 80%
+    }
+    to {
+        left: 30%
+    }
+}
+
+.img2 {
+    height: 70px;
+    position: absolute;
+    top: -5px;
+    animation-name: img2;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes img2 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 45%;
+    }
+}
+
+.img3 {
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    animation-name: img3;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes img3 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 63%;
+    }
+}
+
+nav {
+    grid-area: nav-cell;
+    margin-top: 20px;
+
+}
+
+nav a {
     margin: 3px;
     border: 1px solid #fff;
     padding: 2px 4px;
-
-    text-shadow: 0 0 3px 0 #00000066;
-    
-    
+    height: 20px;
+    color: #ed4190;
+    text-align: center;
+    font-size: 17px;
+    background: #ffffff80;
+    box-shadow: 0 0 3px #00000066, 0 0 2px #0000004d;
 }
-nav > a:hover {
-    color:#fff;
+
+nav a:hover {
+    color: #fff;
     background-color: #ed4190;
-    text-shadow: 0 0 2px 0 #0000004d;
-}
-footer {
-    /* grid-area: footer-cell; */
-    margin: 2px;
-    color: #000;
-    border: 1px #ccc7c8;
-    padding: 0px 5px;
-
 }
 
 nav > div {
+    display: inline-block;
+}
+
+nav div.last {
     padding-top: 3px;
     float: right;
 }
 
-nav > div > a.search, a.cart {
+.search {
     padding: 4px;
     min-width: 30px;
+    text-align: center;
     color: #fff;
     background-color: #cddc39;
 }
 
-nav > div > a.cart:hover {
+.cart {
+    padding: 4px;
+    min-width: 30px;
+    text-align: center;
     color: #ed4190;
+    background-color: #cddc39;
 }
 
-body img, video, footer, nav a, footer, h1 {
+body img, a, video, footer, main {
     border-radius: 5px;
+}
+
+head, main, footer {
+    border: 1px solid #ccc7c8;
+}
+
+footer {
+    grid-area: footer-cell;
+    margin-top: 2px;
     text-align: center;
+    color: #000;
 }
 
 footer a {
-    color:#ed4190;
-    text-decoration: none;;
+    color: #ed4190;
 }
 
-a.top {
+footer .top {
     position: fixed;
-    right: 10px;
     bottom: 5px;
+    right: 10px;
     padding: 10px;
-    background-image: url("images/top.png");
     z-index: 100;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 5%;
-    height: 10%;
-}
-
-@keyframes background_animation {
-    30% { background-image: url("images/header.png"); }
-    70% { background-image: url("images/header-img1.png"), url("images/header-img2.png"), url("images/header-img3.png"), url("images/header.png"); }
 }
