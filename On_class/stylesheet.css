@@ -1,4 +1,10 @@
 body {
+    display: grid;
+    text-decoration: ;
+}
+
+
+body {
     top: 0;
     margin: 0 auto;
     border: 1px;
@@ -14,12 +20,51 @@ body {
     "footer-cell";
 }
 
+main {
+    grid-area: main-cell;
+}
+
+.column_one_grid {
+    grid-template-areas:
+        "left-cell"
+        "article-cell"
+        "right-cell";
+}
+
+.column_tworight_grid {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "left-cell article-cell";
+}
+
+.column_twoleft_grid {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "article-cell right-cell";
+}
+
+.column_three_grid {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "left-cell article-cell right-cell";
+}
+
+.left_cell {
+    grid-area: left-cell;
+}
+
+.right_cell {
+    grid-area: right-cell;
+}
+.article_cell {
+    grid-area: article-cell;
+}
 
 
 header {
     grid-area: header-cell;
     margin-bottom: 2px;
-    background-color: #ccc7c8;
+    border: 1px #ccc7c8;
     height: 100px;
     background-image: url("images/header.png");
 }
@@ -126,7 +171,7 @@ nav div.last {
     background-color: #cddc39;
 }
 
-body img, a, video, footer, main {
+body img, a, video, footer, main, header {
     border-radius: 5px;
 }
 
@@ -151,4 +196,65 @@ footer .top {
     right: 10px;
     padding: 10px;
     z-index: 100;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 12px 0 16px 0;
+    height: 34px;
+    font-size: 28px;
+    text-align: center;
+    color: #ed4190;
+}
+
+.underline { /* Chua lam xong */
+    position: relative;
+    left: 40%;
+    width: 200px;
+    height: 3px;
+    background: radial-gradient( #cddc39, #fff);
+    
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    height: 28px;
+    margin: 5px 0 10px 0;
+    color: #f90b6d;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    height: 24px;
+    margin: 5px 0 10px 0;
+    color: #f90b6d;
+    font-size: 20px;
+}
+
+h4.break_column {
+    break-before: column;
+}
+
+div.make_three {
+    column-count: 2;
+}
+
+div.dat_hang {
+    display: ;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+
+}
+
+div.dat_hang div {
+    display: inline-block;
+    border: 1px solid #ed4190;
+    padding-top: 5px;
+    width: 24%;
+    border-radius: 5px;
 }
