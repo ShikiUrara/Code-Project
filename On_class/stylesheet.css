@@ -1,14 +1,13 @@
-body {
+/* body {
     display: grid;
-    text-decoration: ;
-}
+} */
 
 
 body {
     top: 0;
     margin: 0 auto;
     border: 1px;
-    padding: 0 5px;
+    padding: 0px 5px;
     max-width: 1024px;
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -244,7 +243,6 @@ div.make_three {
 }
 
 div.dat_hang {
-    display: ;
     margin-bottom: 5px;
     width: 100%;
     text-align: center;
@@ -257,4 +255,33 @@ div.dat_hang div {
     padding-top: 5px;
     width: 24%;
     border-radius: 5px;
+}
+
+.container_a {
+    display: grid;
+    grid-template-columns: 30% 69%;
+    grid-template-areas:
+    "left right";
+}
+
+.container .lefta {
+    grid-area: left;
+}
+
+.container .righta {
+    grid-area: right;
+}
+.container_b {
+    display: grid;
+    grid-template-columns: 69% 30%;
+    grid-template-areas:
+    "leftb rightb";
+}
+
+.container_b .leftb {
+    grid-area: leftb;
+}
+
+.container_b .rightb {
+    grid-area: rightb;
 }
