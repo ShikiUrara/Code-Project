@@ -1,13 +1,12 @@
-/* body {
-    display: grid;
-} */
+* {
+    padding: 0px 2px;
+}
 
-
-body {
-    top: 0;
+body {    
     margin: 0 auto;
     border: 1px;
-    padding: 0px 5px;
+    top: 0;
+    display: grid;
     max-width: 1024px;
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -207,7 +206,7 @@ h1 {
     color: #ed4190;
 }
 
-.underline { /* Chua lam xong */
+.underline {
     position: relative;
     left: 40%;
     width: 200px;
