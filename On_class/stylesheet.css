@@ -75,7 +75,7 @@ body, header, footer {
     border: 1px;
 }
 
-header, main img, footer, nav a, div.cart > div, main {
+header, main img, footer, nav a, div.cart > div, main, section.type > div {
     border-radius: 5px;
 }
 
@@ -185,6 +185,7 @@ div.searchbar {
 footer {
     grid-area: footer-cell;
     margin-top: 2px;
+    padding-top: 5px;
     border: 1px solid #ccc7c8;
     text-align: center;
     color: #000;
@@ -261,3 +262,55 @@ div.cart > div {
 
 /* 3 */
 /* San pham */
+div img {
+    display: block;
+    margin: auto;
+}
+
+section.type h2 {
+    text-align: center;
+}
+section.type {
+    /* position: fixed; */
+    justify-content: space-evenly;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    /* color: #ed4190; */
+
+}
+section.type > div {
+    justify-content: s;
+    flex-direction: column;
+    background: linear-gradient(to top, #ccdc39 0%, rgba(0, 0, 0 , 0) 10%);
+    display: flex;
+    margin: 3px;
+    border: 1px solid #dbd7d9;
+    padding: 0;
+    width: 33%;
+    /* color: #ed4190; */
+    text-align: center;
+}
+
+section.type input {
+    width: 20%;
+}
+
+/* 4 */
+/* Cac site con lai */
+
+fieldset {
+    border: 0;
+}
+
+main table {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+
+}
+
