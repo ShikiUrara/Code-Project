@@ -1,16 +1,16 @@
-* {
-    padding: 0px 2px;
+/* Chung */ /* 1 */
+body, main, .oneCol, .rightTwoCol, .leftTwoCol, .threeCol {
+    display: grid;
 }
 
-body {    
+header, main, footer {
+    border: 1px solid #ccc7c8;
+}
+
+body {
     margin: 0 auto;
-    border: 1px;
-    top: 0;
-    display: grid;
     max-width: 1024px;
-    font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
+    font: 1.2em Arial, Helvetica, sans-serif;
     grid-template-areas:
     "header-cell"
     "nav-cell"
@@ -22,121 +22,136 @@ main {
     grid-area: main-cell;
 }
 
-.column_one_grid {
+main .oneCol {
     grid-template-areas:
-        "left-cell"
-        "article-cell"
-        "right-cell";
+    "left-cell"
+    "article-cell"
+    "right-cell";
 }
 
-.column_tworight_grid {
+main .rightTwoCol {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
-        "left-cell article-cell";
+    "left-cell article-cell";
 }
 
-.column_twoleft_grid {
+main .leftTwoCol {
     grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        "article-cell right-cell";
+    grid-template-areas: 
+    "article-cell right-cell";
 }
 
-.column_three_grid {
+main .threeCol {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
-        "left-cell article-cell right-cell";
+    "left-cell article-cell right-cell";
 }
 
-.left_cell {
+.left, .right, .article-cell{
+    margin-bottom: 5px;
+    padding: 0 5px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.article-cell p {
+    margin-top: 0;
+}
+
+.left {
     grid-area: left-cell;
 }
 
-.right_cell {
+.right {
     grid-area: right-cell;
 }
-.article_cell {
+
+.article-cell {
     grid-area: article-cell;
 }
 
+body, header, footer {
+    padding: 0 5px;
+    border: 1px;
+}
+
+header, main img, footer, nav a, div.cart > div, main {
+    border-radius: 5px;
+}
 
 header {
     grid-area: header-cell;
     margin-bottom: 2px;
-    border: 1px #ccc7c8;
+    border-color: #ccc7c8;
     height: 100px;
     background-image: url("images/header.png");
 }
 
-.img1 {
-    height: 100px;
+.img1, .img2, .img3 {
     position: absolute;
-    top: -30px;
-    animation-name: img1;
-    animation-duration: 3s;
-    animation-fill-mode: both;
 }
 
-@keyframes img1 {
-    from {
-        left: 80%
+.img1 {
+    height: 100px;
+    top: -30px;
+    animation: aniImg1 3s both;
+}
+
+@keyframes aniImg1 {
+    0% {
+        left: 80%;
     }
-    to {
-        left: 30%
+    100% {
+        left: 30%;
     }
 }
 
 .img2 {
     height: 70px;
-    position: absolute;
     top: -5px;
-    animation-name: img2;
-    animation-duration: 3s;
-    animation-fill-mode: both;
+    animation: aniImg2 3s both;
 }
 
-@keyframes img2 {
-    from {
+@keyframes aniImg2 {
+    0% {
         left: 80%;
     }
-    to {
+    100% {
         left: 45%;
     }
 }
 
 .img3 {
     height: 80px;
-    position: absolute;
-    top: 0px;
-    animation-name: img3;
-    animation-duration: 3s;
-    animation-fill-mode: both;
+    top: 0;
+    animation: aniImg3 3s both;
 }
 
-@keyframes img3 {
-    from {
+@keyframes aniImg3 {
+    0% {
         left: 80%;
     }
-    to {
+    100% {
         left: 63%;
     }
 }
 
 nav {
-    grid-area: nav-cell;
     margin-top: 20px;
-
 }
 
 nav a {
+    top: 0;
     margin: 3px;
     border: 1px solid #fff;
     padding: 2px 4px;
     height: 20px;
-    color: #ed4190;
     text-align: center;
+    color: #ed4190;
     font-size: 17px;
-    background: #ffffff80;
-    box-shadow: 0 0 3px #00000066, 0 0 2px #0000004d;
+    background-color: #ffffff80;
+    box-shadow: 0 0 3px 0 #00000066, 0 0 2px 0 #0000004d;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -148,12 +163,13 @@ nav > div {
     display: inline-block;
 }
 
-nav div.last {
+/* Searchbar */
+div.searchbar {
     padding-top: 3px;
     float: right;
 }
 
-.search {
+.searchbottom, .cartbottom {
     padding: 4px;
     min-width: 30px;
     text-align: center;
@@ -161,126 +177,87 @@ nav div.last {
     background-color: #cddc39;
 }
 
-.cart {
-    padding: 4px;
-    min-width: 30px;
-    text-align: center;
+.cartbottom, footer a i, .topbottom {
     color: #ed4190;
-    background-color: #cddc39;
 }
 
-body img, a, video, footer, main, header {
-    border-radius: 5px;
-}
-
-head, main, footer {
-    border: 1px solid #ccc7c8;
-}
-
+/* Footer */
 footer {
     grid-area: footer-cell;
     margin-top: 2px;
+    border: 1px solid #ccc7c8;
     text-align: center;
     color: #000;
 }
 
-footer a {
-    color: #ed4190;
-}
-
-footer .top {
+.topbottom {
     position: fixed;
-    bottom: 5px;
     right: 10px;
+    bottom: 5px;
     padding: 10px;
+    text-align: center;
     z-index: 100;
 }
 
-h1 {
-    font-family: 'Open Sans', sans-serif;
+/* 2 */
+/* Trang chu */
+h1, h2, h3 {
     font-weight: 300;
-    margin: 12px 0 16px 0;
-    height: 34px;
-    font-size: 28px;
-    text-align: center;
-    color: #ed4190;
+    font-family: Open Sand, sans-serif;
+    color: #f90b6d;
 }
 
-.underline {
+h1 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 12px 0 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    display: block;
     position: relative;
-    left: 40%;
+    left: 50%;
+    margin: 12px 0 16px;
     width: 200px;
     height: 3px;
-    background: radial-gradient( #cddc39, #fff);
-    
+    transform: skewX(-12deg) translateX(-50%);
+    background: radial-gradient(#cddc39, #fff);
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    height: 28px;
-    margin: 5px 0 10px 0;
-    color: #f90b6d;
     font-size: 24px;
+    line-height: 28px;
+    margin: 5px 0 10px;
 }
 
 h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    height: 24px;
-    margin: 5px 0 10px 0;
-    color: #f90b6d;
     font-size: 20px;
+    line-height: 24px;
+    margin: 5px 0 10px;
 }
 
-h4.break_column {
-    break-before: column;
-}
-
-div.make_three {
+div.twoCol {
     column-count: 2;
 }
 
-div.dat_hang {
+.breakColumn {
+    break-before: column;
+}
+
+div.cart {
     margin-bottom: 5px;
     width: 100%;
     text-align: center;
-
 }
-
-div.dat_hang div {
+div.cart > div {
     display: inline-block;
     border: 1px solid #ed4190;
     padding-top: 5px;
     width: 24%;
-    border-radius: 5px;
 }
 
-.container_a {
-    display: grid;
-    grid-template-columns: 30% 69%;
-    grid-template-areas:
-    "left right";
-}
-
-.container .lefta {
-    grid-area: left;
-}
-
-.container .righta {
-    grid-area: right;
-}
-.container_b {
-    display: grid;
-    grid-template-columns: 69% 30%;
-    grid-template-areas:
-    "leftb rightb";
-}
-
-.container_b .leftb {
-    grid-area: leftb;
-}
-
-.container_b .rightb {
-    grid-area: rightb;
-}
+/* 3 */
+/* San pham */
