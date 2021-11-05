@@ -32,38 +32,39 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <fieldset>
-                <legend>Đăng Nhập</legend>
-                <table>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <img src="images/dangnhap/userlogin.png" width="200px">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">Email</label></td>
-                        <td><input type="email" name="email" id="email" placeholder="Nhập email"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="psw">Mật khẩu</label></td>
-                        <td><input type="password" name="psw" id="psw" placeholder="Nhập mật khẩu"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="reset" value="Đăng Nhập">
-                            <input type="submit" value="Hủy">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            Bạn quên <a href="#">Mật Khẩu?</a>
-                            <input type="checkbox" name="remember" checked> Ghi nhớ cho lần đăng nhập sau
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
+        <main class="login">
+            <form>
+                <fieldset>
+                    <h1>Đăng Nhập</h1>
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <img src="images/dangnhap/userlogin.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></label></td>
+                            <td><input type="email" name="email" id="email" placeholder="Nhập email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="psw"><i class="fa fa-key" aria-hidden="true"></i></label></td>
+                            <td><input type="password" name="psw" id="psw" placeholder="Nhập mật khẩu"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="reset" value="Đăng Nhập">
+                                <input type="submit" value="Hủy">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                Bạn quên <a href="#">Mật Khẩu?</a>
+                                <input type="checkbox" name="remember" checked> Ghi nhớ cho lần đăng nhập sau
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
         </main>
         <footer>
             &copy2021 Bản quyền thuộc về FreeezeVN.

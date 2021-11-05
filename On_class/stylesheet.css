@@ -300,6 +300,7 @@ section.type input {
 /* 4 */
 /* Cac site con lai */
 
+/* Lien he */
 fieldset {
     border: 0;
 }
@@ -310,7 +311,60 @@ main table {
     margin-right: auto;
 }
 
-.contact {
-
+.contact img {
+    display: inline-block;
+    height: 20px;
+    padding: 2px 5px;
+    background: #ccdc39;
+    margin: 0 10px;
+    border-radius: 0;
+}
+.note {
+    vertical-align: bottom;
 }
 
+/* Gioi thieu */
+.induction img, .news .left img{
+    width: 100%;
+}
+
+/* Tin tuc */
+.news .article-cell img {
+    overflow: auto;
+    float: right;
+    width: 30%;
+    margin-left: 10px;
+}
+
+/* Dang ky */
+.register {
+    margin-top: 10%;
+}
+
+.register table, .login table, .contact table {
+    width: 50%;
+    border-spacing: 0;
+    
+}
+.register td, .login td, .contact td {
+    display: inline-block;
+    padding: 0 5px 0 0;
+}
+
+.register i, .login i, .contact i{
+    color: #fff;
+    background: #ccdc39;
+    padding: 5px;
+}
+
+i.file {
+    padding: 7px 8.5px;
+}
+
+/* Dang nhap */
+.login, .contact {
+    margin-top: 5%;
+}
+.login img {
+    width: 50%;
+}
