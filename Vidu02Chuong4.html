@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var fruits = ["Apple", "Orange", "Cherry"];
+            fruits.forEach(function(e, i) {
+                console.log(i + " " + e);
+            })
+
+            function logger(msg, msg2) {
+                console.log(msg[0]);
+                console.log(arguments[1]);
+            }
+            logger("Hello", "Hi");
+
+            // Vi du 10
+            function sum() {
+                let total = 0;
+                for (let i=0; i<arguments.length; i++) {
+                    total += arguments[i];
+                }
+                document.write("Sum ")
+                for (let i=0; i<arguments.length; i++) {
+                    document.writeln(arguments[i]);
+                    if(i<arguments.length-1)
+                        document.writeln(",")
+                }
+                document.writeln(" is " + total)
+                return total;
+            }
+            alert(sum(2, 2, 3))
+            
+
+            // Vi du 11
+            function Sum(...args) {
+                let total = 0;
+                for (let i in args) {
+                    total += args[i];
+                }
+                return total;
+            }
+            alert(Sum(2, 2, 2, 2, 3));
+
+            // Vi du 12
+            function myFunc(str) {
+                document.writeln("Hi " + str);
+            }
+
+            function test(msg, myFunc) {
+                myFunc(msg);
+            }
+
+            test("Friend", myFunc);
+        </script>
+    </head>
+    <body>
+        <main>
+            
+        </main>
+        <footer></footer>
+    </body>
+</html>
