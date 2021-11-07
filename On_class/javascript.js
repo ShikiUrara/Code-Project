@@ -11,7 +11,7 @@ function dataSend() {
 
 // catch try ???
 function enterPress(event) {
-    if(event.key === "Enter") {
+    if(event.keyCode === 13 || event.key === "Enter") {
         console.log("Enter pressed");
         dataSend();
     }
