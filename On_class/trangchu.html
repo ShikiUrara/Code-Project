@@ -5,8 +5,7 @@
         <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
         <link href="stylesheet.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+        <script src="javascript.js"></script>
         <title>Trang chủ</title>
     </head>
     <body>
@@ -26,9 +25,11 @@
                     <a href="lienhe.html">Liên Hệ</a>
                 </div>
                 <div class="searchbar">
-                    <input type="text" placeholder="Nhập nội dung cần tìm...">
-                    <a href="#" class="searchbottom"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    <a href="#" class="cartbottom"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <form class="formSearchBar" method="get" action="#timkiem.html" onsubmit="return dataConfirmation(frm)">
+                        <input id="enterPress" type="text" placeholder="Nhập nội dung cần tìm..." value=""return onkeypress="enterPress()">
+                        <button id="searchButton" class="searchbutton"return onclick="dataSend()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button class="cartbutton" onclick="return cart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    </form>
                 </div>
             </nav>
         </header>
@@ -116,7 +117,7 @@
             <a href="#"><i class="fa fa-facebook icon pink"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-pinterest"></i></a>
-            <a class="topbottom" href="#logo">
+            <a class="topbutton" href="#logo">
                 <img src="images/top.png" width="60px">
             </a>
             <p>Tạo bởi Phan Trung Thành B1906764</p>

@@ -75,7 +75,7 @@ body, header, footer {
     border: 1px;
 }
 
-header, main img, footer, nav a, div.cart > div, main, section.type > div {
+header, main img, footer, nav a, div.cart > div, main, section.type > div, .searchbutton, .cartbutton {
     border-radius: 5px;
 }
 
@@ -168,16 +168,19 @@ div.searchbar {
     padding-top: 3px;
     float: right;
 }
+.formSearchBar {
+}
 
-.searchbottom, .cartbottom {
+.searchbutton, .cartbutton {
     padding: 4px;
     min-width: 30px;
     text-align: center;
     color: #fff;
     background-color: #cddc39;
+    border: 0;
 }
 
-.cartbottom, footer a i, .topbottom {
+.cartbutton, footer a i, .topbutton {
     color: #ed4190;
 }
 
@@ -191,7 +194,7 @@ footer {
     color: #000;
 }
 
-.topbottom {
+.topbutton {
     position: fixed;
     right: 10px;
     bottom: 5px;
