@@ -1,8 +1,117 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
+    <head>
+        <title>Dom Html</title>
+        <script>
+            // Vi du 15
+            function checkAll() {
+                var x = document.getElementsByClassName("course");
+                x.checked == true;
+                for (let i=0; i<x.length; i++) {
+                    if (x[i].type == "checkbox") {
+                        x[i].checked = true;
+                    }
+                }
+            }
 
+            // Vi du 19
+            function f19() {
+                var x1 = document.getElementById("demo");
+                alert(x1.innerText);
+                alert(x1.textContent);
+                alert(x1.innerHTML);
+                x1.innerHTML = "New content";
+                x1.style.color = "red"
+            }
+
+            // Vi du 24
+            console.log("24");
+            var phone = {
+                type: 'Google',
+                name: 'Pixel 6',
+
+                showName: function() {
+                    console.log("Label " + this.type)
+                    console.log("Name: " + this.name)
+                },
+
+                setNewName: function(newName) {
+                    this.name = newName;
+                }
+            }
+            var smartPhone = Object.create(phone);
+            smartPhone.showName();
+            smartPhone.type = 'Apple';
+            smartPhone.setNewName('Iphone X');
+            smartPhone.showName();
+
+            // Vi du 25
+            console.log("25");
+            function person(name, age) {
+                this.name = name;
+                this.age = age;
+                this.changeName = function(newName) {
+                    this.name = newName;
+                }
+                this.showName = function() {
+                    console.log("Name: " + this.name)
+                    console.log("Age: " + this.age)
+                }
+            }
+            var A = new person("ZX-01", 30);
+            A.showName();
+            A.changeName("AI-06");
+            A.showName();
+
+            // Vi du 30
+            console.log("30");
+            var arr = new Array()
+                arr[0] = "Thứ hai";
+                arr[1] = "Thứ ba";
+                arr[2] = "Thứ tư";
+                arr[3] = "Thứ năm";
+                arr[4] = "Thứ sáu";
+                arr[5] = "Thứ bảy";
+                arr[6] = "Chủ nhật"
+
+                for (i=0; i<=6; i++) {
+                    console.log(arr[i]);
+                }
+                console.log("Số phần tử trang mảng arr là: " + arr.length);
+            
+
+            // Vi du 35
+            function add() {
+                var btn = document.getElementById('btn');
+                var input = document.getElementById('txtInput').value;
+                var list = document.getElementById('list');
+                var child = document.createElement('li');
+                child.textContent = input;
+                // input = null;
+                // input.focus();
+                list.appendChild(child);
+            }
+        </script>
+    </head>
+    <body>
         <!--Vi du 15-->
+        JavaScript <input class="course" type="checkbox" value="js"/>
+        Python<input class="course" type="checkbox" value="py"/>
+        <button onclick="checkAll()">This f15</button>
+
+        <!--Vi du 19-->
+        <p id="demo">       This <strong>is</strong> what</p>
+        <button onclick="f19()">This f19</button>
+
+        <!--Vi du 35-->
+        <br>
+        <hr/>
+        <label for="txtInput">Enter name a car: </label>
+        <input type="text" id="txtInput">
+        <button id="btn" onclick="add()">Add</button>
+        <hr/>
+        <p>Name car:</p>
+        <ul id="list"></ul>
     </body>
 </html>
+<!-- 19, 24 phone, 25, 30, 35 car  slide 109-->
