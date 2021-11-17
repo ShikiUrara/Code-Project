@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                // Vi du 35
+                function add() {
+                var input = document.getElementById('txtInput').value;
+                var list = document.getElementById('list');
+                var child = document.createElement('li');
+                child.textContent = input;
+                document.getElementById("txtInput").focus();
+                input.value = null;
+                list.appendChild(child);
+                }
+
+                // Vi du 36
+                function press(event) {
+                    var input = document.getElementById("txt");
+                    var sp1 = document.getElementById("sp1");
+                    var sp2 = document.getElementById("sp2");
+                    sp1.innerText = event.key;
+                    sp2.innerText = event.keyCode;
+                }
+
+                
+        </script>
+    </head>
+    <body>
+        <p>Vi du 35</p>
+        <label for="txtInput">Enter name a car: </label>
+        <input type="text" id="txtInput">
+        <button id="button" onclick="add()">Add</button>
+        <p>Name car:</p>
+        <ul id="list"></ul>
+
+        <p>Vi du 36</p>
+        <p>Enter characters: <input type="text" id="txt" onkeydown="press(event)"/></p>
+        <p>Key: <span id="sp1"></span></p>
+        <p>Code: <span id="sp2"></span></p>
+
+
+        <p>Vi du 42</p>
+        <form>
+            <label for="pwd">Password: </label>
+            <input type="password" id="pwd" name="pwd" pattern=".{8,}"
+            title="Eight or more characters">
+            <input type="submit">
+        </form>
+
+        <footer>Tạo bởi Phan Trung Thành B1906764</footer>
+    </body>
+</html>
