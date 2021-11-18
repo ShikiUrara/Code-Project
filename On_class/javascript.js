@@ -77,10 +77,25 @@ var itemList = {
         "sp008": {  "name": "Sữa Chua Vị Táo Xanh", "price": 28000, "photo": "images/sanpham/green-apple.jpg"},
         "sp009": {  "name": "Sữa Chua Vị Dứa", "price": 29000, "photo": "images/sanpham/pineapple.jpg"}
 };
+alert(localStorage.key(0));
 
-if(typeof localStorage[code] === "undefined") {
-    window.localStorage.setItem(code, Number);
+var code = itemList;
+function addCart(code) {
+    alert("Running");
+    // if(typeof localStorage[code] === 'undefined') {
+    //     window.localStorage.setItem(code, number);
+    // }
+    // else {
+    //     if(localStorage.getItem(code) >= 100)
+    //         window.localStorage.setItem(code, 100);
+    //     else /* ocalStorage.getItem("code") < 100 */ {
+    //         number = parseInt(document.getElementById(code).value);
+    //         current = parseInt(window.localStorage.getItem(code));
+    //         window.localStorage.setItem(code, current + number);
+    //     }
+    // }
 }
+
 
 // Bai 4
 function cart() {
