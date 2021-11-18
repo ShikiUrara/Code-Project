@@ -1,0 +1,47 @@
+[title] {
+
+}
+
+p, h1 { /* Chính nó */
+    color: red;
+
+}
+
+div p { /* Lấy mọi thẻ p nằm trong thẻ div - con, cháu - */
+    color: gold;
+}
+
+div > p { /* Lấy các thẻ p nằm trong thẻ div, div chỉ hơn p một tab - con -*/
+    color: lightblue;
+}
+
+div + p { /* Lấy 1 thẻ p dầu tiên sau div, ngang với div - anh em gần nhất - */
+    color: lightcoral;
+}
+
+div ~ p { /* Lấy mọi thẻ p sau div, ngang với div - anh em - */
+    color: lightgreen;
+}
+
+/*
+    padding không nhận giá trị âm
+    Outline không tác dụng kích thước, cách làm giống border
+    maggin nhận giá trị âm
+    Html Document object model - HTML DOM
+    html tương tác trên DOM
+    id is unique
+
+    Thay đổi nội dung thành phần html 
+        e.innerHTML = <new-html>
+        e.innerTEXT
+
+    Thay đổi giá trị thuộc tính thành phần html
+        e.<attribute> = <value>
+        e.setAttribute(<attribute>, <value>);
+    
+    Thay đổi trình bày css của thành phần html
+    e.style <property> = <new-style>
+
+    Thêm sự kiện 
+    e.<event> = fuction() {};
+*/
