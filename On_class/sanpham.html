@@ -6,7 +6,11 @@
         <link href="stylesheet.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="javascript.js"></script>
-        <title>Trang chủ</title>
+        <!-- <script>
+            alert(Object.keys(itemList)[0])
+            alert(itemList)
+        </script> -->
+        <title>Sản phẩm</title>
     </head>
     <body>
         <header>
@@ -25,7 +29,7 @@
                     <a href="lienhe.html">Liên Hệ</a>
                 </div>
                 <div class="searchbar">
-                    <form class="formSearchBar" method="get" action="#" onsubmit="return dataConfirmation(frm)">
+                    <form class="formSearchBar" method="get" action="timkiem.html" onsubmit="return dataConfirmation(frm)">
                         <input id="enterPress" type="text" placeholder="Nhập nội dung cần tìm..." value=""return onkeypress="enterPress()">
                         <button id="searchButton" class="searchbutton"return onclick="dataSend()"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <button class="cartbutton" onclick="return cart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>

@@ -3,19 +3,19 @@ function dataSend() {
     var input = document.getElementById("enterPress").value;
     alert("Input: " + input + "\nInput length: "+ input.length);
     if(input.length === 0) {
-        return;
+        return false;
     }
-    else alert("Complete data send");
+    else {
+        alert("Complete data send");
+        return true;
+    } 
+    
 }
-
-
-// catch try ???
 function enterPress(event) {
     if(event.keyCode === 13 || event.key === "Enter") {
         console.log("Enter pressed");
         dataSend();
     }
-    else return;
 }
 
 // Bai 2
@@ -82,17 +82,18 @@ var itemList = {
 var number = 0;
 var current = 0;
 function addCart(code) {
-    alert("Running");
-    if(typeof localStorage[code] === 'undefined') {
-        window.localStorage.setItem("code", number);
+    localStorage.clear;
+    alert(code);
+    if(typeof window.localStorage(code) === 'undefined') {
+        window.localStorage.setItem(code, number);
     }
     else {
         if(localStorage.getItem(code) >= 100)
-            window.localStorage.setItem("code", 100);
+            window.localStorage.setItem(code, 100);
         else /* ocalStorage.getItem("code") < 100 */ {
             number = parseInt(document.getElementById(code).value);
             current = parseInt(window.localStorage.getItem(code));
-            window.localStorage.setItem("code", current + number);
+            window.localStorage.setItem(code , current + number);
         }
     }
 }
