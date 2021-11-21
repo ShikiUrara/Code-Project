@@ -18,9 +18,9 @@ function enterPress(event) {
     }
 }
 
-// Bai 2
+// Bai 2 Xac thuc du lieu form
 
-function dataConfirmation(frm) {
+function dataConfirmationLogin(frm) {
     if(dataConfirmationEmail(frm) === true && dataConfirmationPassword(frm) === true && dataConfirmationName(frm) === true && dataConfirmationContact(frm) === true) {
         alert("Đã gửi dữ liệu");
         return true;
@@ -77,23 +77,22 @@ var itemList = {
         "sp008": {  "name": "Sữa Chua Vị Táo Xanh", "price": 28000, "photo": "images/sanpham/green-apple.jpg"},
         "sp009": {  "name": "Sữa Chua Vị Dứa", "price": 29000, "photo": "images/sanpham/pineapple.jpg"}
 };
-// var code = Object.keys(itemList);
-// alert(code);
-var number = 0;
-var current = 0;
 function addCart(code) {
-    localStorage.clear;
-    alert(code);
-    if(typeof window.localStorage(code) === 'undefined') {
+    var number = parseInt(document.getElementById(code).value)
+    var name = itemList[code].name
+    if(typeof localStorage[code] === "undefined") {
         window.localStorage.setItem(code, number);
+        alert("Đã thêm " + number + name + " vào giỏ hàng");
     }
     else {
-        if(localStorage.getItem(code) >= 100)
+        if(localStorage.getItem(code) >= 100) {
             window.localStorage.setItem(code, 100);
-        else /* ocalStorage.getItem("code") < 100 */ {
-            number = parseInt(document.getElementById(code).value);
-            current = parseInt(window.localStorage.getItem(code));
+            alert("Số lượng không vượt quá 100")
+        }
+        else /* localStorage.getItem("code") < 100 */ {
+            var current = parseInt(window.localStorage.getItem(code));
             window.localStorage.setItem(code , current + number);
+            alert("Đã thêm " + number + " " + name + " vào giỏ hàng");
         }
     }
 }

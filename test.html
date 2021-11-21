@@ -14,11 +14,22 @@
                 "sp008": {  "name": "Sữa Chua Vị Táo Xanh", "price": 28000, "photo": "images/sanpham/green-apple.jpg"},
                 "sp009": {  "name": "Sữa Chua Vị Dứa", "price": 29000, "photo": "images/sanpham/pineapple.jpg"}
             };
-            alert(Object.keys(itemList)[0]);
+            // alert(Object.keys(itemList)[0]);
+
+            function add(code) {
+                var number = parseInt(document.getElementById("sp001").value);
+                alert(number);
+                alert(code);
+                if(typeof localStorage[code] === "undefined") {
+                    alert("DO IT")
+                    window.localStorage.setItem(code, number);
+                }
+            }
         </script>
     </head>
     <body>
-
+        <input type="number" id="sp001" min="0" max="100" value="0"/>
+        <button onclick="add(Object.keys(itemList)[0])">Add</button>
     </body>
 </html>
 
