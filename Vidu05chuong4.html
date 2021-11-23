@@ -1,4 +1,53 @@
+
+
 <!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            // Vi du 43
+            function validate(from) {
+                alert("he")
+                var frm = document.forms['formValidate']
+                alert(frm.pwd.title)
+                var reg = new RegExp(".{8,}");
+                if(reg.test(form.pwd.value) == false) {
+                    alert(form.pwd.title);
+                    return false;
+                }
+                DDD
+                return true;
+            }
+            alert(form.pwd.title)
+        </script>
+    </head>
+    <body>
+        <!-- Vi du 43 -->
+        <form onsubmit="return validate(this)" action="#" name="formValidate">
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" title="Eight or more characters">
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <script>
@@ -31,22 +80,7 @@
         <input type="number" id="sp001" min="0" max="100" value="0"/>
         <button onclick="add(Object.keys(itemList)[0])">Add</button>
     </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html> -->
 
 <!--
 [title] {
