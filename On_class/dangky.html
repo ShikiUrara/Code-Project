@@ -5,9 +5,13 @@
         <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
         <link href="stylesheet.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-        <title>Đăng ký</title>
+        <script src="javascript.js"></script>
+        <script>
+            window.onload = function() {
+                searchResult();
+            }
+        </script>
+        <title>Trang chủ</title>
     </head>
     <body>
         <header>
@@ -26,9 +30,11 @@
                     <a href="lienhe.html">Liên Hệ</a>
                 </div>
                 <div class="searchbar">
-                    <input type="text" placeholder="Nhập nội dung cần tìm...">
-                    <a href="#" class="searchbottom"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    <a href="#" class="cartbottom"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <form class="formSearchBar" method="get" action="timkiem.html" name="ormSearch">
+                        <input id="enterPress" required type="text" placeholder="Nhập nội dung cần tìm..." value="" return onkeypress="enterCheck()">
+                        <button id="searchButton" class="searchbutton"return onclick="searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button class="cartbutton" onclick="return cart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    </form>
                 </div>
             </nav>
         </header>

@@ -1,44 +1,71 @@
-// Bai 1
-function dataSend() {
+// strict
+"use strict"
+
+
+// Bai 1 Bo sung chuc nang tim kiem du lieu
+
+function searching() {
     var input = document.getElementById("enterPress").value;
-    alert("Input: " + input + "\nInput length: "+ input.length);
-    if(input.length === 0) {
-        return false;
-    }
-    else {
-        alert("Complete data send");
-        return true;
-    } 
-    
+    window.localStorage.setItem("searchKeyword", input);
+    var  frm = document.forms["formSearch"];
+    if(frm.words.value.length > 0)
+        frm.submit();
 }
-function enterPress(event) {
-    if(event.keyCode === 13 || event.key === "Enter") {
-        console.log("Enter pressed");
-        dataSend();
+function enterCheck(event) {
+    if(event.keyCode === 32) {
+        searching();
     }
+}
+
+function searchResult() {
+    var url = new URL(window.location);
+    var wd =  url.searchParams.get("words");
+    // if(wd == null) 
+    //     document.getElementById("out").innerHTML = "Không tìm thấy từ khóa đã nhập"
+    // else
+    //     document.getElementById("out").innerHTML = wd + " " + window.localStorage.getItem("searchKeyword") + " " + "URL: " + url;
+    document.getElementById("out").innerHTML = window.localStorage.getItem("searchKeyword")
 }
 
 // Bai 2 Xac thuc du lieu form
 
-function dataConfirmationLogin(frm) {
-    if(dataConfirmationEmail(frm) === true && dataConfirmationPassword(frm) === true && dataConfirmationName(frm) === true && dataConfirmationContact(frm) === true) {
-        alert("Đã gửi dữ liệu");
-        return true;
-    }
-    else {
-        alert("Error");
+function confirmationLogin(form) {
+    var frm = document.forms['formLogin']
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-a]{2, 4}$/;
+    if(emailReg.test(frm.email.value) == false) {
+        alert("Email không hợp lệ!");
+        frm.email.focus();
         return false;
     }
+    if(frm.pw.value.length < 8) {
+        alert("Mật khẩu có ít nhất 8 ký tự");
+        frm.pw.focus();
+        return false;
+    }
+    alert("Đã gửi dữ liệu")
+    return true;
 }
 
-function dataConfirmationEmail() {
+function confirmationRegister(frm) {
     var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-a] {2, 4}$/;
-    if(emailReg.test(document.getElementById("email").value) == false) {
-        alert("Mã xử lý dự liệu không hợp lệ - email");
+    if(emailReg.test(frm.email.value) == false) {
+        alert("Email không hợp lệ!");
+        frm.email.focus();
         return false;
     }
-    else return true;
+    if(frm.pw.value.length < 8) {
+        alert("Mật khẩu có ít nhất 8 ký tự");
+        frm.pw.focus();
+        return false;
+    }
+    alert("Đã gửi dữ liệu")
+    return true;
 }
+
+
+
+
+
 
 function dataConfirmationPassword() {
     if(document.getElementById("password").value.length < 8) {
@@ -65,7 +92,7 @@ function dataConfirmationContact() {
     else return true;
 }
 
-// Bai 3 ???
+// Bai 3 Them san pham vao don dat hang
 var itemList = {
         "sp001": {  "name": "Sữa Chua Vị Kiwi", "price": 21000, "photo": "images/sanpham/kiwi.jpg"},
         "sp002": {  "name": "Sữa Chua Vị Xoài", "price": 22000, "photo": "images/sanpham/mango.jpg"},

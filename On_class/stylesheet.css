@@ -89,6 +89,7 @@ header {
 
 .img1, .img2, .img3 {
     position: absolute;
+    max-width: 1024px;
 }
 
 .img1 {

@@ -6,11 +6,12 @@
         <link href="stylesheet.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="javascript.js"></script>
-        <!-- <script>
-            alert(Object.keys(itemList)[0])
-            alert(itemList)
-        </script> -->
-        <title>Sản phẩm</title>
+        <script>
+            window.onload = function() {
+                searchResult();
+            }
+        </script>
+        <title>Trang chủ</title>
     </head>
     <body>
         <header>
@@ -29,9 +30,9 @@
                     <a href="lienhe.html">Liên Hệ</a>
                 </div>
                 <div class="searchbar">
-                    <form class="formSearchBar" method="get" action="timkiem.html" onsubmit="return dataConfirmation(frm)">
-                        <input id="enterPress" type="text" placeholder="Nhập nội dung cần tìm..." value=""return onkeypress="enterPress()">
-                        <button id="searchButton" class="searchbutton"return onclick="dataSend()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <form class="formSearchBar" method="get" action="timkiem.html" name="ormSearch">
+                        <input id="enterPress" required type="text" placeholder="Nhập nội dung cần tìm..." value="" return onkeypress="enterCheck()">
+                        <button id="searchButton" class="searchbutton"return onclick="searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <button class="cartbutton" onclick="return cart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                     </form>
                 </div>
