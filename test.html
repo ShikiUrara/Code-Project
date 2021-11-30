@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // Vi du 43
+            function validate(from) {
+                var frm = document.forms['formValidate']
+                //alert(frm.pwd.title)
+                var reg = new RegExp(".{8,}");
+                if(reg.test(frm.pwd.value) == false) {
+                    alert(frm.pwd.title);
+                    return false;
+                }
+                return true;
+            }
+
+            // Vi du 45
+            var testObject = {
+                'one': 1, 'two': 2, 'three': 3
+            }
+                // Đưa đối tượng vào localStorage 
+            localStorage.setItem('testObject', JSON.stringify(testObject));
+                // Lấy đối tượng từ localStorage
+            var retrievedObject = localStorage.getItem('testObject');
+            console.log('retrievedObject:', JSON.parse(retrievedObject))
+            
+            // Vi du 46
+            function clickCounter() {
+                if(typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } 
+                    else {
+                        localStorage.clickcount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+                } 
+                else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Vi du 43 -->
+        <form onsubmit="return validate(this)" action="#" name="formValidate">
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" title="Eight or more characters">
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Vi du 46-->
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+        <div id="result"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

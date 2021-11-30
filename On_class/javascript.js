@@ -29,9 +29,8 @@ function searchResult() {
 
 // Bai 2 Xac thuc du lieu form
 
-function confirmationLogin(form) {
-    var frm = document.forms['formLogin']
-    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-a]{2, 4}$/;
+function confirmationLogin(frm) {
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if(emailReg.test(frm.email.value) == false) {
         alert("Email không hợp lệ!");
         frm.email.focus();
@@ -47,7 +46,7 @@ function confirmationLogin(form) {
 }
 
 function confirmationRegister(frm) {
-    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-a] {2, 4}$/;
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if(emailReg.test(frm.email.value) == false) {
         alert("Email không hợp lệ!");
         frm.email.focus();
@@ -58,40 +57,35 @@ function confirmationRegister(frm) {
         frm.pw.focus();
         return false;
     }
+    if(frm.pw.value != frm.pw2.value) {
+        alert("Mật khẩu xác nhận không hợp lê!")
+        frm.pw2.focus();
+        return false;
+    }
     alert("Đã gửi dữ liệu")
     return true;
 }
 
-
-
-
-
-
-function dataConfirmationPassword() {
-    if(document.getElementById("password").value.length < 8) {
-        alert("Mã xử lý dự liệu không hợp lệ - password");
+function confirmationContact(frm) {
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if(emailReg.test(frm.email.value) == false) {
+        alert("Email không hợp lệ!");
+        frm.email.focus();
         return false;
     }
-    else return true;
-}
-
-function dataConfirmationName() {
-    if (document.getElementById("name").value.length < 4) {
-        alert("Mã xử lý dự liệu không hợp lệ - name");
+    if(frm.name.value.length < 4) {
+        alert("Tên không hợp lệ!");
+        frm.name.focus();
         return false;
     }
-    else
-        return true;
-}
-
-function dataConfirmationContact() {
-    if(document.getElementById("contact").value.length < 10) {
-        alert("Mã xử lý dự liệu không hợp lệ - contact");
+    if(frm.contact.value.length < 10) {
+        alert("Nhập nội dung không hợp lê!");
+        frm.contact.focus();
         return false;
     }
-    else return true;
+    alert("Đã gửi dữ liệu")
+    return true;
 }
-
 // Bai 3 Them san pham vao don dat hang
 var itemList = {
         "sp001": {  "name": "Sữa Chua Vị Kiwi", "price": 21000, "photo": "images/sanpham/kiwi.jpg"},

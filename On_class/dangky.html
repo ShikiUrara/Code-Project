@@ -11,7 +11,7 @@
                 searchResult();
             }
         </script>
-        <title>Trang chủ</title>
+        <title>Đăng ký</title>
     </head>
     <body>
         <header>
@@ -39,7 +39,7 @@
             </nav>
         </header>
         <main class="register">
-            <form>
+            <form  onsubmit="return confirmationRegister(this)" action="#" method="post" name="formRegister">
                 <fieldset>
                     <h1>Đăng Ký</h1>
                     <table>
@@ -48,12 +48,12 @@
                             <td><input type="email" name="email" id="email" placeholder="Vui lòng nhập email"></td>
                         </tr>
                         <tr>
-                            <td><label for="psw"><i class="fa fa-key" aria-hidden="true"></i></label></td>
-                            <td><input type="password" name="psw" id="psw" placeholder="Vui lòng nhập mật khẩu"></td>
+                            <td><label for="pw"><i class="fa fa-key" aria-hidden="true"></i></label></td>
+                            <td><input type="password" name="pw" id="pw" placeholder="Vui lòng nhập mật khẩu"></td>
                         </tr>
                         <tr>
-                            <td><label for="psw2"><i class="fa fa-key" aria-hidden="true"></i></label></td>
-                            <td><input type="password" name="psw2" id="psw2" placeholder="Vui lòng nhập mật khẩu"></td>
+                            <td><label for="pw2"><i class="fa fa-key" aria-hidden="true"></i></label></td>
+                            <td><input type="password" name="pw2" id="pw2" placeholder="Vui lòng nhập mật khẩu"></td>
                         </tr>
                         <tr>
                             <td><label for=""><i class="fa fa-users" aria-hidden="true"></i></label></td>
