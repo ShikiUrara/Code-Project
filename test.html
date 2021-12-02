@@ -1,66 +1,137 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            // Vi du 43
-            function validate(from) {
-                var frm = document.forms['formValidate']
-                //alert(frm.pwd.title)
-                var reg = new RegExp(".{8,}");
-                if(reg.test(frm.pwd.value) == false) {
-                    alert(frm.pwd.title);
-                    return false;
-                }
-                return true;
-            }
+        <title>Tech</title>
+        <!--Logo-->
+        <link href="favicon.ico" rel="shortcut icon">
+        <!--CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!--JS-->
 
-            // Vi du 45
-            var testObject = {
-                'one': 1, 'two': 2, 'three': 3
-            }
-                // Đưa đối tượng vào localStorage 
-            localStorage.setItem('testObject', JSON.stringify(testObject));
-                // Lấy đối tượng từ localStorage
-            var retrievedObject = localStorage.getItem('testObject');
-            console.log('retrievedObject:', JSON.parse(retrievedObject))
-            
-            // Vi du 46
-            function clickCounter() {
-                if(typeof(Storage) !== "undefined") {
-                    if (localStorage.clickcount) {
-                        localStorage.clickcount = Number(localStorage.clickcount)+1;
-                    } 
-                    else {
-                        localStorage.clickcount = 1;
-                    }
-                    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-                } 
-                else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-                }
-            }
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+        <!--Bunble-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+        <!--Separate-->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+
+
+        <!-- <script type="module">
+            import { Toast } from 'bootstrap.esm.min.js'
+          
+            Array.from(document.querySelectorAll('.toast'))
+              .forEach(toastNode => new Toast(toastNode))
+        </script>
+        
+        <script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script> -->
+
+
+        <script type="text/javascript">
+
+            // Vi du 5.8
+            $(document).ready(function() {
+                $("#hide").click(function() {
+                    $("p").hide();
+                    alert("Hide paragraphs")
+                });
+                
+                // Vi du 5.10
+                var s = $("p").text();
+                alert(s);
+
+                // Vi du 5.11
+                $("a").click(function(e) {
+                    alert("Now load...");
+                    e.stopPropagation();
+                })
+
+                // Vi du 5.12
+                $("*").click(function() {
+                    var tag = $(this).prop("tagName");
+                    alert("Clicked " + tag);
+                })
+
+                // Vi du 5.15
+                $(".class1, .class2").click(function() {
+                    var class0 = $(this).prop("className");
+                    alert(class0); 
+                })
+            });
         </script>
     </head>
     <body>
-        <!-- Vi du 43 -->
-        <form onsubmit="return validate(this)" action="#" name="formValidate">
-            <label for="pwd">Password:</label>
-            <input type="password" id="pwd" name="pwd" title="Eight or more characters">
-            <button type="submit">Submit</button>
+        <p class="container p-3 my-3 bg-primary text-white">Hello</p>
+        <p class="container-fluid p-3 my-3 bg-primary text-white">Welcome...</p>
+
+        <!--Vi du 5.2 Gird-->
+        <div class="row">
+            <div class="col-md-3 bg-black text-white">1/4</div> 
+            <div class="col-md-3 bg-primary text-white">1/4</div>
+            <div class="col-md-3 bg-black text-white">1/4</div>
+            <div class="col-md-3 bg-primary text-white">1/4</div>
+        </div>
+
+        <!--Vi du 5.3 Table-->
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <th>Row</th>
+                    <th>...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-danger">
+                    <th>Row</th>
+                    <th>...</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Form-->
+
+        <!--Vi du 5.4,5.6, 5.7 form-group, validation Browser defaults, form-control-->
+        <form action="#" class="container p-3 my-3 bg-primary text-white">
+            <div class="input-group">
+                <span class="input-group-text"><label for="email">Email:</label></span>
+                <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+                <span class="input-group-text">@example.com</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><label for="password">Password:</label></span>
+                <input type="password" class="form-control" placeholder="Enter password" id="password" required>
+            </div>
+            <div class="form-group">
+                
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="" required>
+                    Remenber this login
+                </label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
 
-        <!-- Vi du 46-->
-        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
-        <div id="result"></div>
-        <p>Click the button to see the counter increase.</p>
-        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+        <!--jQuery-->
+
+        <!--Vi du 5.8-->
+        <button class="btn btn-primary" id="hide">Click to hide</button>
+
+        <!--Vi du 5.10-->
+        <p class="container p-3 my-3 bg-black text-white">Hi friend</p>
+
+        <!--Vi du 5.11-->
+        <a class="class2" href="https://www.google.com">Google</a>
+        <a class="class1" href="#">???</a>
     </body>
 </html>
-
-
-
-
-
 
 
 
