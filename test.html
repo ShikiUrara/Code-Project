@@ -33,103 +33,11 @@
 
         <script type="text/javascript">
 
-            // Vi du 5.8
-            $(document).ready(function() {
-                $("#hide").click(function() {
-                    $("p").hide();
-                    alert("Hide paragraphs")
-                });
-                
-                // Vi du 5.10
-                var s = $("p").text();
-                alert(s);
-
-                // Vi du 5.11
-                $("a").click(function(e) {
-                    alert("Now load...");
-                    e.stopPropagation();
-                })
-
-                // Vi du 5.12
-                $("*").click(function() {
-                    var tag = $(this).prop("tagName");
-                    alert("Clicked " + tag);
-                })
-
-                // Vi du 5.15
-                $(".class1, .class2").click(function() {
-                    var class0 = $(this).prop("className");
-                    alert(class0); 
-                })
-            });
         </script>
     </head>
     <body>
         <p class="container p-3 my-3 bg-primary text-white">Hello</p>
         <p class="container-fluid p-3 my-3 bg-primary text-white">Welcome...</p>
-
-        <!--Vi du 5.2 Gird-->
-        <div class="row">
-            <div class="col-md-3 bg-black text-white">1/4</div> 
-            <div class="col-md-3 bg-primary text-white">1/4</div>
-            <div class="col-md-3 bg-black text-white">1/4</div>
-            <div class="col-md-3 bg-primary text-white">1/4</div>
-        </div>
-
-        <!--Vi du 5.3 Table-->
-        <table class="table">
-            <thead>
-                <tr class="table-primary">
-                    <th>Row</th>
-                    <th>...</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-danger">
-                    <th>Row</th>
-                    <th>...</th>
-                </tr>
-            </tbody>
-        </table>
-
-        <!--Form-->
-
-        <!--Vi du 5.4,5.6, 5.7 form-group, validation Browser defaults, form-control-->
-        <form action="#" class="container p-3 my-3 bg-primary text-white">
-            <div class="input-group">
-                <span class="input-group-text"><label for="email">Email:</label></span>
-                <input type="email" class="form-control" placeholder="Enter email" id="email" required>
-                <span class="input-group-text">@example.com</span>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text"><label for="password">Password:</label></span>
-                <input type="password" class="form-control" placeholder="Enter password" id="password" required>
-            </div>
-            <div class="form-group">
-                
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="" required>
-                    Remenber this login
-                </label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-
-        <!--jQuery-->
-
-        <!--Vi du 5.8-->
-        <button class="btn btn-primary" id="hide">Click to hide</button>
-
-        <!--Vi du 5.10-->
-        <p class="container p-3 my-3 bg-black text-white">Hi friend</p>
-
-        <!--Vi du 5.11-->
-        <a class="class2" href="https://www.google.com">Google</a>
-        <a class="class1" href="#">???</a>
     </body>
 </html>
 
