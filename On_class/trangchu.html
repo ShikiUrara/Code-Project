@@ -5,13 +5,16 @@
         <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
         <link href="stylesheet.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="javascript.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="./javascript.js"></script>
         <script>
             window.onload = function() {
                 searchResult();
             }
         </script>
         <title>Trang chủ</title>
+
+        
     </head>
     <body>
         <header>
@@ -40,7 +43,7 @@
         </header>
         <main>
             <article>
-                <img src="images/trangchu/bg-home.jpg" alt="bg_home.jpg">
+                <div id="headline"></div>
                 <section>
                     <h1>Sản Phẩm Mới</h1>
                     <h2>Sữa Chua Tốt Cho Sức Khỏe</h2>
@@ -125,7 +128,7 @@
             <a class="topbutton" href="#logo">
                 <img src="images/top.png" width="60px">
             </a>
-            <p>Tạo bởi Phan Trung Thành B1906764</p>
+            <p id="thanh">Tạo bởi Phan Trung Thành B1906764</p>
         </footer>
     </body>
 </html>
