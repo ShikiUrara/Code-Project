@@ -131,6 +131,9 @@ var d=new Date();
 var ads="Khách hàng có ngày sinh trong tháng "+ ( d.getMonth() + 1 ) +" sẽ được tặng 2 phần sữa chua dâu cho đơn hàng đầu tiên trong tháng.";
 $(document).ready(function() {
     $("footer").append( "<div id='adscontainer'><span id='adstext'><h2>"+ads+"</h2></span></div>");
+
+
+    $("footer").append("<div>AAaaaaa</div>");
     var w = ($(window).width() - $("main").width())/2;
     alert(w);
     if(w >= 200) {
@@ -142,29 +145,29 @@ $(document).ready(function() {
     headlineEffect() 
 })
 
-function adsVerEffect() {
-    $("#adscontainer").addClass("adsvercontainer container");
-    $("#adscontainer").css("width", ($(window).width() - $("main").width())/2);
-    $("#adstext").addClass("adsvertext adstext");
-    $("#adstext").css('top', $('#adscontainer').height());
-    $('#adstext').animate({
-        top: '-=' + ($('#adscontainer').height() + $('#adstext').height())
-    }, 30000, function() {
-        adsVerEffect();
-    })
-}
-function adsHorEffect() {
-    $("#adscontainer").addClass("adshorcontainer container");
-    $("#adscontainer").css("left", $("main").position().left);
-    $("#adscontainer").css("width", $("main").width());
-    $("#adstext").addClass("adshortext adstext");
-    $('#adstext').css('left', $("#adscontainer").width()); 
-    $('#adstext').animate({
-        left: '-=' + ($('#adscontainer').width() + $('#adstext').width())
-    }, 30000, function() {
-        adsHorEffect();
-    })
-}
+// function adsVerEffect() {
+//     $("#adscontainer").addClass("adsvercontainer container");
+//     $("#adscontainer").css("width", ($(window).width() - $("main").width())/2);
+//     $("#adstext").addClass("adsvertext adstext");
+//     $("#adstext").css('top', $('#adscontainer').height());
+//     $('#adstext').animate({
+//         top: '-=' + ($('#adscontainer').height() + $('#adstext').height())
+//     }, 30000, function() {
+//         adsVerEffect();
+//     })
+// }
+// function adsHorEffect() {
+//     $("#adscontainer").addClass("adshorcontainer container");
+//     $("#adscontainer").css("left", $("main").position().left);
+//     $("#adscontainer").css("width", $("main").width());
+//     $("#adstext").addClass("adshortext adstext");
+//     $('#adstext').css('left', $("#adscontainer").width()); 
+//     $('#adstext').animate({
+//         left: '-=' + ($('#adscontainer').width() + $('#adstext').width())
+//     }, 30000, function() {
+//         adsHorEffect();
+//     })
+// }
 
 // Lab 4 - 3
 var headlineContent = [
