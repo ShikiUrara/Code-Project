@@ -145,29 +145,29 @@ $(document).ready(function() {
     headlineEffect() 
 })
 
-// function adsVerEffect() {
-//     $("#adscontainer").addClass("adsvercontainer container");
-//     $("#adscontainer").css("width", ($(window).width() - $("main").width())/2);
-//     $("#adstext").addClass("adsvertext adstext");
-//     $("#adstext").css('top', $('#adscontainer').height());
-//     $('#adstext').animate({
-//         top: '-=' + ($('#adscontainer').height() + $('#adstext').height())
-//     }, 30000, function() {
-//         adsVerEffect();
-//     })
-// }
-// function adsHorEffect() {
-//     $("#adscontainer").addClass("adshorcontainer container");
-//     $("#adscontainer").css("left", $("main").position().left);
-//     $("#adscontainer").css("width", $("main").width());
-//     $("#adstext").addClass("adshortext adstext");
-//     $('#adstext').css('left', $("#adscontainer").width()); 
-//     $('#adstext').animate({
-//         left: '-=' + ($('#adscontainer').width() + $('#adstext').width())
-//     }, 30000, function() {
-//         adsHorEffect();
-//     })
-// }
+function adsVerEffect() {
+    $("#adscontainer").addClass("adsvercontainer container");
+    $("#adscontainer").css("width", ($(window).width() - $("main").width())/2);
+    $("#adstext").addClass("adsvertext adstext");
+    $("#adstext").css('top', $('#adscontainer').height());
+    $('#adstext').animate({
+        top: '-=' + ($('#adscontainer').height() + $('#adstext').height())
+    }, 30000, function() {
+        adsVerEffect();
+    })
+}
+function adsHorEffect() {
+    $("#adscontainer").addClass("adshorcontainer container");
+    $("#adscontainer").css("left", $("main").position().left);
+    $("#adscontainer").css("width", $("main").width());
+    $("#adstext").addClass("adshortext adstext");
+    $('#adstext').css('left', $("#adscontainer").width()); 
+    $('#adstext').animate({
+        left: '-=' + ($('#adscontainer').width() + $('#adstext').width())
+    }, 30000, function() {
+        adsHorEffect();
+    })
+}
 
 // Lab 4 - 3
 var headlineContent = [

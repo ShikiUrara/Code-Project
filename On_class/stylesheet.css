@@ -208,7 +208,7 @@ footer {
 /* Trang chu */
 h1, h2, h3 {
     font-weight: 300;
-    font-family: Open Sand, sans-serif;
+    font-family: sans-serif;
     color: #f90b6d;
 }
 
@@ -266,9 +266,17 @@ div.cart > div {
 
 /* 3 */
 /* San pham */
-div img {
+.sanpham div img {
     display: block;
+    height: 250px;
     margin: auto;
+}
+.sanpham div p {
+    height: min-content;
+    overflow: auto;
+    height: 150px;
+    text-align: justify;
+    margin: 5px;
 }
 
 section.type h2 {
@@ -285,7 +293,7 @@ section.type {
 
 }
 section.type > div {
-    justify-content: s;
+    justify-content: center;
     flex-direction: column;
     background: linear-gradient(to top, #ccdc39 0%, rgba(0, 0, 0 , 0) 10%);
     display: flex;
@@ -390,7 +398,7 @@ i.file {
     top:10px;
     height:300px;
    }
-.adsvertext{white-space:wrap;}
+.adsvertext{ white-space: nowrap; }
 .adstext {
     position:absolute;
     left:5px;
@@ -399,7 +407,7 @@ i.file {
     bottom:50px;
     height:50px;
 }
-.adshortext{white-space:nowrap;}
+.adshortext{ white-space: nowrap;}
 
 
 #headline {

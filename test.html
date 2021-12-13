@@ -21,6 +21,8 @@
         <link href="./On_class/images/favicon.ico" rel="icon">
         <!--Code-->
         <style>
+            * {
+                margin: 0; padding: 0; box-sizing: border-box }
             body {
                 font-family: Arial, Helvetica, sans-serif;
                 top: 0;
@@ -182,15 +184,14 @@
                 alert("Đã gửi dữ liệu")
                 return true;
             }
-
         </script>
     </head>
     <body>
         <header>
-            <img class="img1" src="./On_class/images/header-img1.png">
-            <img class="img2"  src="./On_class/images/header-img2.png">
-            <img class="img3"  src="./On_class/images/header-img3.png">
-            <a href=""><img id="logo" src="./On_class/images/logo.png"></a>
+            <img class="img1" src="./On_class/images/header-img1.png" alt="">
+            <img class="img2" src="./On_class/images/header-img2.png" alt="">
+            <img class="img3" src="./On_class/images/header-img3.png" alt="">
+            <a href=""><img id="logo" src="./On_class/images/logo.png" alt=""></a>
             <nav id="navbar">
                 <div>
                     <a href="">Trang Chủ</a>
@@ -204,14 +205,14 @@
                 <div class="searchbar">
                     <form class="formSearchBar" method="get" action="#" name="formSearch">
                         <input id="enterPress" type="text" placeholder="Nhập nội dung cần tìm..." value="">
-                        <button id="searchButton" class="searchbutton"return onclick="searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button id="searchButton" class="searchbutton" onclick="return searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <button class="cartbutton" onclick="return cart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </nav>
         </header>
         <main>
-            <img src="./On_class/images/trangchu/bg-home.jpg">
+            <img src="./On_class/images/trangchu/bg-home.jpg" alt="">
             <article>
                 <div>
                     <div>
@@ -232,7 +233,7 @@
                                         <td><input type="password" name="pw2" id="pw2" placeholder="Vui lòng nhập mật khẩu"></td>
                                     </tr>
                                     <tr>
-                                        <td><label for=""><i class="fa fa-users" aria-hidden="true"></i></label></td>
+                                        <td><label><i class="fa fa-users" aria-hidden="true"></i></label></td>
                                         <td>
                                             <input type="radio" name="memberType" checked> Bạc
                                             <input type="radio" name="memberType"> Vàng
@@ -261,7 +262,7 @@
                 <div>
                     <h1>Sản Phẩm Mới</h1>
                     <h2>Sữa Chua Tốt Cho Sức Khỏe</h2>
-                    <img src="./On_class/images/trangchu/yogurt.jpg">
+                    <img src="./On_class/images/trangchu/yogurt.jpg" alt="">
                     <p>Sữa chua là một loại thực phẩm được tạo ra từ quá trình lên men sữa của các vi khuẩn. 
                         Hầu hết các loại sữa đều có thể dùng làm sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết. 
                         Sữa chua hay được gọi là yaourt (là da-ua). Chúng được lên men từ sữa động vật nhờ vi khuẩn lactic, đã được khử chất béo và thanh trùng ở nhiệt độ 80 - 90 độ C.
@@ -302,13 +303,13 @@
 
                 <div id="datHang">
                     <h2>Đặt Hàng Ngay</h2>
-                    <img src="./On_class/images/trangchu/order_1.png">
+                    <img src="./On_class/images/trangchu/order_1.png" alt="">
                     <p>Gọi Điện</p>
-                    <img src="./On_class/images/trangchu/order_2.png">
+                    <img src="./On_class/images/trangchu/order_2.png" alt="">
                     <p>Đặt Hàng</p>
-                    <img src="./On_class/images/trangchu/order_3.png">
+                    <img src="./On_class/images/trangchu/order_3.png" alt="">
                     <p>Nhận Hàng</p>
-                    <img src="./On_class/images/trangchu/order_4.png">
+                    <img src="./On_class/images/trangchu/order_4.png" alt="">
                     <p>Thanh Toán</p>
                 </div>
             </article>
@@ -340,7 +341,7 @@
             </div>
         </main>
         <footer>
-            &copy2021 Bản quyền thuộc về FreeezeVN.
+            &copy;2021 Bản quyền thuộc về FreeezeVN.
             <a href="">Facebook</a>
             <a href="">Twitter</a>
             <a href="">Pinterest</a>
