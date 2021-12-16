@@ -82,3 +82,7 @@ h4, p, img {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+
+#lightSwitch {
+  transform: scale(1.8);
+}
