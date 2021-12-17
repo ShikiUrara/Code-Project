@@ -1,15 +1,15 @@
 * {
-    margin: 0; padding: 0; box-sizing: border-box }
+  margin: 0; padding: 0; box-sizing: border-box }
 img {
-    width: 100%;
+  width: 100%;
 }
 main h4:hover, main p:hover {
-    color: #dc3545;
-    text-decoration: underline lightblue;
-    opacity: 0.8;
+  color: #dc3545;
+  text-decoration: underline lightblue;
+  opacity: 0.8;
 }
 h4, p, img {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 
