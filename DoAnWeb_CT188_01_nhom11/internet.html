@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Import-->
+    <link href="./style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!--Bunble-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./trang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Internet</title>
+    <!-- <link rel="stylesheet" href="https://github.com/IanLunn/Hover.git"> -->
+    <script src="./code.js"></script>
+    <script src="./backTop.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./saveNews.js"></script>
+</head>
+
+
+<body id="internet">
+    <button type="button" class="btn btn-danger btn-floating btn-sm " id="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+</button>
+    <header>
+        <nav id="nav" class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand animate__animated  animate__wobble" href="Tech-trangchu.html">
+                    Tech
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav menu ">
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower " aria-current="page" href="Tech-trangchu.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                          </svg>HOME</a>
+                        <a class="nav-link   animate__animated  animate__lightSpeedInLeft animate__slower delay-M" href="./mobile.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-phone-vibrate-fill" viewBox="0 0 16 16">
+                            <path d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z"/>
+                          </svg>MOBILE</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower animate__delay-1s" href="./ICT.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                          </svg>TIN ICT</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower delay-I" href="./internet.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>INTERNET</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+                      </svg> SaveNews(<span class="total-count"></span>)
+                  </button>
+
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower " data-bs-toggle="modal" data-bs-target="#modelId">Login</button>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower delay-M"><a target="_blank" class="" href="./register.html">Register</a></button>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="container-md">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="internet-tab" data-bs-toggle="tab" data-bs-target="#internet" type="button" role="tab" aria-controls="internet" aria-selected="true"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z" />
+                  <path
+                    d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z" />
+                </svg> Internet</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button" role="tab" aria-controls="media" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z" />
+                </svg> Media</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="internet" role="tabpanel" aria-labelledby="internet-tab">
+                    <div class="border border-5 container rounded-3">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/17/photo1639722860782-16397228608812102773567-1639728385308-1639728385576186832586.jpg" class="d-block w-100 rounded-3" alt="image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Elon Musk lại thêm tuyên bố: 5 năm nữa mà con người chưa đặt chân tới sao Hỏa mới là điều lạ
+                                            </h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 20 giờ trước ) </h7>
+                                            <p class="text-muted overflow-auto">Với tham vọng đưa người lên sinh sống trên sao Hỏa, Elon Musk đang ráo riết thực hiện mục tiêu của mình. Mới đây, ông công bố rằng việc này có thể thực hiện được trong vòng 5 năm tới.<br> Elon Musk cho biết
+                                                ông vừa đề ra lộ trình mới cho dự án lớn về sao Hỏa của công ty. Mốc thời gian của dự án sẽ diễn ra sớm hơn so với dự tính của rất nhiều người. Trả lời Time Magazine về dự tính đưa loài người lên sao Hỏa
+                                                của SpaceX, Elon Musk cho biết: " Trong vòng 5 năm nữa, nếu chúng tôi không hạ cánh được lên sao Hỏa thì với tôi đó sẽ là một điều rất đáng ngạc nhiên".
+                                            </p>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/15/photo-1-1639554542750471852571-1639562807532-16395628076691894255027.jpg" class="d-block w-100 rounded-3" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Giải pháp nâng cao hiệu quả sử dụng các kênh truyền dẫn cho doanh nghiệp</h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 11 giờ trước ) </h7>
+                                            <p class="text-muted overflow-auto">Đảm bảo mạng hoạt động liên tục ngay cả khi một đường truyền bị ngắt hoặc có độ trễ cao, giảm thiểu đáng kể các chi phí điều hành mạng WAN, quản lý giám sát thông minh, độ bảo mật cao, triển khai nhanh chóng,
+                                                đơn giản hóa công tác quản trị và vận hành là những ưu điểm vượt trội của giải pháp VNPT SD-WAN. Với kinh nghiệm lâu năm và uy tín trong lĩnh vực mạng Internet đồng thời cũng là doanh nghiệp tiên phong trong
+                                                chuyển đổi số, Tập đoàn VNPT hiểu được những gì doanh nghiệp cần để đẩy nhanh quá trình chuyển đổi số và VNPT SD-WAN</p>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://genk.mediacdn.vn/139269124445442048/2021/11/8/photo-1-1636357924205690016832.jpeg" class="d-block w-100 rounded-3" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Cảnh báo! Axie Infinity bị hacker tấn công, nhiều người chơi bị mất số tiền ước tính gần 2 tỷ VNĐ
+                                            </h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 10 phút trước ) </h7>
+                                            <p class="text-muted">Mới đây, một trong số những tựa game NFT nổi tiếng là Axie Infinity đã bất ngờ bị hacker tấn công. Axie Infinity đang được xem là một trong số những tựa game nổi tiếng và thu hút được sự chú ý rất lớn của cộng
+                                                đồng game thủ. Tuy nhiên, chính bởi vì sức hút quá lớn kết hợp với sự phát triển của thể loại game NFT nên không khó hiểu khi Axie Infinity trở thành mục tiêu của những hacker.<br> Discord của Axie Infinity
+                                                đã bị hacker tấn công, cụ thể hacker này đã chiếm quyền của một nhân sự và bắt đầu kế hoạch lừa đảo của mình. Thủ đoạn của hacker này là sử dụng bot của máy chủ để đăng một số thông báo nói rằng họ sẽ phát
+                                                hành hơn 1.000 Axie NFT mới. Thông báo này đi kèm với các đường link dẫn đến một trang web bên ngoài.</p>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/11/8/photo-1-16363622717381708588671.jpg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="AAG">
+                                <p class="">Đã có lịch sửa chữa tuyến cáp quang biển quốc tế AAG <span class="fs-6 fw-lighter opacity-50">( Internet ~ 10 giờ trước ) </span></p>
+                                <ul>
+                                    <li class="opacity-75">Sự cố xảy ra vào tối 22/10 trên nhánh S1I kết nối Việt Nam - Hong Kong</li>
+                                </ul>
+                                <img class="rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/12/15/token-web-3-0-la-gi-lieu-token-web-3-0-co-the-tro-thanh-hot-trend-1633039604-1639560646326-1639560647268560745947.png" alt="" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Wed 3.0">
+                                <p class="">Web3 - khái niệm Internet tương lai hay chiêu tiếp thị blockchain? <span class="fs-6 fw-lighter opacity-50">( Internet ~ 21 giờ trước ) </span></p>
+                                <ul>
+                                    <li class="opacity-75">Các thuật ngữ công nghệ mới nhất của năm nay chính là “web3” và “mertaverse”.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--   -->
+                        <hr class="bg-danger">
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/14/a16zrtfktsneakers0-1639452994759-1639452995009473212041.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">metaverse</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Nike vừa mua lại một công ty chuyên sản xuất giày, nhưng là giày kỹ thuật số cho vũ trụ ảo metaverse
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 2 ngày trước ) </h7>
+                                <p class="text-muted">Có một cơn sốt kỳ lạ đang lan ra trên toàn cầu, đó là sưu tầm những tác phẩm nghệ thuật NFT và mua bất động sản ảo trong vũ trụ metaverse. Có vẻ như trong một thế giới ảo, sẽ không có gì là không thể, và ranh giới với thế
+                                    giới thật sẽ ngày càng mờ đi. Nắm bắt xu hướng mới của tương lai này, hãng giày thể thao nổi tiếng Nike cũng đã có động thái nhảy vào cuộc chơi.
+                                    <br>Nike vừa công bố thương vụ mua lại RTFKT Studios, được biết đến như là “thương hiệu hàng đầu của sự đổi mới, cung cấp các bộ sưu tập next gen để phù hợp với văn hóa và trò chơi của tương lai”. RTFKT Studios cũng
+                                    là một nhà sản xuất giày, nhưng là giày kỹ thuật số cho vũ trụ ảo metaverse.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/14/2-16394545277061326805362.png" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Web 3.0</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Lượng người dùng Internet tìm kiếm "Web 3.0" trên Google ngày một tăng, Việt Nam đứng top 5
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 3 ngày trước ) </h7>
+                                <p class="text-muted">Có một cơn sốt kỳ lạ đang lan ra trên toàn cầu, đó là sưu tầm những tác phẩm nghệ thuật NFT và mua bất động sản ảo trong vũ trụ metaverse. Có vẻ như trong một thế giới ảo, sẽ không có gì là không thể, và ranh giới với thế
+                                    giới thật sẽ ngày càng mờ đi. Nắm bắt xu hướng mới của tương lai này, hãng giày thể thao nổi tiếng Nike cũng đã có động thái nhảy vào cuộc chơi.
+                                    <br>Nike vừa công bố thương vụ mua lại RTFKT Studios, được biết đến như là “thương hiệu hàng đầu của sự đổi mới, cung cấp các bộ sưu tập next gen để phù hợp với văn hóa và trò chơi của tương lai”. RTFKT Studios cũng
+                                    là một nhà sản xuất giày, nhưng là giày kỹ thuật số cho vũ trụ ảo metaverse.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/12/15/photo1639559672892-16395596731101024071278-1639560975687-1639560975883367251.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Omicron & Delta</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Nhà khoa học cảnh báo xuất hiện siêu biến thể mới từ sự kết hợp Omicron và Delta
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 19 giờ trước ) </h7>
+                                <p class="text-muted">Theo trang Daily Mail (Anh), sự lây lan COVID-19 thường chỉ liên quan đến một chủng virus đột biến, nhưng trong một số trường hợp vô cùng hiếm gặp, hai chủng virus có thể tấn công con người cùng một lúc. Nếu 2 chủng virus
+                                    cùng lây nhiễm vào một tế bào, chúng có thể hoán đổi DNA và kết hợp với nhau để tạo ra một phiên bản virus SARS-CoV-2 mới.
+                                    <br>Tiến sĩ Paul Burton, Giám đốc Y tế của nhà sản xuất vaccine Moderna, cảnh báo số ca nhiễm biến chủng Omicron và Delta đang lưu hành ở Anh khiến kịch bàn này có khả năng xảy ra cao hơn. Ông nói với các nghị sĩ trong
+                                    Ủy ban Khoa học và Công nghệ rằng “chắc chắn” virus có thể hoán đổi gien và kích hoạt một biến thể thậm chí còn nguy hiểm hơn.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/8/sciencecdffawardee3-1638955242071-16389552424361239594619.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">ISS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Đây là cách trạm vũ trụ thay thế ISS có thể hình thành
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 19 giờ trước ) </h7>
+                                <p class="text-muted">ISS, trạm vũ trụ quốc tế với nhiều mô-đun, bốn bộ pin mặt trời và từng đón rất nhiều du khách từ khắp nơi trên thế giới tới tham quan, từ lâu đã trở thành biểu tượng hiện hữu trên bầu trời đêm của Trái đất kể từ cuối những
+                                    năm 1990. Nó cũng là biểu tượng của sự hợp tác toàn cầu và khoa học vũ trụ. Nhưng nó không thể tồn tại mãi mãi.
+                                    <br>NASA, Cơ quan Hàng không và Vũ trụ Mỹ, đang phát triển các kế hoạch cho phiên bản kế nhiệm ISS. Tuần trước, cơ quan này đã ký thỏa thuận với ba công ty có trụ sở tại Mỹ - Blue Origin, Nanoracks và Northrop Grumman
+                                    - để thiết kế các trạm vũ trụ cho phép kết hợp các hoạt động khoa học và thương mại.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/13/tesla-cybertruck-source-chile-al100-1639384747624-163938474798343630907.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Tesla Cybertruck</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Elon Musk tiết lộ chi tiết gây khó chịu nhất trên Tesla Cybertruck, tuyên bố hãng sẽ có giải pháp 'khác thường' để xử lý
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 3 ngày trước ) </h7>
+                                <p class="text-muted">Mới đây, trên mạng internet đã xuất hiện một video với nguyên mẫu xe Tesla Cybertruck chạy ngoài thực tế. Tuy nhiên, nó gây chú ý và đã đặt ra nhiều câu hỏi bởi sự xuất hiện của gương chiếu hậu bên hông (bản concept được
+                                    hãng giới thiệu không có) và cần gạt nước rất lớn trên kính chắn gió.
+                                    <br>Giám đốc điều hành Tesla, Elon Musk, sau đó đã lên tiếng trên mạng xã hội Twitter, tuyên bố cần gạt nước không phải là giải pháp sản xuất của mẫu Cybertruck. Theo đó, ông muốn một thứ gì đó khác biệt, thậm chí cả
+                                    việc triển khai cần gạt nước từ cốp trước của xe dù việc hiện thực hóa nó sẽ không dễ dàng.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/10/hero-imagefillsize1248x702v1639097983-1639124671700-1639124671975558181185.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Apple Car</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Chân dung xe điện Apple Car dựa trên các bằng sáng chế
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 3 ngày trước ) </h7>
+                                <p class="text-muted">Apple đã rất kín tiếng, thậm chí hơn cả bình thường, về kế hoạch sản xuất ô tô điện và xe tự lái của mình, trong một hoạt động bí mật được đặt tên là Project Titan. Nhưng điều đó không có nghĩa là chúng ta không thể tưởng
+                                    tượng được nhà sản xuất iPhone sẽ chuẩn bị những gì cho chiếc ô tô đầu tiên của mình.
+                                    <br>Công ty cho thuê xe hơi Vanarama đã quyết định sử dụng phong cách thẩm mỹ của Apple, từ các sản phẩm như iPhone, MacBook... kết hợp những điều đó với các bằng sáng chế đã được Apple nộp lên trong lĩnh vực xe hơi,
+                                    để phác thảo chân dung chiếc Apple Car khi ra xuất hiện ngoài đời thực.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/12/6/ezgifcom-gif-maker-1-16387338768862072599229.gif" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Eggborough Power</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Mãn nhãn với màn phá dỡ nhà máy nhiệt điện bằng thuốc nổ
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Internet ~ 10 ngày trước ) </h7>
+                                <p class="text-muted">Vào một buổi sáng tháng 10, 50 nhân viên của DSM Demolition có trụ sở tại Anh đã làm việc với lực lượng cảnh sát địa phương ở North Yorkshire để đóng cửa con đường và đảm bảo an toàn trên một khu vực có đường kính hơn 350m.
+                                    Sau 9h sáng, quá trình tháo dỡ bắt đầu.
+                                    <br>Địa điểm phá dỡ là Eggborough Power, một nhà máy điện đốt than có công suất 1.960 MW ở miền bắc nước Anh hiện đã ngừng hoạt động vào năm 2018. Nhà máy này có tổng cộng tám tháp làm mát, bốn trong số đó đã được phá
+                                    dỡ từ hồi tháng 8.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-danger">
+                    <h4 class="text-danger text-center">Có thể bạn chưa biết</h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Apple
+                    </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/8/holiday-header-iphone-13-16389526586131436391144.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">iPhone</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Cơn ác mộng của Apple trước Giáng sinh: iPhone bị ngừng sản xuất lần đầu tiên sau hơn một thập
+                        kỷ.</strong> Khi mùa mua sắm quan trọng nhất trong năm đang tới gần, Apple đang phải đối mặt với điều mà báo cáo mới từ Nikkei Asia mô tả là “cơn ác mộng trước Giáng sinh”. Cụ thể, công ty Mỹ
+                                    đang gia tăng áp lực đối với các nhà cung cấp trong bối cảnh tình trạng khan hiếm iPhone và iPad ảnh hưởng đến thời gian bán hàng. Báo cáo chỉ ra rằng Apple đã bỏ lỡ mục tiêu sản xuất iPhone 13 trong tháng 9 và tháng
+                                    10, thấp hơn khoảng 20%. Ngoài ra, công ty được cho là đã buộc phải giảm quy mô tổng mục tiêu sản xuất iPhone 13 xuống còn từ 83 đến 85 triệu chiếc, so với mục tiêu ban đầu là 95 triệu chiếc.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 10 ngày trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Japan
+                    </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://assets.newatlas.com/dims4/default/7319542/2147483647/strip/true/crop/1158x772+0+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F8f%2F21%2F3ec2d52b40028ea8d6ef4131ece5%2Fdmv.jpeg"
+                                                alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">BUS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Xe buýt đi được cả trên đường bộ lẫn đường sắt đầu tiên trên thế giới sắp được đưa vào sử dụng
+                        ở Nhật Bản.</strong> Tại sao phải chuyển đổi giữa xe buýt và xe lửa, nếu bạn có thể ở trên một phương tiện vừa di chuyển trên được cả đường bộ và đường ray? Đó là suy nghĩ đằng sau chiếc xe buýt
+                                    tích hợp hai chế độ (dual-mode vehicle hay DMV), dự kiến sẽ bắt đầu hoạt động tại Nhật Bản vào ngày 25/12 tới. Được phát triển từ năm 2002, hệ thống DMV hiện đang được điều hành bởi công ty Đường sắt Bờ biển Asa (Asa
+                                    Coast Railway) của Nhật Bản. Ban đầu sẽ có ba phương tiện được triển khai, với nhiệm vụ di chuyển khoảng 123 km từ cơ sở văn hóa Awa Kainan Bunka Mura ở tỉnh Tokushima đến bến thuyền Umi no Eki Toromu ở tỉnh Kochi.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 13 ngày trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Microsoft
+                    </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/3/microsoft-edge-chromium-1-16385039349251019935304.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Microsoft</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Microsoft Edge lại dùng 'tiểu xảo', cố gắng ngăn người dùng tải xuống Google Chrome.</strong> Google Chrome là trình duyệt phổ biến nhất trên thế giới. Và điều đó đã thúc đẩy Microsoft và những đối thủ khác
+                                    phải nỗ lực rất nhiều để tạo ra dấu ấn của riêng mình trên thị trường. Microsoft Edge phiên bản mới đã được xây dựng lại bằng cách sử dụng cùng một nền tảng với Chrome vào năm ngoái. Và nó thực sự tốt. Nhưng vậy là
+                                    chưa đủ, nên Microsoft lại đang tích cực cố gắng ngăn người dùng tải xuống Google Chrome từ hệ điều hành Windows. Nỗ lực mới nhất của Microsoft nhằm đẩy mọi người khỏi phạm vi ảnh hưởng của Chrome là khá thụ động. Được
+                                    phát hiện mới đây bởi Windows Latest, Microsoft Edge, trình duyệt mặc định được cung cấp cho Windows 10 và Windows 11, hiện kích hoạt cửa sổ bật lên để cố gắng giữ người dùng trên trình duyệt Edge, thay vì nhảy vào
+                                    hệ sinh thái của Google.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 10 ngày trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Inventions
+                    </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/12/16/photo1639567415293-1639567415419978825125-1639617833149-1639617833597810690618.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Inventions change the future</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>8 phát minh thay đổi tương lai.</strong> Triển lãm của Viện Smithsonian ở Washington, D.C trưng bày tầm nhìn lớn về cách mà các bom tấn công nghệ thay đổi thế giới loài người.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 14 giờ trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Virtual money
+                    </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/12/16/bitcoin-co-the-vo-gia-tri-trong-tuong-lai-1639618623436-16396186238011820384089.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Bitcoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Bitcoin có thể vô giá trị trong tương lai.</strong> Phó thống đốc Ngân hàng Trung ương Anh (BoE), ông Jon Cunliffe đã gửi lời cảnh báo tới các nhà đầu tư tiền điện tử trong một chương trình của BBC vào ngày
+                                    14/12. “Giá trị của Bitcoin có thể biến động rõ rệt trên cả lý thuyết và thực tế, thậm chí trở về con số 0”, ông Cunliffe nhận xét. Cảnh báo của ông trùng với báo cáo hôm 13/12 của BoE.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 13 giờ trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
+                    <div class="border border-5 container rounded-3">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="carouselExampleCaptionsTwo" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div> -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/13/a8707954e39a12218475b807c2-1639410150087-16394101502861821853103.jpg" class="d-block w-100 rounded-3" alt="image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Sự thật 'ngã ngửa' về những bộ phim nổi tiếng</h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 5 ngày trước ) </h7>
+                                            <p class="text-muted overflow-auto">Làm phim là một quá trình thực sự kỳ diệu với vô số thông tin nội bộ chỉ được chia sẻ bởi các thành viên trong đoàn.<br> Để chuẩn bị cho vai diễn chính trong The Theory of Everything, Eddie Redmayne đã giảm
+                                                gần 7 kg và tập luyện co cơ thể trong 4 tháng để có thể di chuyển như những người mắc bệnh thần kinh vận động. Redmayne đã đứng trước gương hàng giờ, học cách chỉnh sửa khuôn mặt của mình một cách chính
+                                                xác. Ngoài ra, anh cũng liên tục uốn éo cơ thể Cuối cùng, theo bác sĩ nắn xương cá nhân, nam diễn viên này đã tự thay đổi sự thẳng hàng của cột sống.</p>
+                                            <!-- <p class="text-center">
+                            <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                              aria-expanded="false" aria-controls="collapseExample">
+                              Xem chi tiết hơn...
+                            </a>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">Những con vật 4 chân bằng một cách thú vị đã tỏ ra hiệu quả trong
+                              việc ngăn những con chim bay vào động cơ máy bay, một nỗi lo tai nạn rình rập phổ biến trong
+                              ngành hàng không.<br>
+                              Ở Amsterdam, thủ đô Hà Lan, những con lợn gần đây đã được sử dụng để hạn chế các loài chim
+                              bay gần khu vực sân bay. Và không chỉ lợn, khoảng 20 động vật chuyên được nuôi trong các
+                              trang trại đã được sử dụng để đuổi các loài chim lớn trong khu vực xung quanh Sân bay Quốc
+                              tế Schiphol ở Amsterdam.
+                            </div>
+                          </div> -->
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/2/5215-16384164336191422505921.jpg" class="d-block w-100 rounded-3" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Liên Hợp Quốc: Hơn một phần ba dân số thế giới chưa bao giờ sử dụng internet</h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 16 ngày trước ) </h7>
+                                            <p class="text-muted overflow-auto">Gần 3 tỷ người, hay 37% dân số toàn cầu, chưa bao giờ trực tuyến bất chấp đại dịch Covid-19 đang khiến mọi người sử dụng internet ngày càng nhiều hơn.<br> Liên minh Viễn thông Quốc tế của LHQ (ITU) ước tính
+                                                rằng 96% trong số 2,9 tỷ người không truy cập web sống ở các nước đang phát triển. Cơ quan này cho biết số lượng ước tính người dùng trực tuyến đã tăng từ 4,1 tỷ người vào năm 2019 lên 4,9 tỷ người trong
+                                                năm nay, một phần do "sự thúc đẩy kết nối của đại dịch Covid-19". Nhưng, ngay cả trong số những người dùng internet đó, hàng trăm triệu người có thể chỉ truy cập mạng không thường xuyên, sử dụng các thiết
+                                                bị dùng chung hoặc đối mặt với tốc độ kết nối luôn cản trở việc sử dụng internet của họ.</p>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2021/7/21/947db00a-1f34-4c16-87ba-ffd8c12c0bbb-16268057564942035842133.jpeg" class="d-block w-100 rounded-3" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                                <p></p>
+                                            </div>
+                                            <h4>Kinh phí dành cho series The Last of Us của HBO có thể sẽ đắt đỏ hơn cả Game of Thrones</h4>
+                                            <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 5 tháng trước ) </h7>
+                                            <p class="text-muted">Tác phẩm chuyển thể từ video game với sự góp mặt của ngôi sao Pedro Pascal hiện đang trong quá trình quay, và theo nhiều nguồn tin là khiến HBO tiêu tốn đến hơn 10 triệu USD cho mỗi tập.<br> Phim truyền hình
+                                                ngày nay không còn như xưa nữa. Chúng giống như những bộ phim bom tấn nhưng được chia ra nhiều tập nhỏ. Cứ xem loạt phim Star Wars hay các series Marvel đang hot trên Disney , series Star Trek trên Paramount
+                                                , hay bất kỳ tác phẩm truyền hình hoành tráng này trên Netflix, Hulu và Amazon, bạn sẽ thấy ngay rằng những ngày tháng mà phim truyền hình bị xem là "chiếu dưới" của phim chiếu rạp đã chấm hết. Và tiêu chuẩn
+                                                đối với phim truyền hình cũng ngày một cao hơn, thậm chí ngay tại nơi mà xu thế này bắt đầu: HBO.</p>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptionsTwo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptionsTwo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2020/3/20/photo-1-15847097408141468142800.jpeg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="Netflix">
+                                <p class="">Netflix sẽ giảm chất lượng stream tại châu Âu để tránh nghẽn mạng<span class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước ) </span></p>
+                                <ul>
+                                    <li class="opacity-75">Trong bối cảnh đại dịch virus corona đang bùng phát trên toàn châu Âu, nhiều người đã bị buộc phải ở nhà, hạn chế ra đường hoặc đến nơi làm việc.</li>
+                                </ul>
+                                <img class="rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2021/9/25/4fa62133-98d9-461c-a427-be98c2524da7-1632502953432501805147.jpeg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="NFT">
+                                <p class="">NFT: Trò may rủi của những triệu phú “hụt”<span class="fs-6 fw-lighter opacity-50">(
+                        Internet ~ 3 tháng trước ) </span></p>
+                                <ul>
+                                    <li class="opacity-75">
+                                        Là đồng sáng lập của một website chuyên theo dõi những bộ sưu tập số, Gauthier Zuppinger đã thấy gần như mọi thứ.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="bg-danger">
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/8/24/1629593309pressatv1-1629794077885812371953.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">meme hot</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Cụ bà 101 tuổi ném tôm hùm trở thành meme hot trên mạng xã hội</h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 4 tháng trước ) </h7>
+                                <p class="text-muted">Đối với một số người dùng mạng xã hội thì bức ảnh chụp cụ bà 101 tuổi Virginia Oliver đang ném con tôm hùm qua đầu trông có vẻ rất buồn cười.
+                                    <br>Ở tuổi 78, ông Max Oliver đã là một thủy thủ lão luyện. Thế nhưng, đối với người đồng hành trên chiếc thuyền đánh bắt tôm hùm thì ông Max chỉ là một đứa trẻ. Vâng, các bạn không lầm đâu, "một đứa trẻ" theo đúng
+                                    nghĩa đen bởi người "cùng hội cùng thuyền" kia chính là mẹ của ông.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/139269124445442048/2021/8/9/1627871009pressatv1-16284760201401721238523.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">The Terminator (1984)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Ảnh hậu trường hiếm của một trong những bộ phim nổi tiếng nhất mọi thời đại: Kẻ Hủy Diệt (1984)
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 4 tháng trước ) </h7>
+                                <p class="text-muted">Trong năm 2008, bộ phim Kẻ Hủy Diệt 1984 đã được lựa chọn bởi Thư viện Quốc hội để bảo quản tại Viện lưu trữ phim quốc gia Mỹ.
+                                    <br>Mới đây trên mạng internet đã xuất hiện những bức ảnh hậu trường chụp nam diễn viên Arnold Schwarzenegger trong quá trình quay phim Kẻ Hủy Diệt (The Terminator) năm 1984. Bộ phim kinh dị về thế giới tương lai của
+                                    đạo diễn James Cameron đã gây được tiếng vang lớn, và đưa tên tuổi của nam diễn viên Arnold Schwarzenegger lên thành một trong những anh hùng hành động vĩ đại nhất của những năm 1980 và cả những năm sau đó. Mời các
+                                    bạn cùng xem một số hình ảnh hậu trường được chọn lọc của bộ phim này.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/800/139269124445442048/2020/12/13/photo1607846428221-16078464285775935828.jpeg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Photoshop</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Nhà phát triển Photoshop nói rằng ảnh chụp là thứ lỗi thời
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 1 năm trước ) </h7>
+                                <p class="text-muted">Adobe, công ty phần mềm Mỹ đứng sau phần mềm Photoshop trứ danh, nói rằng các sản phẩm của họ nay có thể tạo ra những hình ảnh tốt hơn cả ảnh chụp truyền thống
+                                    <br>"Ben và Jerry đã phát hiện ra điều mà nhiều công ty đang tìm kiếm; rằng hình ảnh dựng 3D hiện nay đã đạt đến mức độ không thể phân biệt được với ảnh chụp truyền thống, và chúng thậm chí còn hiệu quả hơn nhiều và
+                                    tốn ít chi phí để tạo ra hơn" - Scott Belsky, giám đốc sản phẩm của Adobe, phát biểu trong một cuộc họp cổ đông vào ngày 10/12 vừa qua. Bình luận của anh ám chỉ việc công ty sản xuất kem Mỹ Ben và Jerry sử dụng các
+                                    sản phẩm 3D và hoạt hoạ của Adobe để tạo ra một chiến dịch quảng cáo về giao hàng giữa thời kỳ dịch bệnh.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2020/8/11/15ea0d44-f5be-4b81-ad3d-f1dd0f5f05ce-1597080740534376388107.jpeg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">YouTube</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">Gần 90% tổng số video đăng tải lên YouTube sẽ không bao giờ đạt 1.000 lượt xem
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 1 năm trước ) </h7>
+                                <p class="text-muted">Dù rằng YouTube vẫn là website chia sẻ video trực tuyến lớn nhất thế giới xét về số lượng video, một bản tin mới đây đã tiết lộ rằng gần 90% số video đăng tải lên dịch vụ này có lượt xem thấp hơn 1.000.
+                                    <br>Đối với một website có 5 tỷ lượt xem video mỗi ngày tính trên toàn bộ nền tảng, quả là sốc khi biết rằng số lượng video sẽ không bao giờ đạt cột mốc tối thiểu 1.000 lượt xem lại cao đến vậy. Dữ liệu này được công
+                                    bố bởi Pex, trong bản phân tích của họ về nền tảng chia sẻ video trong năm 2019.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2020/4/24/944787673170426592740675413066996772241408n-15877202670761684708991.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Netflix</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Mánh khoé sử dụng Netflix giá rẻ được nhiều người Việt lợi dụng bị chặn đứng
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước ) </h7>
+                                <p class="text-muted">Thời gian gần đây, đã có một số người Việt chuyển tài khoản Netflix của mình sang Thổ Nhĩ Kỳ để có được mức giá rẻ hơn. Tuy nhiên trong một vài ngày trở lại đây, Netflix đã bắt đầu càn quét và chặn những tài khoản này.
+                                    <br>Thời gian gần đây, dịch vụ xem phim trực tuyến Netflix đã có những biện pháp nhằm ngăn chặn tình trạng gian lận tài khoản ở Việt Nam. Hồi đầu tháng Hai, Netflix đã ngừng chương trình dùng thử miễn phí (trial) tại
+                                    Việt Nam, đồng nghĩa với việc người dùng sẽ buộc phải trả phí ngay từ đầu nếu như muốn sử dụng dịch vụ này. Đây được coi là đòn đáp trả của Netflix trước sự nở rộ của dịch vụ mua bán tài khoản Netflix giá rẻ (với giá
+                                    chỉ khoảng 20-50.000 đồng/tháng) thông qua việc lợi dụng chính sách dùng thử.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2020/8/2/photo-1-15963228925981665122766.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">game online</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Vì sao game online thu phí không còn phổ biến ở thập kỷ này?
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 1 năm trước ) </h7>
+                                <p class="text-muted">Ngày nay, chỉ có rất ít game trực tuyến nhiều người chơi (MMO) giữ lại mô hình thu phí bắt buộc.
+                                    <br>Vào buổi bình minh của game trực tuyến nhiều người chơi (massively multiplayer online games - MMO), các nhà phát triển phương Tây đã xây dựng một mô hình bán game, thu phí theo tháng (subscription), bán các bản
+                                    mở rộng để duy trì một sản phẩm game online qua hàng chục năm. Đây được xem là mô hình chuẩn mà thế giới học theo, cho đến khi một vài web game miễn phí (free-to-play hoặc freemium) manh nha xuất hiện như Neopets hay
+                                    RuneSpace. Dù vậy, phải đến khi Nexon phát hành MapleStory và chứng kiến một cuộc bùng nổ số lượng người đăng ký, một cuộc cách mạng game miễn phí mới diễn ra.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border border-5">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="hovereffect">
+                                        <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/2019/9/11/apple-tv-15681490700731414062460.jpg" alt="">
+                                        <div class="overlay">
+                                            <h2></h2>
+                                            <a class="info rounded bg-primary bg-opacity-25" href="#">Apple</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="shadow p-1 rounded">
+                                    Chỉ bằng một câu nói thôi, Apple đã trở thành đối thủ đáng gờm của Netflix, Disney, Amazon và Google...
+                                </h4>
+                                <h7 class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước ) </h7>
+                                <p class="text-muted">Trước ngày hôm nay, ai dám nghĩ Apple lại quyết tâm theo đuổi lĩnh vực streaming video đến vậy.
+                                    <br>Cho đến trước ngày 10/9, nhiều người vẫn nghĩ rằng dịch vụ stream video TV chỉ là một "thú vui" chứ không phải là một mảng kinh doanh thực sự nghiêm túc của Apple. Xét cho cùng, Apple vẫn là một công ty phần cứng,
+                                    vẫn có quá nửa doanh thu đến từ iPhone. Mảng dịch vụ của Táo đến nay cũng không có điểm vượt trội nào so với đối thủ cạnh tranh: Apple Pay sau khi ra mắt rầm rộ nay đã gần như biến mất khỏi mặt báo. Apple Card thường
+                                    xuyên bị đem ra làm trò đùa. Apple News chẳng mấy ai nhắc tới. Apple Music tuy là dịch vụ phát nhạc đứng thứ 2 thế giới nhưng cũng không vượt mặt được Spotify về giá hay tính năng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-danger">
+                    <h4 class="text-danger text-center">Có thể bạn chưa biết</h4>
+                    <div class="accordion" id="accordionExample2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Amazon
+                    </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/660/2019/8/23/1566324039276-2-1566568888407339843934.jpeg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Amazon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Khói từ đám cháy rừng Amazon có thể thấy được từ trên không gian</strong> Rừng Amazon đã cháy hàng tuần qua. Khói từ đám cháy này đã được phát hiện bởi NASA và khiến thành phố Sao Paulo chìm trong bóng tối hôm
+                                    thứ 2 vừa qua.<br> Giữa sáng thứ Hai vừa qua, bầu trời phía trên thành phố Sao Paulo, Brazil, đã chuyển sang tối mịt. Thành phố này, cùng với nhiều phần khác của bang Mato Grosso và Parana của Brazil, bị bao phủ bởi
+                                    làn khói dày đặc từ ngọn lửa dữ dội đang quần thảo trong rừng Amazon. Đầu tháng này, Amazonas (bang lớn nhất của Brazil) đã tuyên bố tình trạng khẩn cấp vì số lượng các vụ cháy rừng ngày càng gia tăng. Mùa cháy ở Amazon
+                                    chỉ mới bắt đầu - mùa này kéo dài từ tháng 8 đến tháng 10, với đỉnh điểm là giữa tháng 9 - thế nhưng khói từ vụ cháy lần này đã quá khủng khiếp đến mức có thể thấy được từ trên không gian.
+                                    <span class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Google
+                    </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="data:image/jpeg;base64,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"
+                                                alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Google</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Google công bố bản đồ độ phân giải cao lớn nhất từng có về hoạt động của não bộ.</strong> Các nhà khoa học đến từ Google và Janelia Research Campus ở Virgina vừa cho xuất bản một tấm bản đồ độ phân giải cao
+                                    về hoạt động của não bộ có kích thước lớn nhất từ trước đến nay trên bất kỳ loài sinh vật nào, trong đó có một mô hình 3D thể hiện 20 triệu khớp thần kinh đang kết nối với khoảng 25.000 nơ-ron trong bộ não của một con
+                                    ruồi giấm. Mô hình này là một cột mốc đáng nhớ trong lĩnh vực kết nối học (connectomics) - lĩnh vực sử dụng những kỹ thuật dựng hình chi tiết để ánh xạ đường đi vật lý của bộ não. Tấm bản đồ này còn được gọi là một
+                                    "connectome", bao phủ gần 1/3 của bộ não ruồi giấm. Cho đến ngày nay, chỉ có một sinh vật duy nhất - một con giun đũa C. elegans - đã được ánh xạ hoàn chỉnh bộ não theo cách này.
+                                    <span class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      iPhone
+                    </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/17/ab200c35-e512-4b2f-9b22-8893af2a8624-16397266708092100369394.png" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">iPhone</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Đây là tất cả thông tin về chiếc iPhone có thể sẽ khiến 1,4 tỷ người dùng Android chuyển sang iOS.</strong> Theo các chuyên gia phân tích nhận định, chiếc iPhone SE 5G (2022) sẽ có thể khiến cho 1,4 tỷ người
+                                    dùng Android muốn chuyển sang iOS. Chiếc iPhone 5G giá rẻ của Apple dự kiến sẽ được ra mắt vào đầu năm 2022. Và đây là tất cả những thông tin về chiếc iPhone này mà chúng ta đã được biết.
+                                    <span class="fs-6 fw-lighter opacity-50">( Media ~ 2 năm trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Discover
+                    </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/15/mjtm3hez3hdtp4bsyadjgj-970-80-16395631137921746145786.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Sun</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Lần đầu tiên trong lịch sử loài người, chúng ta đã ‘chạm vào Mặt trời’.</strong> Tàu thăm dò mặt trời Parker (Paker Solar Probe) lần đầu tiên bay qua lớp ngoài cùng của Mặt trời, được gọi là vành nhật hoa, vào
+                                    ngày 28/4/2021, để thu thập các hạt và đo từ trường của Mặt trời, theo NASA. Và thông báo này vừa được đăng trên tờ Physical Review Letters vào ngày 14/12 vừa qua.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 3 ngày trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Animal
+                    </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <div class="">
+                                        <div class="hovereffect">
+                                            <img class="img-responsive rounded-3" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/11/29/4d06893685d0631f735de5c964143b73-16382012255931535488940.jpg" alt="">
+                                            <div class="overlay">
+                                                <h2></h2>
+                                                <a class="info rounded bg-primary bg-opacity-25" href="#">Cat</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>8 loài vật đang đứng trước nguy cơ tuyệt chủng vì... những con mèo.</strong> Mèo hoang có thể là loài tấn công những sinh vật khác nhiều nhất nhưng những con mèo nhà đi lang thang cũng gây hại cho động vật hoang
+                                    dã.
+                                    <br> Đã hàng ngàn năm trôi qua kể từ khi con người thuần hóa loài mèo để nuôi, nhưng có vẻ như khác với chó, chúng ta vẫn chưa kiểm soát được nhiều đối vối loài vật này và biệt danh “hoàng thượng” đã chứng tỏ chúng
+                                    khó hiểu như thế nào. Một số người chăm sóc và theo dõi mèo rất kỹ, một số thì bỏ mặc cho chúng đi đâu tùy ý. Theo thống kê tại Mỹ, một nửa số mèo nhà thường sinh sống, đi lại tự do bên ngoài và theo Cơ quan quản lý
+                                    Cá và Động vật Hoang dã Mỹ, tính trên toàn thế giới, loài mèo đã khiến ít nhất 33 loài bị tuyệt chủng.
+                                    <span class="fs-6 fw-lighter opacity-50">( Internet ~ 13 giờ trước )</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class=" text-black p-3 my-3 row text-center" style="background-color: #e3f2fd;">
+            <h1 class="h1fter">Tech</h1>
+            <hr>
+            <div class="col ">
+                <ul class="listMember">Thực hiện bởi - Nhóm KTPM_K45:
+                    <li>Nguyễn Nhựt Thanh</li>
+                    <li>Phan Trung Thành</li>
+                    <li>Lê Quang Phú</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Email: techK45@gmail.com</p>
+                <p>&copy Copyright 2021 - Tech</p>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Login-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Sign In</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" onsubmit="return frmDangNhap(this)">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="mail" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" name="pws" required minlength="8" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>If you don't have an account, please <a href="./register.html" target="_blank" data-bs-toggle="modal" data-bs-target="#modelRegister">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal SaveNews-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Save List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="clear-cart btn btn-danger">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
