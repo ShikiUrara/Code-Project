@@ -1,14 +1,14 @@
 * {
   margin: 0; padding: 0; box-sizing: border-box }
-img {
+body#internet img {
   width: 100%;
 }
-main h4:hover, main p:hover {
+body#internet h4:hover, body#internet main p:hover {
   color: #dc3545;
   text-decoration: underline lightblue;
   opacity: 0.8;
 }
-h4, p, img {
+body#internet h4, body#internet p, body#internet img {
   margin: 10px 0;
 }
 
