@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--JS-->
+
+    <!--jQuery-->
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!--Bunble-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./trang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tamma">
+    <!-- card-list -->
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"></script>
+    <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
+    <script src="./backTop.js"></script>
+    <script src="./code.js"></script>
+    <title>TIN ICT</title>
+    <style>
+        html {
+            text-align: justify !important;
+        }
+        </style>
+</head>
+
+<body>
+    <button type="button" class="btn btn-danger btn-floating btn-sm " id="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+</button>
+    <header>
+        <nav id="nav" class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand animate__animated  animate__wobble" href="Tech-trangchu.html">
+                    Tech
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav menu ">
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower " aria-current="page" href="Tech-trangchu.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                          </svg>HOME</a>
+                        <a class="nav-link   animate__animated  animate__lightSpeedInLeft animate__slower delay-M" href="./mobile.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-phone-vibrate-fill" viewBox="0 0 16 16">
+                            <path d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z"/>
+                          </svg>MOBILE</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower animate__delay-1s" href="./ICT.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                          </svg>TIN ICT</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower delay-I" href="./internet.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>INTERNET</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+                      </svg> SaveNews(<span class="total-count"></span>)
+                  </button>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower " data-bs-toggle="modal" data-bs-target="#modelId">Login</button>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower delay-M"><a target="_blank" href="./register.html">Register</a></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="full-width">
+
+            <div class='cf'>
+                <div class="Switch cardicon">
+                    <div class="Toggle"></div>
+                    <span class="on"><i class="fa fa-th"></i></span>
+                    <span class="off"><i class="fa fa-th-list"></i></span>
+                </div>
+            </div>
+            <!-- card 1 -->
+            <div class="col-md-3">
+
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/thumb_w/800/139269124445442048/2021/11/9/photo1636426541860-1636426541960187896190.jpg" alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>Chuyện gì xảy ra nếu Bill Gates chưa bán số cổ phiếu Microsoft của mình?</p>
+                                </a>
+                                <p class="review">Nếu không bán đi số cổ phiếu Microsoft của mình, Bill Gates có thể giàu hơn cả Elon Musk và Jeff Bezos cộng lại.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+                <!-- card 2 -->
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/139269124445442048/2021/12/17/photo-1-16397388620001450149003-1639754994050-16397549941962068922476.jpg" alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>Giá trị thương hiệu Viettel 6 năm liên tiếp xếp hạng số 1 Việt Nam</p>
+                                </a>
+                                <p class="review">Viettel tiếp tục giữ vị trí số 1 trong bảng xếp hạng Top 50 thương hiệu có giá trị nhất Việt Nam (Vietnam 50) năm 2021 với định giá 6,061 tỷ USD.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+                <!-- card 3 -->
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/139269124445442048/2021/12/17/photo1639724419334-16397244194401460984779-1639729393213-16397293934552082016906.jpg" alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>HOT: Ông lớn bán lẻ Thế Giới Di Động bắt tay đại gia cầm đồ F88, cung cấp dịch vụ cho vay tiền mặt, giải ngân chỉ trong 15 phút</p>
+                                </a>
+                                <p class="review">Thế Giới Di Động cho biết thời gian giải ngân nhanh chóng chỉ trong 15 phút. Gốc, chi phí vay trả đều trong vòng 12 tháng.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+                <!-- card 4 -->
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/17/httpsbucketeer-e05bbc84-baa3-437e-9518-adb32be77984s3amazonawscompublicimages7f457707-e4d9-4eba-852b-1201885e81d0976x549-16397108245881200890410.jpeg"
+                                        alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>Diễn đàn Reddit chuẩn bị IPO, mức định giá hiện tại đã hơn 10 tỷ USD</p>
+                                </a>
+                                <p class="review">Reddit cho biết họ đã nộp hồ sơ S-1 lên Ủy ban Chứng khoán và Giao dịch Hoa Kỳ, để chuẩn bị IPO trở thành một công ty đại chúng.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+                <!-- card 5 -->
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/139269124445442048/2021/12/17/avatar1639643215467-163964321626474657973-1639704171959-1639704173079114955354.jpg" alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>Intel đầu tư nhà máy 7 tỷ USD ở quốc gia Đông Nam Á này</p>
+                                </a>
+                                <p class="review">CEO Intel Pat Gelsinger cho biết công ty sẽ đầu tư hơn 7 tỷ USD để xây dựng một nhà máy đóng gói và thử nghiệm chip mới tại Malaysia đồng thời mở rộng sản xuất tại quốc gia này sau cuộc khủng hoảng chip toàn cầu.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+                <!-- card 6 -->
+                <div class="card-view">
+                    <div class="container2">
+                        <a href='#'>
+                            <div class="tag_name red">tin ict / hot</div>
+                        </a>
+                        <div class="company">
+                            <div class="c_logo">
+                                <a href="#" class="bg"><img width="100%" src="https://genk.mediacdn.vn/139269124445442048/2021/12/17/hang-loat-cong-ty-trung-quoc-vao-danh-sach-den-cua-my-1639715599299-1639715601476575318102.jpg" alt="Linkedin"></a>
+                            </div>
+
+                            <div class="c_content">
+                                <a href='#' class="title">
+                                    <p>DJI cùng hàng loạt công ty Trung Quốc vào danh sách đen của Mỹ</p>
+                                </a>
+                                <p class="review">Chính quyền Tổng thống Mỹ Joe Biden đưa hàng loạt doanh nghiệp và viện nghiên cứu Trung Quốc vào danh sách cấm tiếp cận công nghệ và đầu tư của Mỹ.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end card -->
+
+
+            </div>
+            <!-- end col-md-3 -->
+        </div>
+        <div id="end" class="row border">
+            <div class="col-sm-8">
+                <div class="badge bg-danger text-wrap p-2" style="margin-top: 10px;">
+                    NEW
+                </div>
+                <div class="container my-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-17">
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active " data-bs-interval="10000">
+                                        <div class="row">
+
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/18/photo-1-1635930256843270342391-16397952065641782025927.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">Vừa bị hacker tung dữ liệu nội bộ, CEO BKAV Nguyễn Tử Quảng vẫn mạnh miệng tuyên bố...</h5>
+                                                        <p class="cardB-text">CEO BKAV Nguyễn Tử Quảng tự tin về khả năng bảo mật của Bphone mới, thậm chí sẵn sàng so sánh với Apple hay Samsung.</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/14/photo-1-16394609147771792461616-1639466790546-163946679095011428108.jpeg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">Nhà máy pin 4.000 tỷ của Vingroup quy mô ra sao với những 'siêu nhà máy' của các...</h5>
+                                                        <p class="cardB-text">Tesla, Toyota, Volkswagen đều đã công bố những dự án xây các "siêu nhà máy" sản xuất pin với vốn đầu tư hàng tỷ USD, phục vụ tham vọng phổ cập ô tô điện trong tương lai.</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/14/photo-1-1639456787232980893730-1639487098151-1639487098366921867495.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">VNPT là đơn vị đầu tiên tích hợp thanh toán bằng Mobile Money trên Cổng Dịch vụ...</h5>
+                                                        <p class="cardB-text">Ngày 01/12 vừa qua, Tập đoàn VNPT trở thành đơn vị trung gian thanh toán đầu tiên bằng Mobile Money</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/14/screen-shot-2021-12-14-at-210103-16394904742921079975914.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">Lấy lỗi làm lời: Microsoft bán poster “Vòng tròn đỏ tử thần” từng ám ảnh Xbox 360</h5>
+                                                        <p class="cardB-text">“Vòng tròn đỏ tử thần”, hay “Red Ring of Death”, là thứ từng khiến game thủ Xbox 360 phải khiếp sợ.</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/14/l1280343-16394866156641557837202.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">Cận cảnh Wacom Cintiq Pro 16: Thiết kế cao cấp, nhiều tính năng dành riêng cho dân đồ...</h5>
+                                                        <p class="cardB-text">Wacom Cintiq Pro 16 được đánh giá là một trong những bảng vẽ điện tử cao cấp, hứa hẹn sẽ giúp các nhà sáng tạo nội dung số nâng cao hiệu suất công việc.</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card ">
+                                                    <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/15/photo-1-1639554223441733943725-1639562852433-16395628525471322542483.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="cardB-title">Huawei cùng tổ chức giáo dục Singapore tạo cơ hội cho sinh viên công nghệ</h5>
+                                                        <p class="cardB-text">Tập đoàn công nghệ thông tin và truyền thông (ICT) Huawei International đã ký Biên bản Ghi nhớ (MOU) với Trung tâm Phân tích Kinh doanh (BAC)</p>
+                                                        <a href="#" class="primary read">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="badge bg-danger text-wrap p-2" style="margin-top: 10px;">
+                    POPULAR
+                </div>
+                <div class="alltime">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <ul class="timeline">
+                                <li>
+                                    <a href="#">Tưởng đã hồi sinh sau vực thẳm WeWork, Masayoshi Son vừa rơi xuống vực thẳm sâu</a>
+                                    <p>Vision Fund của Masayoshi Son vừa lập kỷ lục thua lỗ chưa từng có.</p>
+                                </li>
+                                <li>
+                                    <a href="#">Huawei sẽ đầu tư 50 triệu USD trong 5 năm tới để phát triển 500.000 nhân tài</a>
+                                    <p>Nhu cầu về các tài năng ICT trẻ ở khu vực ASEAN là rất lớn, đặc biệt là trong bối cảnh đại dịch toàn cầu khiến chúng ta phụ thuộc nhiều hơn nền tảng kỹ thuật số. </p>
+                                </li>
+                                <li>
+                                    <a href="#">Elon Musk đạt cột mốc mới: Tổng tài sản bằng Bill Gates và Warren Buffett cộng lại</a>
+                                    <p>Elon Musk quá đỉnh: Tài sản bằng 2 tiền bối Bill Gates và Warren Buffett cộng lại.</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+    <footer>
+        <div class=" text-black p-3 my-3 row text-center" style="background-color: #e3f2fd;">
+            <h1 class="h1fter">Tech</h1>
+            <hr>
+            <div class="col ">
+                <ul class="listMember">Thực hiện bởi - Nhóm KTPM_K45:
+                    <li>Nguyễn Nhựt Thanh</li>
+                    <li>Phan Trung Thành</li>
+                    <li>Lê Quang Phú</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Email: techK45@gmail.com</p>
+                <p>&copy Copyright 2021 - Tech</p>
+                <p>Tham khảo nội dung từ trang <a href="https://genk.vn" class="text-danger text-decoration-none">genk.vn</a> & <a href="https://tinhte.vn/" class="text-danger text-decoration-none">tinhte.vn</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Login-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Sign In</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" onsubmit="return frmDangNhap(this)">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="mail" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" name="pws" required minlength="8" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>If you don't have an account, please <a href="./register.html" data-bs-toggle="modal" data-bs-target="#modelRegister">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal SaveNews-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Save List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="clear-cart btn btn-danger">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- card - list -->
+<script>
+    $(document).ready(function() {
+        var $container = $(".col-md-3");
+        $container.imagesLoaded(function() {
+            $container.masonry({
+                itemSelector: ".card-view",
+                columnWidth: 302
+            });
+        });
+
+        $(function() {
+            $(".Switch").click(function() {
+                $(this).toggleClass("list").toggleClass("cardicon");
+                // check current view mode: 'list' or 'card'
+                if ($(this).hasClass("list")) {
+                    console.log("List view");
+                    $(".card-view").attr("class", "list-view");
+                    $(".list-view").removeAttr("style");
+                    $('#end').css({
+                        'margin-top': '350px'
+                    })
+                } else {
+                    console.log("Card view");
+                    $(".list-view").attr("class", "card-view");
+                    var container = document.querySelector(".col-md-3");
+                    // Reload masonry again
+                    var msnry = new Masonry(container, {
+                        itemSelector: ".card-view",
+                        columnWidth: 302
+                    });
+                    $('#end').css({
+                        'margin-top': '0'
+                    })
+                }
+            });
+
+
+        });
+    })
+</script>
+
+
+</html>

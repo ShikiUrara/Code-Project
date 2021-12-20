@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link href="./favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--JS-->
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!--Bunble-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
+    <script src="./slider.js"></script>
+    <script type="module">
+        import { Toast } from 'bootstrap.esm.min.js'; Array.from(document.querySelectorAll('.toast')) .forEach(toastNode => new Toast(toastNode))
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./trang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./code.js"></script>
+    <script src="./backTop.js"></script>
+    <script src="./saveNews.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title> Mobile</title>
+    <style>
+        html {
+            text-align: justify !important;
+        }
+        </style>
+
+
+</head>
+
+<body>
+    <button type="button" class="btn btn-danger btn-floating btn-sm " id="btn-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+      </svg>
+</button>
+    <header>
+        <nav id="nav" class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand animate__animated  animate__wobble" href="Tech-trangchu.html">
+                Tech
+            </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav menu ">
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower " aria-current="page" href="Tech-trangchu.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                      </svg>HOME</a>
+                        <a class="nav-link   animate__animated  animate__lightSpeedInLeft animate__slower delay-M" href="./mobile.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-phone-vibrate-fill" viewBox="0 0 16 16">
+                        <path d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z"/>
+                      </svg>MOBILE</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower animate__delay-1s" href="./ICT.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                      </svg>TIN ICT</a>
+                        <a class="nav-link  animate__animated  animate__lightSpeedInLeft animate__slower delay-I" href="./internet.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                      </svg>INTERNET</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
+                    <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+                  </svg> SaveNews(<span class="total-count"></span>)
+              </button>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower " data-bs-toggle="modal" data-bs-target="#modelId">Login</button>
+                <button type="button" class="btn btn-outline-info animate__animated animate__bounceInRight animate__slower delay-M"><a target="_blank" href="./register.html">Register</a></button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-8" style="display: block;">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active ">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <img src="https://cdn.tgdd.vn/Files/2021/12/10/1403613/oppo-find-n-5g-2_1280x720-800-resize.jpg" class="d-block w-100 border border-light rounded" alt="...">
+                                        <div class="carousel-caption d-none d-md-block tieude">
+                                            <h5 class="bg-dark bg-opacity-50 link">OPPO Find N cháy hàng tại Trung Quốc sau vài giây mở bán</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <img src="https://photo.techrum.vn/images/2021/12/18/2021-12-18_1114088c16ac87cf55b10e.jpg" class="d-block w-100 border border-light rounded" alt="...">
+                                        <div class="carousel-caption d-none d-md-block tieude">
+                                            <h5 class="bg-dark bg-opacity-50 link">MediaTek Dimensity 9000 vs Qualcomm Snapdragon 8 Gen 1</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+                                <div class="carousel-item">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <img src="https://photo.techrum.vn/images/2021/11/22/2021-11-22_164750695d8a0942b4350c.png" class="d-block w-100 border border-light rounded" alt="...">
+                                        <div class="carousel-caption d-none d-md-block tieude">
+                                            <h5 class="bg-dark bg-opacity-50 link">MediaTek tuyên bố rằng, Dimensity 9000 có hiệu năng "ngang ngửa" A15 Bionic và mạnh hơn Snapdragon 888 tới 35%</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="text-decoration-none text-black">
+                            <img src="https://photo2.tinhte.vn/data/attachment-files/2021/12/5777923_5573801_review_oppo_find_x3_pro_tinhte-9.jpg">
+                            <h5 class="link">Flagship mới của Oppo sẽ dùng chip MediaTek thay cho Snapdragon</h5>
+
+                            <p style="height: 100px; overflow: hidden !important; text-overflow: ellipsis;">
+                                Mình đã mượn được 10 chiếc điện thoại gập OPPO Find N mới ra mắt chiều qua đến qua CN này. Mời anh em đến trải nghiệm và trao đổi về nó. Ngoài những chiếc điện thoại đó mình còn xin được cả quà của OPPO nữa. Anh em đăng ký theo form bên dưới nhé. OPPO
+                                Find N được ra mắt chiều hôm qua, là chiếc điện thoại gập đầu tiên của OPPO, không có nếp gập và kích thước rất nhỏ gọn, xinh xắn. Mình chắc anh em yêu thích công nghệ hay trải nghiệm smartphone mới sẽ thích OPPO Find N.
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="row swiper mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="col-4 swiper-slide">
+                            <img src="https://photo.techrum.vn/images/2021/12/11/tab-a8-cvr90f1c80d33bab16e.jpg">
+                            <p class="link">Lộ ảnh sản phẩm của Galaxy Tab A mới sắp ra mắt </p>
+                        </div>
+                        <div class="col-4 swiper-slide">
+                            <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/16/001rbnxygy1gxfadt3cfyj61hc0u07ee02-1639660281627594900575.jpg">
+                            <p class="link">Huawei P50 Pocket lộ diện: Thiết kế gập như Galaxy Z Flip3</p>
+                        </div>
+                        <div class="col-4 swiper-slide">
+                            <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/16/xiaomi-12-ultra-display-163966902857729836188.png">
+                            <p class="link">Xiaomi 12 Ultra trông sẽ như thế này?</p>
+                        </div>
+                        <div class="col-4 swiper-slide">
+                            <img src="https://photo2.tinhte.vn/data/attachment-files/2021/12/5779740_3.Nep_Gap.jpg">
+                            <p class="link">Nói không với nếp gấp, điện thoại màn hình gập toàn diện nhất</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    loop: true,
+                    spaceBetween: 20,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    centeredSlides: true,
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1020: {
+                            slidesPerView: 3,
+
+                        },
+                    },
+                });
+            </script>
+
+            <div class="col-4 xem_nhanh">
+                <div class="content">
+                    <div class="content__container">
+                        <p class="content__container__text">
+                            Xem
+                        </p>
+
+                        <ul class="content__container__list">
+                            <li class="content__container__list__item">Nhanh</li>
+                            <li class="content__container__list__item">Ngay</li>
+                            <li class="content__container__list__item">Liền</li>
+                            <li class="content__container__list__item">Luôn</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="text-decoration-none text-black">
+                    <div class=" row">
+                        <img src="https://photo2.tinhte.vn/data/attachment-files/2021/12/5778961_chip_ban_dan.jpeg" class="col-4">
+                        <div class="col-8 link">IBM & Samsung hợp tác phát triển loại chip mới có thể giúp thời lượng pin smartphone lên đến 1 tuần</div>
+                    </div>
+                </a>
+                <hr>
+                <a href="#" class="text-decoration-none text-black">
+                    <div class=" row">
+                        <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/16/galaxy-s22-live-leak-1-1639664457374-1639664457828282698001.jpg" class="col-4">
+                        <div class="col-8 link">Thiết kế Galaxy S22 series lại rò rỉ, bản Ultra có camera không lồi</div>
+                    </div>
+                </a>
+                <hr>
+                <a href="#" class="text-decoration-none text-black">
+                    <div class=" row">
+                        <img src="https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2021/12/18/photo-1-1635930256843270342391-16397952065641782025927.jpg" class="col-4">
+                        <div class="col-8 link">CEO BKAV Nguyễn Tử Quảng mạnh miệng tuyên bố: "Về bảo mật Apple hay Samsung không thể có nghề bằng BKAV"</div>
+                    </div>
+                </a>
+                <hr>
+                <a href="#" class="text-decoration-none text-black">
+                    <div class=" row">
+                        <img src="https://photo.techrum.vn/images/2021/12/16/galaxy-s21-fe-TECHRUM-cover6a1528dc7c45255a.jpg" class="col-4">
+                        <div class="col-8 link">Galaxy FE mới có phải là chiếc điện thoại mà các GenZ luôn mong muốn?</div>
+                    </div>
+                </a>
+                <hr>
+                <a href="#" class="text-decoration-none text-black">
+                    <div class=" row">
+                        <img src="https://genk.mediacdn.vn/139269124445442048/2021/12/7/photo-1638891871938-1638891872092467880469.jpeg" class="col-4">
+                        <div class="col-8 link">Galaxy Tab S8 lộ diện: Bản Ultra có thiết kế mới, dùng chip Snapdragon 8 Gen 1</div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="row">
+                <h2> Nổi bật</h2>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">Bốn điều Samsung có thể học hỏi ở điện thoại gập của OPPO, dù có một điều gần như là không thể</a>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">MediaTek giữ vị trí số 1 trong làng chip di động, nhưng vẫn thua Qualcomm ở điểm này</a>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">CEO BKAV Nguyễn Tử Quảng: "Công nghệ Bphone giúp con người trở nên nhân văn hơn"</a>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">CEO OnePlus tuyên bố OPPO Find N là chiếc smartphone màn hình gập tốt nhất trên thị trường</a>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">Đây là tất cả thông tin về chiếc iPhone có thể sẽ khiến 1,4 tỷ người dùng Android chuyển sang iOS</a>
+                <a class="col-6 titlenoibat text-decoration-none text-black link">Apple sẽ tự thiết kế chip 5G và nhiều chip khác cho iPhone, không còn phụ thuộc vào bất kỳ công ty nào khác</a>
+            </div>
+            <a href="#" class="text-decoration-none text-black">
+                <div class="row">
+                    <div class="col-3"><img src="https://photo2.tinhte.vn/data/attachment-files/2021/12/5777547_airB_2.png"> </div>
+                    <div class="col-9">
+                        <h3 class="link">Video khui hộp AirB Đẹp và Âm Thanh Hay </h3>
+                        Mình mua AirB để nghe thử thì mình là một khách hàng của Air B và mình muốn khoe với các bạn một thứ mà mình đã mua, với mình tận dụng chuyên môn của mình để tạo ra một cái cái hình và vài cái Video Clip về Air B theo tiêu chí làm đúng khả năng tư duy
+                        và hiểu biết.
+                    </div>
+                </div>
+            </a>
+            <hr>
+            <a href="#" class="text-decoration-none text-black">
+                <div class="row">
+                    <div class="col-3"><img src="https://photo2.tinhte.vn/data/attachment-files/2021/12/5779130_cover_tren_tay_nokia_X10_tinhte_21.jpeg"> </div>
+                    <div class="col-9">
+                        <h3 class="link">Nokia đã bắt đầu cập nhật Android 12 cho các thiết bị của mình, bắt đầu với Nokia X20</h3>
+                        <p>HMD Global cho biết công ty đã bắt đầu phát hành bản cập nhật Android 12 cho các thiết bị nằm trong danh sách được cập nhật của mình, trong đó chiếc X20 sẽ được cập nhật trước tiên trong ngày hôm nay. Nokia X20 là một chiếc điện
+                            thoại không quá nổi bật trong thế giới smartphone hiện tại khi nó sở hữu con chip Snapdragon 480, màn hình 6.67" 60Hz và cụm 4 camera sau. Điều hấp dẫn nhất trên chiếc điện thoại này có lẽ là lời hứa cập nhật hệ điều hành 3
+                            năm và kèm với đó là chính sách bảo hành 3 năm. Điều này có nghĩa là chiếc X20 sẽ được bảo hành cho đến Android 14...
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+            </a>
+            <a href="#" class="text-decoration-none text-black">
+                <div class="row">
+                    <div class="col-3"><img src="https://genk.mediacdn.vn/139269124445442048/2021/12/16/photo-1639629631958-1639629632793878356902.jpeg"> </div>
+                    <div class="col-9">
+                        <h3 class="link">Lễ ra mắt Bphone dòng A sẽ có sự góp mặt của NSƯT Xuân Bắc</h3>
+                        Sự xuất hiện của NSƯT Xuân Bắc hứa hẹn sẽ mang lại nhiều tiếng cười cho buổi ra mắt Bphone dòng A cũng như thu hút nhiều người quan tâm hơn.<br> Mới đây, CEO Bkav Nguyễn Tử Quảng đã lên tiếng xác nhận ngày ra mắt chính thức của
+                        Bphone dòng A. Cụ thể, sự kiện giới thiệu sản phẩm Bphone dòng A sẽ được tổ chức vào Chủ Nhật ngày 19/12 tới đây. Bphone dòng A sẽ bao gồm ba phiên bản: Bphone A40, A50 và A60 với sự khác biệt chủ yếu tới từ dung lượng bộ nhớ.
+                    </div>
+                </div>
+            </a>
+            <hr>
+            <a href="#" class="text-decoration-none text-black">
+                <div class="row">
+                    <div class="col-3"><img src="https://genk.mediacdn.vn/139269124445442048/2021/12/14/2021-12-14211858-1639492935516737946817.jpg"> </div>
+                    <div class="col-9">
+                        <h3 class="link">Tin đồn: Apple cuối cùng cũng sẽ loại bỏ tai thỏ trên iPhone 14 Pro và iPhone 14 Pro Max</h3>
+                        Phiên bản iPhone 14 Pro và iPhone 14 Pro Max ra mắt vào năm sau dự kiến sẽ sử dụng màn hình dạng đục lỗ thay thế cho màn hình tai thỏ đã tồn tại từ iPhone X đến nay.
+                    </div>
+
+                </div>
+            </a>
+    </main>
+    <footer>
+        <div class=" text-black p-3 my-3 row text-center" style="background-color: #e3f2fd;">
+            <h1 class="h1fter">Tech</h1>
+            <hr>
+            <div class="col ">
+                <ul class="listMember">Thực hiện bởi - Nhóm KTPM_K45:
+                    <li>Nguyễn Nhựt Thanh</li>
+                    <li>Phan Trung Thành</li>
+                    <li>Lê Quang Phú</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Email: techK45@gmail.com</p>
+                <p>&copy Copyright 2021 - Tech</p>
+                <p>Tham khảo nội dung từ trang <a href="https://genk.vn" class="text-danger text-decoration-none">genk.vn</a> & <a href="https://tinhte.vn/" class="text-danger text-decoration-none">tinhte.vn</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Login-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Sign In</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" onsubmit="return frmDangNhap(this)">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="mail" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" name="pws" required minlength="8" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>If you don't have an account, please <a href="./register.html" data-bs-toggle="modal" data-bs-target="#modelRegister">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal SaveNews-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Save List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="clear-cart btn btn-danger">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
