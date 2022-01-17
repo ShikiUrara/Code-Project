@@ -58,14 +58,7 @@
     </nav>
   </header>
   <main>
-    <p id="demo">One Change</p>
-    <button class="button" type="button"
-      onclick="document.getElementById('demo').style.fontSize = '35px'">Click</button>
-    <button class="button" type="button" onclick="document.getElementById('demo').style.display = 'none'">Click</button>
-    <button class="button" type="button" onclick="document.write('Reset')">Click to reset</button>
-    <button class="button" type="button" onclick="window.print()">Click to print</button>
-    <div class="owl-carousel owl-theme"></div>
-    
+
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
@@ -95,6 +88,29 @@
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
+
+    <!--Accordion-->
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    </div>
+
   </main>
   <footer>
     <div class="container">
@@ -133,7 +149,25 @@
     })
   });
 
-  // demo
+  // Accordion 
+  {
+    var acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  }
+
+  // Show slide
   var slideIndex = 0;
   showSlides();
 
@@ -165,6 +199,8 @@
       navbar.classList.remove("sticky");
     }
   }
+
+
 </script>
 
 </html>

@@ -299,3 +299,49 @@ footer a {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/* Accordion */
+@import url('https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol');
+.accordion {
+  background-color: rgba(var(--white-rgb), 0.25);
+  color: rgba(var(--white-rgb), 0.9);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 50%;
+}
+.active,
+.accordion:hover {
+  background-color: rgba(var(--white-rgb), 0.15);
+  color: rgba(var(--white-rgb), 1);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  background-color: rgba(var(--white-rgb), 0.15);
+  color: rgba(var(--white-rgb), 1);
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-top: 1px solid var(--dark);
+}
+* .panel *{
+  margin: 8px;
+}
