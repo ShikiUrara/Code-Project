@@ -1,9 +1,14 @@
+// import 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
 
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+
+// function
 public class App {
     // Java program for implementation of Selection Sort
     void sort(int arr[]) {
@@ -34,7 +39,13 @@ public class App {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
+    
+    // Phương thức cài đặt Gui 
+    private void initUI() {
+        // setTitle("Sorting");
+    }
 
+    // function main
     public static void main(String[] args) throws Exception {
         App ob = new App();
 
