@@ -50,7 +50,7 @@ public class App {
         App ob = new App();
 
         // Đọc file
-        File file = new File("Data.txt");
+        File file = new File("./Data.txt");
         Scanner scanner = new Scanner(file);
         int n, i = 0;
         n = scanner.nextInt();
@@ -69,21 +69,21 @@ public class App {
         ob.printArray(array);
 
 
-        // GUI - Giao diện đồ họa
-        // Container
-        JFrame f = new JFrame("Sorting");
-        // Xử lý bố cục 
-        f.setLayout(new FlowLayout());
-        // Tạo và thêm các thành phần
-        JLabel hello = new JLabel("Hello World");
-        JButton btPress = new JButton("Press here");
-        f.getContentPane().add(hello);
-        f.getContentPane().add(btPress);
-        // Xử lý nút đóng chương trình
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Hiển thị 
-        f.pack();
-        f.setSize(1080, 720);
-        f.setVisible(true);
+        // // GUI - Giao diện đồ họa
+        // // Container
+        // JFrame f = new JFrame("Sorting");
+        // // Xử lý bố cục 
+        // f.setLayout(new FlowLayout());
+        // // Tạo và thêm các thành phần
+        // JLabel hello = new JLabel("Hello World");
+        // JButton btPress = new JButton("Press here");
+        // f.getContentPane().add(hello);
+        // f.getContentPane().add(btPress);
+        // // Xử lý nút đóng chương trình
+        // f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // // Hiển thị 
+        // f.pack();
+        // f.setSize(1080, 720);
+        // f.setVisible(true);
     }
 }
