@@ -5,6 +5,9 @@
 package start;
 import java.io.*;
 import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+
 
 /**
  *
@@ -84,30 +87,67 @@ public class QuickSort {
 
         System.out.println();
     }
+    
+    
+    // Tao Gui
+    public static void initGui() {
+        
+        // Tao menu 
+        menu = new JMenu("Set");
+
+        
+        JFrame frame = new JFrame("Mô Phỏng Giải Thuật Sắp Xếp");
+        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1280, 720);
+        frame.setVisible(true);
+    }
+    
 
     // Driver Code
     public static void main(String[] args)
     {
         try {
-            int[] arr = { 10, 7, 8, 9, 1, 5 };
-            int n = arr.length;
-
-            quickSort(arr, 0, n - 1);
-            System.out.println("Sap xep bang Quick sort: ");
-            printArray(arr, n);
             
-            // Tao mang
+            // Tao mang va doc file
             int[] array = new int[10];
-            File file = new File("Data.txt");
+            File file = new File("C:\\Users\\time0\\OneDrive\\Desktop\\Web\\NetBeans\\Sort\\src\\main\\java\\start\\Data.txt");
             Scanner scanner = new Scanner(file);
             int length = scanner.nextInt();
 
             int i=0;
             while(scanner.hasNextInt()){
                 array[i]= scanner.nextInt();
-                System.out.println(array[i]);
+//                System.out.println(array[i]);
                 i++;
-            }   
+            }
+            System.out.print("Ket thuc mang\n");
+            
+            // Lay day so Ramdom
+            Random rd = new Random(); // creating Random object
+            int[] arrrd = new int[5];
+            for (int a = 0; a < arrrd.length; a++)
+            {
+               arrrd[a] = rd.nextInt(100); // storing random integers in an array
+               System.out.print(arrrd[a]+" "); // printing each array element
+            }
+            System.out.print("\nEnd\n");
+            int lengt=arrrd.length;
+            quickSort(arrrd, 0, (arrrd.length-1));
+            printArray(arrrd, arrrd.length);
+            
+            
+            
+            // Chay Gui
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    initGui();
+                }
+            });
+
+            
+            
+
         }
         catch(Exception e) {
             System.out.print("Loi doc file");
