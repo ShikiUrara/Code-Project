@@ -93,7 +93,7 @@ public class QuickSort {
     public static void initGui() {
         
         // Tao menu 
-        menu = new JMenu("Set");
+        JMenu menu = new JMenu("Set");
 
         
         JFrame frame = new JFrame("Mô Phỏng Giải Thuật Sắp Xếp");
