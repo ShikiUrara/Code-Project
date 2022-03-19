@@ -49,15 +49,15 @@ public class DemoSort extends javax.swing.JFrame {
         jProgressMain = new javax.swing.JProgressBar();
         jSpinnerArrLength = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelProssec = new javax.swing.JLabel();
         jButtonCreateArr = new javax.swing.JButton();
         jButtonRun = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelBestCase = new javax.swing.JLabel();
+        jLabelWorstCase = new javax.swing.JLabel();
         jMenuMain = new javax.swing.JMenuBar();
         jMenuAlgo = new javax.swing.JMenu();
-        jRadioSelection = new javax.swing.JRadioButtonMenuItem();
         jRadioBubble = new javax.swing.JRadioButtonMenuItem();
+        jRadioSelection = new javax.swing.JRadioButtonMenuItem();
         jRadioInsertion = new javax.swing.JRadioButtonMenuItem();
         jRadioHeap = new javax.swing.JRadioButtonMenuItem();
         jRadioQuick = new javax.swing.JRadioButtonMenuItem();
@@ -88,7 +88,7 @@ public class DemoSort extends javax.swing.JFrame {
             .addGap(0, 173, Short.MAX_VALUE)
         );
 
-        jLabelAlgo.setText("Hãy chọn giải thuật muốn mô phỏng ");
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nổi bọt - Bubble sort ");
 
         jSpinnerArrLength.setModel(new javax.swing.SpinnerNumberModel(5, 5, 15, 1));
         jSpinnerArrLength.setMaximumSize(new java.awt.Dimension(5, 15));
@@ -96,7 +96,7 @@ public class DemoSort extends javax.swing.JFrame {
 
         jLabel1.setText("Số lượng phần tử mảng");
 
-        jLabel2.setText("Tiến trình ");
+        jLabelProssec.setText("Tiến trình ");
 
         jButtonCreateArr.setText("Tạo mảng");
         jButtonCreateArr.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -104,32 +104,22 @@ public class DemoSort extends javax.swing.JFrame {
                 jButtonCreateArrMousePressed(evt);
             }
         });
-        jButtonCreateArr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCreateArrActionPerformed(evt);
+
+        jButtonRun.setText("Sắp xếp");
+        jButtonRun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonRunMouseClicked(evt);
             }
         });
 
-        jButtonRun.setText("Sắp xếp");
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
 
-        jLabel3.setText("Trường hợp tốt nhất");
-
-        jLabel4.setText("Trường hợp xấu nhất");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
 
         jMenuAlgo.setText("Giải Thuật");
 
-        buttonGroup.add(jRadioSelection);
-        jRadioSelection.setSelected(true);
-        jRadioSelection.setText("Sắp xếp chọn ( Selection sort )");
-        jRadioSelection.setName("Sắp xếp chọn ( Selection sort )"); // NOI18N
-        jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioSelectionMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioSelection);
-
         buttonGroup.add(jRadioBubble);
+        jRadioBubble.setSelected(true);
         jRadioBubble.setText("Sắp xếp nổi bọt - Bubble sort ");
         jRadioBubble.setName("Sắp xếp nổi bọt ( Bubble sort )"); // NOI18N
         jRadioBubble.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,6 +128,16 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
         jMenuAlgo.add(jRadioBubble);
+
+        buttonGroup.add(jRadioSelection);
+        jRadioSelection.setText("Sắp xếp chọn ( Selection sort )");
+        jRadioSelection.setName("Sắp xếp chọn ( Selection sort )"); // NOI18N
+        jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioSelectionMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioSelection);
 
         buttonGroup.add(jRadioInsertion);
         jRadioInsertion.setText("Sắp xếp chèn - Insertion sort");
@@ -153,6 +153,11 @@ public class DemoSort extends javax.swing.JFrame {
         buttonGroup.add(jRadioHeap);
         jRadioHeap.setText("Sắp xếp vun đống - Heap sort");
         jRadioHeap.setName("Sắp xếp vun đống - Heap sort"); // NOI18N
+        jRadioHeap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioHeapMousePressed(evt);
+            }
+        });
         jMenuAlgo.add(jRadioHeap);
 
         buttonGroup.add(jRadioQuick);
@@ -188,11 +193,6 @@ public class DemoSort extends javax.swing.JFrame {
                 jMenuItemReadFileMousePressed(evt);
             }
         });
-        jMenuItemReadFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemReadFileActionPerformed(evt);
-            }
-        });
         jMenuCreateArr.add(jMenuItemReadFile);
 
         jMenuMain.add(jMenuCreateArr);
@@ -208,12 +208,10 @@ public class DemoSort extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressMain, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jProgressMain, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelAlgo)
                             .addGroup(layout.createSequentialGroup()
@@ -224,17 +222,16 @@ public class DemoSort extends javax.swing.JFrame {
                                 .addComponent(jButtonCreateArr)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
+                            .addComponent(jLabelWorstCase)
+                            .addComponent(jLabelBestCase))
                         .addGap(122, 122, 122))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jButtonRun)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(334, 334, 334)
-                .addComponent(jLabel2)
+                .addComponent(jLabelProssec)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -246,7 +243,7 @@ public class DemoSort extends javax.swing.JFrame {
                         .addComponent(jLabelAlgo))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabelBestCase)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -256,13 +253,13 @@ public class DemoSort extends javax.swing.JFrame {
                             .addComponent(jButtonCreateArr))
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(jLabelWorstCase)
                         .addGap(18, 18, 18)))
                 .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonRun)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(jLabelProssec)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jProgressMain, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
@@ -274,30 +271,30 @@ public class DemoSort extends javax.swing.JFrame {
     private void jRadioSelectionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioSelectionMousePressed
         // TODO add your handling code here:
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioSelection.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n^2)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
     }//GEN-LAST:event_jRadioSelectionMousePressed
 
     private void jRadioBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioBubbleMousePressed
         // TODO add your handling code here:
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioBubble.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
     }//GEN-LAST:event_jRadioBubbleMousePressed
 
     private void jRadioQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioQuickMousePressed
         // TODO add your handling code here:
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioQuick.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
     }//GEN-LAST:event_jRadioQuickMousePressed
 
     private void jRadioInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioInsertionMousePressed
         // TODO add your handling code here:
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioInsertion.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
     }//GEN-LAST:event_jRadioInsertionMousePressed
-
-    private void jMenuItemReadFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReadFileActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemReadFileActionPerformed
-
-    private void jButtonCreateArrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateArrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCreateArrActionPerformed
 
     private void jButtonCreateArrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCreateArrMousePressed
         createArrayRandom(this);
@@ -320,11 +317,43 @@ public class DemoSort extends javax.swing.JFrame {
                 arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
                 i++;
             }
-            System.out.println(num);
+//            System.out.println(num);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItemReadFileMousePressed
+    private void jButtonRunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMouseClicked
+        if(num==0) {
+//            JLabel label = new JLabel("Chưa tạo mảng", JLabel.CENTER);
+//            label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+//            label.setLocation(180, 73);
+//            label.setSize(69, 40);
+//            jPanelMain.add(label);
+//            jPanelMain.setVisible(true);
+            
+            int i =1;
+            System.out.println("Chua tao mang");
+                            JLabel label = new JLabel("Chua tao mang", JLabel.CENTER);
+                label.setLocation(300 , 73);
+                jPanelMain.add(label);
+                label.setSize(120,30);
+                label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+            return;
+        }
+        if(jRadioBubble.isSelected()) {
+            printArray(arrValue);
+            System.out.println("Sap xep mang");
+            
+            bubbleSort(arrValue);
+            printArray(arrValue);
+        }
+    }//GEN-LAST:event_jButtonRunMouseClicked
+
+    private void jRadioHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioHeapMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
+    }//GEN-LAST:event_jRadioHeapMousePressed
 
     /**
      * @param args the command line arguments
@@ -356,13 +385,12 @@ public class DemoSort extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
 //                new DemoSort().setVisible(true);
                 DemoSort main = new DemoSort();
                 main.setVisible(true);
                 main.setLocationRelativeTo(null);
-                
-                
             }
         });
     }
@@ -372,10 +400,10 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCreateArr;
     private javax.swing.JButton jButtonRun;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelAlgo;
+    private javax.swing.JLabel jLabelBestCase;
+    private javax.swing.JLabel jLabelProssec;
+    private javax.swing.JLabel jLabelWorstCase;
     private javax.swing.JMenu jMenuAlgo;
     private javax.swing.JMenu jMenuCreateArr;
     private javax.swing.JMenu jMenuGUI;
@@ -395,6 +423,7 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinnerArrLength;
     // End of variables declaration//GEN-END:variables
     private static JLabel[] arrLabel;
+    private static int arrValue[];
     private static int num = 0;
     
     // Hand code
@@ -408,12 +437,19 @@ public class DemoSort extends javax.swing.JFrame {
         }
         num = ( Integer ) a.jSpinnerArrLength.getValue();
         arrLabel = new JLabel[num];
+        arrValue = new int[num];
         for(int i=0; i<num; i++) {
-            arrLabel[i] = new JLabel("" + random.nextInt(100), JLabel.CENTER);
+            // Them gia tri vao nhan
+            int rd = random.nextInt(100);
+            arrLabel[i] = new JLabel("" + rd, JLabel.CENTER);
             arrLabel[i].setLocation(180 * (i + 1)/5  , 73);
             a.jPanelMain.add(arrLabel[i]);
             arrLabel[i].setSize(40,30);
             arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+            
+            // Them gia tri vao mang sap xep
+            arrValue[i]= rd;
+//            System.out.println(arrValue[i]);
         }
         a.jPanelMain.setVisible(true);
     }
@@ -422,7 +458,6 @@ public class DemoSort extends javax.swing.JFrame {
         for(int i=0; i<num; i++) {
             arrLabel[i].setVisible(false);
             a.jPanelMain.remove(arrLabel[i]);
-            
         }
     }
     public static void readFile(DemoSort a) {
@@ -441,12 +476,32 @@ public class DemoSort extends javax.swing.JFrame {
                 arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
                 i++;
             }
-            System.out.println(num);
+//            System.out.println(num);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void bubbleSort() {
-        
+    
+    // Phuong thuc sap xep 
+    public void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if ( (Integer) arr[j] > (Integer) arr[j+1])
+                {
+                    // swap arr[j+1] and arr[j]
+                    int temp = ( Integer ) arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+    // In mang test
+    public void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
     }
 }

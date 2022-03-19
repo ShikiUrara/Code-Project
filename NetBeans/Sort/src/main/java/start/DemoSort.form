@@ -11,29 +11,29 @@
             <Property name="text" type="java.lang.String" value="Gi&#x1ea3;i Thu&#x1ead;t"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioSelection">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="selected" type="boolean" value="true"/>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n ( Selection sort )"/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n ( Selection sort )" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioSelectionMousePressed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioBubble">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p n&#x1ed5;i b&#x1ecd;t - Bubble sort "/>
                 <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p n&#x1ed5;i b&#x1ecd;t ( Bubble sort )" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioBubbleMousePressed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioSelection">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n ( Selection sort )"/>
+                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n ( Selection sort )" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioSelectionMousePressed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioInsertion">
@@ -59,6 +59,9 @@
                 <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p vun &#x111;&#x1ed1;ng - Heap sort"/>
                 <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p vun &#x111;&#x1ed1;ng - Heap sort" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioHeapMousePressed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioQuick">
               <Properties>
@@ -107,7 +110,6 @@
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItemReadFileMousePressed"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemReadFileActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -152,13 +154,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanelMain" alignment="0" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jProgressMain" pref="708" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jProgressMain" alignment="0" pref="708" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabelAlgo" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -171,13 +170,12 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelWorstCase" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelBestCase" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButtonRun" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -186,7 +184,7 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="334" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="jLabelProssec" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -201,7 +199,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelBestCase" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -215,7 +213,7 @@
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelWorstCase" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -223,7 +221,7 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButtonRun" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="30" max="32767" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="jLabelProssec" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jProgressMain" min="-2" pref="13" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -259,7 +257,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabelAlgo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="H&#xe3;y ch&#x1ecd;n gi&#x1ea3;i thu&#x1ead;t mu&#x1ed1;n m&#xf4; ph&#x1ecf;ng "/>
+        <Property name="text" type="java.lang.String" value="Gi&#x1ea3;i thu&#x1ead;t s&#x1eed; d&#x1ee5;ng: S&#x1eaf;p x&#x1ebf;p n&#x1ed5;i b&#x1ecd;t - Bubble sort "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JProgressBar" name="jProgressMain">
@@ -282,7 +280,7 @@
         <Property name="text" type="java.lang.String" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng ph&#x1ea7;n t&#x1eed; m&#x1ea3;ng"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jLabelProssec">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ti&#x1ebf;n tr&#xec;nh "/>
       </Properties>
@@ -293,22 +291,24 @@
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonCreateArrMousePressed"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCreateArrActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonRun">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRunMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jLabelBestCase">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tr&#x1b0;&#x1edd;ng h&#x1ee3;p t&#x1ed1;t nh&#x1ea5;t"/>
+        <Property name="text" type="java.lang.String" value="Tr&#x1b0;&#x1edd;ng h&#x1ee3;p t&#x1ed1;t nh&#x1ea5;t: &#x3b8;(n+k)"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jLabelWorstCase">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tr&#x1b0;&#x1edd;ng h&#x1ee3;p x&#x1ea5;u nh&#x1ea5;t"/>
+        <Property name="text" type="java.lang.String" value="Tr&#x1b0;&#x1edd;ng h&#x1ee3;p x&#x1ea5;u nh&#x1ea5;t: &#x3b8;(n^2)"/>
       </Properties>
     </Component>
   </SubComponents>
