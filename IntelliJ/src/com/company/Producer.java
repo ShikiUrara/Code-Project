@@ -20,7 +20,7 @@ public class Producer implements Runnable {
                     System.out.println("Kho day - Ngung san xua\n" + blockingQueue);
                 else
                     blockingQueue.put(produce());
-                Thread.sleep(rd);
+                Thread.sleep(200);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
