@@ -45,6 +45,7 @@ public class App {
 		Random random = new Random();
 		
 		while(true) {
+			Thread.sleep(2000);
 			queue.put(random.nextInt(10));
 		}
 	}
@@ -53,7 +54,7 @@ public class App {
 		Random random = new Random();
 		
 		while(true) {
-			Thread.sleep(100);
+			Thread.sleep(1000);
 			
 			if(random.nextInt(10) == 0) {
 				Integer value = queue.take();
