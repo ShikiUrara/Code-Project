@@ -13,10 +13,12 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.JDialog;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
+import javax.swing.JTextArea;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.text.NumberFormatter;
@@ -45,11 +47,10 @@ public class DemoSort extends javax.swing.JFrame {
 
         buttonGroup = new javax.swing.ButtonGroup();
         jPanelMain = new javax.swing.JPanel();
+        jLabelCountSwap = new javax.swing.JLabel();
         jLabelAlgo = new javax.swing.JLabel();
-        jProgressMain = new javax.swing.JProgressBar();
         jSpinnerArrLength = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
-        jLabelProssec = new javax.swing.JLabel();
         jButtonCreateArr = new javax.swing.JButton();
         jButtonRun = new javax.swing.JButton();
         jLabelBestCase = new javax.swing.JLabel();
@@ -65,7 +66,6 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuItemRun = new javax.swing.JMenuItem();
         jMenuCreateArr = new javax.swing.JMenu();
         jMenuItemRandom = new javax.swing.JMenuItem();
-        jMenuItemHandInput = new javax.swing.JMenuItem();
         jMenuItemReadFile = new javax.swing.JMenuItem();
         jMenuGUI = new javax.swing.JMenu();
 
@@ -77,15 +77,23 @@ public class DemoSort extends javax.swing.JFrame {
         jPanelMain.setBackground(new java.awt.Color(255, 255, 255));
         jPanelMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabelCountSwap.setText("Số lần hoán đổi");
+
         javax.swing.GroupLayout jPanelMainLayout = new javax.swing.GroupLayout(jPanelMain);
         jPanelMain.setLayout(jPanelMainLayout);
         jPanelMainLayout.setHorizontalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelCountSwap)
+                .addGap(197, 197, 197))
         );
         jPanelMainLayout.setVerticalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 173, Short.MAX_VALUE)
+            .addGroup(jPanelMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCountSwap)
+                .addContainerGap(376, Short.MAX_VALUE))
         );
 
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nổi bọt - Bubble sort ");
@@ -96,9 +104,7 @@ public class DemoSort extends javax.swing.JFrame {
 
         jLabel1.setText("Số lượng phần tử mảng");
 
-        jLabelProssec.setText("Tiến trình ");
-
-        jButtonCreateArr.setText("Tạo mảng");
+        jButtonCreateArr.setText("Tạo mảng ngẫu nhiên");
         jButtonCreateArr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonCreateArrMousePressed(evt);
@@ -130,7 +136,7 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuAlgo.add(jRadioBubble);
 
         buttonGroup.add(jRadioSelection);
-        jRadioSelection.setText("Sắp xếp chọn ( Selection sort )");
+        jRadioSelection.setText("Sắp xếp chọn - Selection sort");
         jRadioSelection.setName("Sắp xếp chọn ( Selection sort )"); // NOI18N
         jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -161,7 +167,7 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuAlgo.add(jRadioHeap);
 
         buttonGroup.add(jRadioQuick);
-        jRadioQuick.setText("Sắp xếp nhanh ( Quick sort )");
+        jRadioQuick.setText("Sắp xếp nhanh - Quick sort ");
         jRadioQuick.setName("Sắp xếp nhanh ( Quick sort )"); // NOI18N
         jRadioQuick.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -184,9 +190,6 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuItemRandom.setText("Lấy ngẫu nhiên");
         jMenuCreateArr.add(jMenuItemRandom);
 
-        jMenuItemHandInput.setText("Tự Nhập mảng");
-        jMenuCreateArr.add(jMenuItemHandInput);
-
         jMenuItemReadFile.setText("Đọc file");
         jMenuItemReadFile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -198,6 +201,11 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuMain.add(jMenuCreateArr);
 
         jMenuGUI.setText("Hướng dẫn");
+        jMenuGUI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuGUIMousePressed(evt);
+            }
+        });
         jMenuMain.add(jMenuGUI);
 
         setJMenuBar(jMenuMain);
@@ -210,29 +218,20 @@ public class DemoSort extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressMain, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
+                    .addComponent(jLabelAlgo)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelAlgo)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonCreateArr)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelWorstCase)
-                            .addComponent(jLabelBestCase))
-                        .addGap(122, 122, 122))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonRun)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(334, 334, 334)
-                .addComponent(jLabelProssec)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonCreateArr)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonRun)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 562, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelWorstCase)
+                    .addComponent(jLabelBestCase))
+                .addGap(128, 128, 128))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,23 +245,15 @@ public class DemoSort extends javax.swing.JFrame {
                         .addComponent(jLabelBestCase)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonCreateArr))
-                        .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabelWorstCase)
-                        .addGap(18, 18, 18)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonCreateArr)
+                        .addComponent(jButtonRun))
+                    .addComponent(jLabelWorstCase))
+                .addGap(18, 18, 18)
                 .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonRun)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jLabelProssec)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressMain, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         pack();
@@ -301,51 +292,41 @@ public class DemoSort extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCreateArrMousePressed
 
     private void jMenuItemReadFileMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemReadFileMousePressed
-//        readFile(this);
-        deleteArray(this);
-        File file = new File("C:\\Users\\time0\\OneDrive\\Desktop\\Web\\NetBeans\\Sort\\src\\main\\java\\start\\array.txt");
-        try {
-            Scanner scanner = new Scanner(file);
-            int i=0;
-            num = scanner.nextInt();
-            arrLabel = new JLabel[num];
-            while(scanner.hasNextInt()) {
-                arrLabel[i] = new JLabel("" + scanner.nextInt(), JLabel.CENTER);
-                arrLabel[i].setLocation(180 * (i + 1)/5  , 73);
-                this.jPanelMain.add(arrLabel[i]);
-                arrLabel[i].setSize(40,30);
-                arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
-                i++;
-            }
-//            System.out.println(num);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        readFile(this);
     }//GEN-LAST:event_jMenuItemReadFileMousePressed
     private void jButtonRunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMouseClicked
         if(num==0) {
-//            JLabel label = new JLabel("Chưa tạo mảng", JLabel.CENTER);
-//            label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
-//            label.setLocation(180, 73);
-//            label.setSize(69, 40);
-//            jPanelMain.add(label);
-//            jPanelMain.setVisible(true);
-            
-            int i =1;
-            System.out.println("Chua tao mang");
-                            JLabel label = new JLabel("Chua tao mang", JLabel.CENTER);
-                label.setLocation(300 , 73);
-                jPanelMain.add(label);
-                label.setSize(120,30);
-                label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+                jLabelArrEmpty.setLocation(560 , 160);
+                jPanelMain.add(jLabelArrEmpty);
+                jLabelArrEmpty.setSize(120,50);
+                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
             return;
         }
         if(jRadioBubble.isSelected()) {
-            printArray(arrValue);
-            System.out.println("Sap xep mang");
-            
             bubbleSort(arrValue);
             printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+            
+        }
+        if(jRadioSelection.isSelected()) {
+           
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioInsertion.isSelected()) {
+            
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioHeap.isSelected()) {
+            
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioQuick.isSelected()) {
+            
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
     }//GEN-LAST:event_jButtonRunMouseClicked
 
@@ -354,6 +335,27 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
     }//GEN-LAST:event_jRadioHeapMousePressed
+
+    private void jMenuGUIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuGUIMousePressed
+        JDialog jDialogGUI = new JDialog();
+        jDialogGUI.setTitle("Hướng dẫn sử dụng");
+        jDialogGUI.setSize(500, 200);
+        jDialogGUI.setLocationRelativeTo(null);
+        
+        // Tao noi dung
+        JTextArea jTextAreaGUI = new JTextArea("Bước 1: Chọn giải thuật\n"
+                + "- Trên thanh menu Chọn Giải thuật -> Chọn một giải thuật\n"
+                + "Bước 2: Chọn số lượng phần tử của mảng\n"
+                + "Theo mặc định số phần tử của mảng là 5\n"
+                + "Bước 3: Tạo mảng\n"
+                + "- Trên thanh menu Chọn Tạo mảng -> Chọn một cách tạo mảng\n"
+                + "Theo mặc định thì sẽ tạo ra mảng ngẫu nhiên\n"
+                + "Bước 4: Chạy mô phỏng\n"
+                + "Chúc bạn thành công!");
+        jTextAreaGUI.setEditable(false);
+        jDialogGUI.add(jTextAreaGUI);
+        jDialogGUI.setVisible(true);
+    }//GEN-LAST:event_jMenuGUIMousePressed
 
     /**
      * @param args the command line arguments
@@ -402,19 +404,17 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAlgo;
     private javax.swing.JLabel jLabelBestCase;
-    private javax.swing.JLabel jLabelProssec;
+    private javax.swing.JLabel jLabelCountSwap;
     private javax.swing.JLabel jLabelWorstCase;
     private javax.swing.JMenu jMenuAlgo;
     private javax.swing.JMenu jMenuCreateArr;
     private javax.swing.JMenu jMenuGUI;
-    private javax.swing.JMenuItem jMenuItemHandInput;
     private javax.swing.JMenuItem jMenuItemRandom;
     private javax.swing.JMenuItem jMenuItemReadFile;
     private javax.swing.JMenuItem jMenuItemRun;
     private javax.swing.JMenuBar jMenuMain;
     private javax.swing.JMenu jMenuRun;
     private javax.swing.JPanel jPanelMain;
-    private javax.swing.JProgressBar jProgressMain;
     private javax.swing.JRadioButtonMenuItem jRadioBubble;
     private javax.swing.JRadioButtonMenuItem jRadioHeap;
     private javax.swing.JRadioButtonMenuItem jRadioInsertion;
@@ -425,6 +425,11 @@ public class DemoSort extends javax.swing.JFrame {
     private static JLabel[] arrLabel;
     private static int arrValue[];
     private static int num = 0;
+    private static JLabel jLabelArrEmpty = new JLabel("Chưa tạo mảng", JLabel.CENTER);
+    private static Thread[] threads = new Thread[1000];
+    private static int time = 120;
+    private static int countThread = -1;
+    private static int countSwap = 0;
     
     // Hand code
     public static void createArrayRandom(DemoSort a) {
@@ -442,10 +447,13 @@ public class DemoSort extends javax.swing.JFrame {
             // Them gia tri vao nhan
             int rd = random.nextInt(100);
             arrLabel[i] = new JLabel("" + rd, JLabel.CENTER);
-            arrLabel[i].setLocation(180 * (i + 1)/5  , 73);
+            if (i == 0)
+                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+            else
+                    arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(40,30);
-            arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+            arrLabel[i].setSize(50, 50);
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
             
             // Them gia tri vao mang sap xep
             arrValue[i]= rd;
@@ -454,7 +462,10 @@ public class DemoSort extends javax.swing.JFrame {
         a.jPanelMain.setVisible(true);
     }
     public static void deleteArray(DemoSort a) {
-        System.out.println(num);
+        countSwap = 0;
+        stopThread();
+        jLabelArrEmpty.setVisible(false);
+        a.jPanelMain.remove(jLabelArrEmpty);
         for(int i=0; i<num; i++) {
             arrLabel[i].setVisible(false);
             a.jPanelMain.remove(arrLabel[i]);
@@ -468,12 +479,18 @@ public class DemoSort extends javax.swing.JFrame {
             int i=0;
             num = scanner.nextInt();
             arrLabel = new JLabel[num];
+            arrValue = new int[num];
             while(scanner.hasNextInt()) {
-                arrLabel[i] = new JLabel("" + scanner.nextInt(), JLabel.CENTER);
-                arrLabel[i].setLocation(180 * (i + 1)/5  , 73);
+                int temp = scanner.nextInt();
+                arrValue[i] = temp;
+                arrLabel[i] = new JLabel("" + temp, JLabel.CENTER);
+                if (i == 0)
+                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+                else
+                    arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
                 a.jPanelMain.add(arrLabel[i]);
-                arrLabel[i].setSize(40,30);
-                arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+                arrLabel[i].setSize(50,50);
+                arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
                 i++;
             }
 //            System.out.println(num);
@@ -494,6 +511,7 @@ public class DemoSort extends javax.swing.JFrame {
                     int temp = ( Integer ) arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
+                    Swap(arrLabel[j], arrLabel[j+1]);
                 }
     }
     // In mang test
@@ -504,4 +522,55 @@ public class DemoSort extends javax.swing.JFrame {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
+    
+    // Phuong thuc hoan doi
+    	public void Swap(JLabel lb1, JLabel lb2) {
+		int x1 = lb1.getX();
+		int x2 = lb2.getX();
+		countThread ++;
+                countSwap ++;
+		
+		int temp = countThread;
+		threads[temp] = new Thread(new Runnable() {
+		    @Override
+		    public void run() {
+		    	try {
+		    		if (temp != 0) {
+			    		threads[temp-1].join();
+			    	}
+			        while (lb1.getY() > 100) {
+			        	lb1.setLocation(lb1.getX(), lb1.getY() - 10);
+			        	lb2.setLocation(lb2.getX(), lb2.getY() + 10);
+			        	Thread.sleep(time);
+			        }
+			        while (lb1.getX() < x2) {
+			        	lb1.setLocation(lb1.getX() + 10, lb1.getY());
+			        	lb2.setLocation(lb2.getX() - 10, lb2.getY());
+			        	Thread.sleep(time);
+			        }
+			        while (lb1.getY() < 140) {
+			        	lb1.setLocation(lb1.getX(), lb1.getY() + 10);
+			        	lb2.setLocation(lb2.getX(), lb2.getY() - 10);
+			        	Thread.sleep(time);
+			        }
+			        String txtLb1 = lb1.getText();
+			        lb1.setText(lb2.getText());
+			        lb2.setText(txtLb1);
+			        lb1.setLocation(x1, 160);
+		        	lb2.setLocation(x2, 160);
+		    	} catch (Exception e) {
+		    	}
+		    }
+		});
+		threads[temp].start();
+	}
+        
+        // Dung cac luong
+        public static void stopThread() {
+            for( int i = 0; i <= countThread; i++) {
+                threads[i].interrupt();
+            }
+            countThread = -1;
+        }
+        
 }
