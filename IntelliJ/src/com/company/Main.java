@@ -1,14 +1,20 @@
 package com.company;
 
+import com.sun.jdi.connect.spi.TransportService;
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import static java.awt.event.KeyEvent.VK_A;
-import static java.awt.event.KeyEvent.getExtendedKeyCodeForChar;
+import java.awt.event.KeyEvent;
+
+import static java.awt.event.KeyEvent.*;
 import static java.lang.System.exit;
 
 public class Main {
@@ -43,9 +49,10 @@ public class Main {
 //        jFrame.addKeyListener(new KeyEvent());
 //        jFrame.setVisible(true);
 
-        Scanner scanner = new Scanner(System.in);
-        scanner.next();
-        System.exit(0);
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.next();
+//        System.exit(0);
+
 
     }
 }
