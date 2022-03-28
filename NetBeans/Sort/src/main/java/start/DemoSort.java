@@ -55,6 +55,8 @@ public class DemoSort extends javax.swing.JFrame {
         jButtonRun = new javax.swing.JButton();
         jLabelBestCase = new javax.swing.JLabel();
         jLabelWorstCase = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaDescription = new javax.swing.JTextArea();
         jMenuMain = new javax.swing.JMenuBar();
         jMenuAlgo = new javax.swing.JMenu();
         jRadioBubble = new javax.swing.JRadioButtonMenuItem();
@@ -122,6 +124,11 @@ public class DemoSort extends javax.swing.JFrame {
 
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
 
+        jTextAreaDescription.setColumns(20);
+        jTextAreaDescription.setRows(5);
+        jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
+        jScrollPane1.setViewportView(jTextAreaDescription);
+
         jMenuAlgo.setText("Giải Thuật");
 
         buttonGroup.add(jRadioBubble);
@@ -181,6 +188,11 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuRun.setText("Chạy");
 
         jMenuItemRun.setText("Chạy");
+        jMenuItemRun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemRunMousePressed(evt);
+            }
+        });
         jMenuRun.add(jMenuItemRun);
 
         jMenuMain.add(jMenuRun);
@@ -188,6 +200,11 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuCreateArr.setText("Tạo mảng");
 
         jMenuItemRandom.setText("Lấy ngẫu nhiên");
+        jMenuItemRandom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemRandomMousePressed(evt);
+            }
+        });
         jMenuCreateArr.add(jMenuItemRandom);
 
         jMenuItemReadFile.setText("Đọc file");
@@ -218,20 +235,25 @@ public class DemoSort extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelAlgo)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonCreateArr)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonRun)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 562, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelWorstCase)
-                    .addComponent(jLabelBestCase))
-                .addGap(128, 128, 128))
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelAlgo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonCreateArr)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonRun)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 562, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelWorstCase)
+                            .addComponent(jLabelBestCase))
+                        .addGap(128, 128, 128))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +275,9 @@ public class DemoSort extends javax.swing.JFrame {
                     .addComponent(jLabelWorstCase))
                 .addGap(18, 18, 18)
                 .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -264,6 +288,9 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioSelection.getName());
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n^2)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Thuật toán sắp xếp lựa chọn sắp xếp một mảng bằng cách liên tục tìm phần tử tối thiểu (xét theo thứ tự tăng dần) từ phần chưa được sắp xếp và đặt nó ở đầu. Thuật toán duy trì hai mảng con trong một mảng nhất định.\n" +
+            "1) Mảng con đã được sắp xếp. \n" +
+            "2) Mảng con còn lại chưa được sắp xếp.");
     }//GEN-LAST:event_jRadioSelectionMousePressed
 
     private void jRadioBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioBubbleMousePressed
@@ -271,6 +298,7 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioBubble.getName());
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
     }//GEN-LAST:event_jRadioBubbleMousePressed
 
     private void jRadioQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioQuickMousePressed
@@ -278,6 +306,7 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioQuick.getName());
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
     }//GEN-LAST:event_jRadioQuickMousePressed
 
     private void jRadioInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioInsertionMousePressed
@@ -285,6 +314,8 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioInsertion.getName());
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. Mảng hầu như được chia thành một phần"
+                + " được sắp xếp và một phần chưa được sắp xếp. Các giá trị từ phần\nchưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
     }//GEN-LAST:event_jRadioInsertionMousePressed
 
     private void jButtonCreateArrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCreateArrMousePressed
@@ -295,6 +326,71 @@ public class DemoSort extends javax.swing.JFrame {
         readFile(this);
     }//GEN-LAST:event_jMenuItemReadFileMousePressed
     private void jButtonRunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMouseClicked
+
+        if(num==0) {
+                jLabelArrEmpty.setLocation(560 , 160);
+                jPanelMain.add(jLabelArrEmpty);
+                jLabelArrEmpty.setSize(120,50);
+                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+            return;
+        }
+        if(jRadioBubble.isSelected()) {
+            bubbleSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+
+        }
+        if(jRadioSelection.isSelected()) {
+            selectionSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioInsertion.isSelected()) {
+            insertionSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioHeap.isSelected()) {
+            heapSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioQuick.isSelected()) {
+            quickSort(arrValue, 0, arrValue.length-1);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+    }//GEN-LAST:event_jButtonRunMouseClicked
+
+    private void jRadioHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioHeapMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
+        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
+    }//GEN-LAST:event_jRadioHeapMousePressed
+
+    private void jMenuGUIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuGUIMousePressed
+        JDialog jDialogGUI = new JDialog();
+        jDialogGUI.setTitle("Hướng dẫn sử dụng");
+        jDialogGUI.setSize(500, 200);
+        jDialogGUI.setLocationRelativeTo(null);
+        
+        // Tao noi dung
+        JTextArea jTextAreaGUI = new JTextArea("Bước 1: Chọn giải thuật\n"
+                + "- Trên thanh menu Chọn Giải thuật -> Chọn một giải thuật\n"
+                + "Bước 2: Chọn số lượng phần tử của mảng\n"
+                + "Theo mặc định số phần tử của mảng là 5\n"
+                + "Bước 3: Tạo mảng\n"
+                + "- Trên thanh menu Chọn Tạo mảng -> Chọn một cách tạo mảng\n"
+                + "Theo mặc định thì sẽ tạo ra mảng ngẫu nhiên\n"
+                + "Bước 4: Chạy mô phỏng\n"
+                + "Chúc bạn thành công!");
+        jTextAreaGUI.setEditable(false);
+        jDialogGUI.add(jTextAreaGUI);
+        jDialogGUI.setVisible(true);
+    }//GEN-LAST:event_jMenuGUIMousePressed
+
+    private void jMenuItemRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRunMousePressed
         if(num==0) {
                 jLabelArrEmpty.setLocation(560 , 160);
                 jPanelMain.add(jLabelArrEmpty);
@@ -328,34 +424,11 @@ public class DemoSort extends javax.swing.JFrame {
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-    }//GEN-LAST:event_jButtonRunMouseClicked
+    }//GEN-LAST:event_jMenuItemRunMousePressed
 
-    private void jRadioHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioHeapMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
-    }//GEN-LAST:event_jRadioHeapMousePressed
-
-    private void jMenuGUIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuGUIMousePressed
-        JDialog jDialogGUI = new JDialog();
-        jDialogGUI.setTitle("Hướng dẫn sử dụng");
-        jDialogGUI.setSize(500, 200);
-        jDialogGUI.setLocationRelativeTo(null);
-        
-        // Tao noi dung
-        JTextArea jTextAreaGUI = new JTextArea("Bước 1: Chọn giải thuật\n"
-                + "- Trên thanh menu Chọn Giải thuật -> Chọn một giải thuật\n"
-                + "Bước 2: Chọn số lượng phần tử của mảng\n"
-                + "Theo mặc định số phần tử của mảng là 5\n"
-                + "Bước 3: Tạo mảng\n"
-                + "- Trên thanh menu Chọn Tạo mảng -> Chọn một cách tạo mảng\n"
-                + "Theo mặc định thì sẽ tạo ra mảng ngẫu nhiên\n"
-                + "Bước 4: Chạy mô phỏng\n"
-                + "Chúc bạn thành công!");
-        jTextAreaGUI.setEditable(false);
-        jDialogGUI.add(jTextAreaGUI);
-        jDialogGUI.setVisible(true);
-    }//GEN-LAST:event_jMenuGUIMousePressed
+    private void jMenuItemRandomMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRandomMousePressed
+        createArrayRandom(this);
+    }//GEN-LAST:event_jMenuItemRandomMousePressed
 
     /**
      * @param args the command line arguments
@@ -404,7 +477,7 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAlgo;
     private javax.swing.JLabel jLabelBestCase;
-    private javax.swing.JLabel jLabelCountSwap;
+    private static javax.swing.JLabel jLabelCountSwap;
     private javax.swing.JLabel jLabelWorstCase;
     private javax.swing.JMenu jMenuAlgo;
     private javax.swing.JMenu jMenuCreateArr;
@@ -420,14 +493,16 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JRadioButtonMenuItem jRadioInsertion;
     private javax.swing.JRadioButtonMenuItem jRadioQuick;
     private javax.swing.JRadioButtonMenuItem jRadioSelection;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerArrLength;
+    private javax.swing.JTextArea jTextAreaDescription;
     // End of variables declaration//GEN-END:variables
     private static JLabel[] arrLabel;
     private static int arrValue[];
     private static int num = 0;
     private static JLabel jLabelArrEmpty = new JLabel("Chưa tạo mảng", JLabel.CENTER);
     private static Thread[] threads = new Thread[1000];
-    private static int time = 120;
+    private static int time = 80;
     private static int countThread = -1;
     private static int countSwap = 0;
     
@@ -463,6 +538,7 @@ public class DemoSort extends javax.swing.JFrame {
     }
     public static void deleteArray(DemoSort a) {
         countSwap = 0;
+        jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         stopThread();
         jLabelArrEmpty.setVisible(false);
         a.jPanelMain.remove(jLabelArrEmpty);
@@ -523,7 +599,8 @@ public class DemoSort extends javax.swing.JFrame {
                 if(arr[indexMin]>arr[j])
                     indexMin = j;
             swap(arr, i, indexMin);
-            Swap(arrLabel[i], arrLabel[indexMin]);
+            if(i!=indexMin)
+                Swap(arrLabel[i], arrLabel[indexMin]);
         }
     }
     public void insertionSort(int[] arr) {
@@ -554,7 +631,8 @@ public class DemoSort extends javax.swing.JFrame {
             int temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
-            Swap(arrLabel[0], arrLabel[i]);
+            if(i!=0)
+                Swap(arrLabel[0], arrLabel[i]);
  
             // call max heapify on the reduced heap
             heapify(arr, i, 0);
@@ -580,7 +658,8 @@ public class DemoSort extends javax.swing.JFrame {
         // If largest is not root
         if (largest != i) {
             swap(arr, i, largest);
-            Swap(arrLabel[i], arrLabel[largest]);
+            if(i!=largest)
+                Swap(arrLabel[i], arrLabel[largest]);
             // int swap = arr[i];
             // arr[i] = arr[largest];
             // arr[largest] = swap;
@@ -612,11 +691,13 @@ public class DemoSort extends javax.swing.JFrame {
                 // smaller element
                 i++;
                 swap(arr, i, j);
-                Swap(arrLabel[i], arrLabel[j]);
+                if(i!=j)
+                    Swap(arrLabel[i], arrLabel[j]);
             }
         }
         swap(arr, i + 1, high);
-        Swap(arrLabel[i+1], arrLabel[high]);
+        if((i+1)!=high)
+            Swap(arrLabel[i+1], arrLabel[high]);
         return (i + 1);
     }
     
@@ -716,9 +797,16 @@ public class DemoSort extends javax.swing.JFrame {
         // Truong hop chay
         public void runUse(int use) {
             switch(use) {
-                case 0:
+                case 0: // Dang sap xep
                     jMenuRun.setEnabled(false);
-                        
+                    jMenuCreateArr.setEnabled(false);
+                    jButtonCreateArr.setEnabled(false);
+                    jButtonRun.setEnabled(false);
+                case 1: // Chua sap xep
+                    jMenuRun.setEnabled(true);
+                    jMenuCreateArr.setEnabled(true);
+                    jButtonCreateArr.setEnabled(true);
+                    jButtonRun.setEnabled(true);
             }
         }
 }
