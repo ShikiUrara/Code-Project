@@ -46,7 +46,7 @@ public class Main {
        JFrame jFrame = new JFrame("Key Event");
        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        jFrame.setSize(450, 500);
-       jFrame.addKeyListener(new KeyEvent());
+       jFrame.addKeyListener(new com.company.KeyEvent());
        jFrame.setVisible(true);
 
 //        Scanner scanner = new Scanner(System.in);
