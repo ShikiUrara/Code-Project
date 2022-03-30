@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<!--Rational Software Architect Designer 9.7.0-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SketchNotation="http://www.ibm.com/ccl/soa/sketch/notation/1.0.0/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation">
+  <umlnotation:UMLDiagram xmi:id="_PrdME6_JEeycyaimoEJA7g" type="Sequence" element="_PrdMEq_JEeycyaimoEJA7g" name="sequencediagram4.dnx" measurementUnit="Himetric">
+    <children xmi:type="umlnotation:UMLShape" xmi:id="_PrdMFK_JEeycyaimoEJA7g" element="_PrdMEq_JEeycyaimoEJA7g" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+      <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_PrdMFa_JEeycyaimoEJA7g" type="interaction_compartment">
+        <children xmi:id="_RCqPkK_JEeycyaimoEJA7g" type="skrectangle">
+          <children xmi:id="_RCq2oK_JEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_RCq2oa_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_RCq2oq_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_RCrdsK_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_RCrdsa_JEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_RCrdsq_JEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_RCqPka_JEeycyaimoEJA7g" description="Hoạt động " transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_RCqPkq_JEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_RCqPk6_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_RCqPlK_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_RCqPla_JEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RCqPlq_JEeycyaimoEJA7g" x="2964" y="3124"/>
+        </children>
+        <children xmi:id="_TFqpIK_JEeycyaimoEJA7g" type="skrectangle">
+          <children xmi:id="_TFrQMK_JEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_TFrQMa_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_TFrQMq_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_TFrQM6_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_TFrQNK_JEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_TFrQNa_JEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TFqpIa_JEeycyaimoEJA7g" description="Thất nghiệp " transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_TFqpIq_JEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_TFqpI6_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_TFqpJK_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_TFqpJa_JEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TFqpJq_JEeycyaimoEJA7g" x="2986" y="8956"/>
+        </children>
+        <children xmi:id="_U8-wEK_JEeycyaimoEJA7g" type="skrectangle">
+          <children xmi:id="_U8_XIK_JEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_U8_XIa_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_U8_XIq_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_U8_XI6_JEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_U8_XJK_JEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_U8_XJa_JEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_U8-wEa_JEeycyaimoEJA7g" description="Nghỉ hưu" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_U8-wEq_JEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_U8-wE6_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_U8-wFK_JEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_U8-wFa_JEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U8-wFq_JEeycyaimoEJA7g" x="8375" y="6103"/>
+        </children>
+        <children xmi:id="_NFeL0K_KEeycyaimoEJA7g" type="sktitle">
+          <children xmi:id="_NFey4K_KEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_NFey4a_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_NFey4q_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_NFey46_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_NFey5K_KEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_NFey5a_KEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_NFeL0a_KEeycyaimoEJA7g" fontHeight="8" description="Tuyển dụng" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_NFeL0q_KEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_NFeL06_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_NFeL1K_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_NFeL1a_KEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NFeL1q_KEeycyaimoEJA7g" x="4888" y="6420" width="2241" height="527"/>
+        </children>
+        <children xmi:id="_YhSH0K_KEeycyaimoEJA7g" type="sktitle">
+          <children xmi:id="_YhSu4K_KEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_YhSu4a_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_YhSu4q_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_YhSu46_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_YhSu5K_KEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_YhSu5a_KEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_YhSH0a_KEeycyaimoEJA7g" fontHeight="8" description="Mất việc" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_YhSH0q_KEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_YhSH06_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_YhSH1K_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_YhSH1a_KEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YhSH1q_KEeycyaimoEJA7g" x="1401" y="6737" width="1590" height="308"/>
+        </children>
+        <children xmi:id="_dTbBIK_KEeycyaimoEJA7g" type="sktitle">
+          <children xmi:id="_dTbBJ6_KEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_dTbBKK_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_dTbBKa_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_dTbBKq_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_dTbBK6_KEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_dTbBLK_KEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_dTbBIa_KEeycyaimoEJA7g" fontHeight="8" description="Thêm 60s" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_dTbBIq_KEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_dTbBI6_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_dTbBJK_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_dTbBJa_KEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dTbBJq_KEeycyaimoEJA7g" x="7107" y="4201"/>
+        </children>
+        <children xmi:id="_hXpEgK_KEeycyaimoEJA7g" type="sktitle">
+          <children xmi:id="_hXprkK_KEeycyaimoEJA7g" type="skshapes">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_hXprka_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_hXprkq_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_hXprk6_KEeycyaimoEJA7g"/>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_hXprlK_KEeycyaimoEJA7g"/>
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:id="_hXprla_KEeycyaimoEJA7g" type="skdescription">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_hXpEga_KEeycyaimoEJA7g" fontHeight="8" description="Thêm 60s" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_hXpEgq_KEeycyaimoEJA7g"/>
+          <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_hXpEg6_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_hXpEhK_KEeycyaimoEJA7g"/>
+          <styles xmi:type="notation:TextStyle" xmi:id="_hXpEha_KEeycyaimoEJA7g" textAlignment="Center"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hXpEhq_KEeycyaimoEJA7g" x="7424" y="8639"/>
+        </children>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_PrdMFq_JEeycyaimoEJA7g" type="Name"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrdMF6_JEeycyaimoEJA7g" x="793" y="793"/>
+    </children>
+    <edges xmi:type="notation:Connector" xmi:id="_ZcfoUK_JEeycyaimoEJA7g" type="skline" source="_RCqPkK_JEeycyaimoEJA7g" target="_U8-wEK_JEeycyaimoEJA7g" roundedBendpointsRadius="12" smoothness="Normal" avoidObstructions="true" lineWidth="2">
+      <styles xmi:type="notation:ArrowStyle" xmi:id="_ZcfoUa_JEeycyaimoEJA7g" arrowTarget="OpenArrow"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_ZcfoUq_JEeycyaimoEJA7g"/>
+      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_ZcfoU6_JEeycyaimoEJA7g"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZcfoVK_JEeycyaimoEJA7g" points="[14, 8, -151, -77]$[166, 73, 1, -12]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zcg2cK_JEeycyaimoEJA7g" id="(0.8564102564102564,0.7216783216783217)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zcg2ca_JEeycyaimoEJA7g" id="(0.521474358974359,0.2111888111888112)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_anrpEK_JEeycyaimoEJA7g" type="skline" source="_TFqpIK_JEeycyaimoEJA7g" target="_U8-wEK_JEeycyaimoEJA7g" roundedBendpointsRadius="12" smoothness="Normal" avoidObstructions="true" lineWidth="2">
+      <styles xmi:type="notation:ArrowStyle" xmi:id="_anrpEa_JEeycyaimoEJA7g" arrowTarget="OpenArrow"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_anrpEq_JEeycyaimoEJA7g"/>
+      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_anrpE6_JEeycyaimoEJA7g"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_anrpFK_JEeycyaimoEJA7g" points="[47, -28, -138, 81]$[186, -108, 1, 1]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ansQIK_JEeycyaimoEJA7g" id="(0.2669871794871795,0.951048951048951)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_bN-0EK_JEeycyaimoEJA7g" type="skline" source="_RCqPkK_JEeycyaimoEJA7g" target="_TFqpIK_JEeycyaimoEJA7g" roundedBendpointsRadius="12" smoothness="Normal" avoidObstructions="true" lineWidth="2">
+      <styles xmi:type="notation:ArrowStyle" xmi:id="_bN-0Ea_JEeycyaimoEJA7g" arrowTarget="OpenArrow"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_bN-0Eq_JEeycyaimoEJA7g"/>
+      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_bN-0E6_JEeycyaimoEJA7g"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bN-0FK_JEeycyaimoEJA7g" points="[-2, 24, 6, -221]$[-71, 252, -63, 7]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_dJ3R8K_JEeycyaimoEJA7g" type="skline" source="_TFqpIK_JEeycyaimoEJA7g" target="_RCqPkK_JEeycyaimoEJA7g" roundedBendpointsRadius="12" lineWidth="2">
+      <styles xmi:type="notation:ArrowStyle" xmi:id="_dJ3R8a_JEeycyaimoEJA7g" arrowTarget="OpenArrow"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_dJ3R8q_JEeycyaimoEJA7g"/>
+      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_dJ3R86_JEeycyaimoEJA7g"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dJ3R9K_JEeycyaimoEJA7g" points="[-212, -675, 0, 4511]$[-212, -5186, 0, 0]$[-212, -4392, 0, 794]$[-212, -5159, 0, 27]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fRFdIK_JEeycyaimoEJA7g" id="(0.14457469191463782,0.4916083916083916)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gCLi4K_JEeycyaimoEJA7g" id="(0.09326923076923077,0.9433566433566434)"/>
+    </edges>
+  </umlnotation:UMLDiagram>
+  <uml:Package xmi:id="_PrdMEK_JEeycyaimoEJA7g">
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_PrdMEa_JEeycyaimoEJA7g">
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_PrdMEq_JEeycyaimoEJA7g" name="Sơ đồ tuần tự biểu diễn sự kiện xảy ra trong miền"/>
+      <ownedAttribute xmi:id="_jLKtEa_JEeycyaimoEJA7g" name=""/>
+    </packagedElement>
+    <profileApplication xmi:id="_PrnkIK_JEeycyaimoEJA7g">
+      <eAnnotations xmi:id="_PrnkIa_JEeycyaimoEJA7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_PrnkIq_JEeycyaimoEJA7g">
+      <eAnnotations xmi:id="_PrnkI6_JEeycyaimoEJA7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_PrnkJK_JEeycyaimoEJA7g">
+      <eAnnotations xmi:id="_ProLMK_JEeycyaimoEJA7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Package>
+</xmi:XMI>

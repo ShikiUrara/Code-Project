@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Xm0kwapmEeyvQpsAWKX1xw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_Xm1L0KpmEeyvQpsAWKX1xw" bindingContexts="_Xm1L0qpmEeyvQpsAWKX1xw">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package.emx&quot; tooltip=&quot;IBM/Blank Package.emx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/Blank Package.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package6.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package6.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package6.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package5.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package5.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package5.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package4.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package4.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package4.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package3.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package3.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package3.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package2.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package2.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package2.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package1.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package1.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package1.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package.emx&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\Blank Package.emx&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/Blank%20Package.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;.project&quot; tooltip=&quot;C:\Users\time0\OneDrive\Desktop\Web\IBM - Paint\.project&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Users/time0/OneDrive/Desktop/Web/IBM%20-%20Paint/.project&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram9.dnx&quot; tooltip=&quot;IBM/sequencediagram9.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram9.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram8.dnx&quot; tooltip=&quot;IBM/sequencediagram8.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram8.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram7.dnx&quot; tooltip=&quot;IBM/sequencediagram7.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram7.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram6.dnx&quot; tooltip=&quot;IBM/sequencediagram6.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram6.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram5.dnx&quot; tooltip=&quot;IBM/sequencediagram5.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram5.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram4.dnx&quot; tooltip=&quot;IBM/sequencediagram4.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram4.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram3.dnx&quot; tooltip=&quot;IBM/sequencediagram3.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram3.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram2.dnx&quot; tooltip=&quot;IBM/sequencediagram2.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram2.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram11.dnx&quot; tooltip=&quot;IBM/sequencediagram11.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram11.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram10.dnx&quot; tooltip=&quot;IBM/sequencediagram10.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram10.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram.dnx&quot; tooltip=&quot;IBM/sequencediagram.dnx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/sequencediagram.dnx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Rose Package.emx&quot; tooltip=&quot;IBM/Blank Rose Package.emx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/Blank Rose Package.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package7.emx&quot; tooltip=&quot;IBM/Blank Package7.emx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/Blank Package7.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package3.emx&quot; tooltip=&quot;IBM/Blank Package3.emx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/Blank Package3.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.xtools.modeler.ui.editors.internal.ModelEditor&quot; name=&quot;Blank Package.emx&quot; tooltip=&quot;IBM/Blank Package.emx&quot;>&#xD;&#xA;&lt;persistable path=&quot;/IBM/Blank Package.emx&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_Xm1L0KpmEeyvQpsAWKX1xw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_basfAapmEeyvQpsAWKX1xw" label="%trimmedwindow.label.eclipseSDK" x="104" y="104" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Xm1L0KpmEeyvQpsAWKX1xw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_basfAapmEeyvQpsAWKX1xw" label="%trimmedwindow.label.eclipseSDK" x="-7" y="0" width="974" height="1047">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -11,7 +11,6 @@
     <persistedState key="aggregateWorkingSetId"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_basfAapmEeyvQpsAWKX1xw" selectedElement="_basfAqpmEeyvQpsAWKX1xw" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_basfAqpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_dCFTkapmEeyvQpsAWKX1xw">
         <children xsi:type="advanced:Perspective" xmi:id="_dCFTkapmEeyvQpsAWKX1xw" elementId="com.ibm.xtools.modeler.internal.ui.perspectives.ModelingPerspective" selectedElement="_dCFTkqpmEeyvQpsAWKX1xw" label="Modeling" iconURI="platform:/plugin/com.ibm.xtools.rmp.ui/icons/modeling_perspective.gif">
@@ -56,10 +55,9 @@
           <tags>persp.newWizSC:com.ibm.xtools.common.ui.wizards.NewModelProjectWizard</tags>
           <tags>persp.actionSet:com.ibm.xtools.common.ui.reduction.modelingViewpointsActionSet</tags>
           <tags>persp.newWizSC:com.ibm.ccl.soa.sketcher.ui.internal.wizards.NewSketchWizard</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTkqpmEeyvQpsAWKX1xw" selectedElement="_dCFTk6pmEeyvQpsAWKX1xw" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTk6pmEeyvQpsAWKX1xw" containerData="2600" selectedElement="_dCFTlKpmEeyvQpsAWKX1xw">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTkqpmEeyvQpsAWKX1xw" selectedElement="_dCFTmqpmEeyvQpsAWKX1xw" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTk6pmEeyvQpsAWKX1xw" containerData="1635" selectedElement="_dCFTlKpmEeyvQpsAWKX1xw">
               <children xsi:type="basic:PartStack" xmi:id="_dCFTlKpmEeyvQpsAWKX1xw" elementId="projectExplorerArea" containerData="6600" selectedElement="_dCFTlapmEeyvQpsAWKX1xw">
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_dCFTlapmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_dBuuQKpmEeyvQpsAWKX1xw"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_dCFTlqpmEeyvQpsAWKX1xw" elementId="underProjectExplorerArea" containerData="3400" selectedElement="_dCFTl6pmEeyvQpsAWKX1xw">
@@ -68,7 +66,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_dCFTmapmEeyvQpsAWKX1xw" elementId="com.ibm.xtools.modeler.ui.internal.ui.views.InheritanceExplorer" toBeRendered="false" ref="_dCFTkKpmEeyvQpsAWKX1xw"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTmqpmEeyvQpsAWKX1xw" containerData="7400" selectedElement="_dCFTm6pmEeyvQpsAWKX1xw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_dCFTmqpmEeyvQpsAWKX1xw" containerData="8365" selectedElement="_dCFTm6pmEeyvQpsAWKX1xw">
               <children xsi:type="advanced:Placeholder" xmi:id="_dCFTm6pmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.editorss" containerData="6600" ref="_dBFOAKpmEeyvQpsAWKX1xw"/>
               <children xsi:type="basic:PartStack" xmi:id="_dCFTnKpmEeyvQpsAWKX1xw" elementId="underEditorArea" toBeRendered="false" containerData="3400">
                 <children xsi:type="advanced:Placeholder" xmi:id="_dCFTnapmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.views.PropertySheet" toBeRendered="false" ref="_dBwjcapmEeyvQpsAWKX1xw"/>
@@ -108,9 +106,18 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_dBFOAKpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.editorss" selectedElement="_dBFOAapmEeyvQpsAWKX1xw">
-      <children xsi:type="basic:PartStack" xmi:id="_dBFOAapmEeyvQpsAWKX1xw" elementId="org.eclipse.e4.primaryDataStack">
+      <children xsi:type="basic:PartStack" xmi:id="_dBFOAapmEeyvQpsAWKX1xw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_5U5YwK_TEeycyaimoEJA7g">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
+        <children xsi:type="basic:Part" xmi:id="_5U5YwK_TEeycyaimoEJA7g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="sequencediagram9.dnx" iconURI="platform:/plugin/com.ibm.xtools.umlviz.ui/viewer.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;UMLVisualizerEditor&quot; name=&quot;sequencediagram9.dnx&quot; partName=&quot;sequencediagram9.dnx&quot; title=&quot;sequencediagram9.dnx&quot; tooltip=&quot;IBM/sequencediagram9.dnx&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IBM/sequencediagram9.dnx&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>UMLVisualizerEditor</tags>
+          <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_dBuuQKpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
@@ -119,8 +126,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;1&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_dE9BYKpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -170,7 +175,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_c2IiQKpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_N1IrdqpqEey_2b_21Do3Pg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_X-p2yapmEeyvQpsAWKX1xw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6I51IK--EeycyaimoEJA7g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_X-p2yapmEeyvQpsAWKX1xw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_c2IiQapmEeyvQpsAWKX1xw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -197,7 +202,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_c2IiRapmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_N1IrgKpqEey_2b_21Do3Pg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_X-p2fapmEeyvQpsAWKX1xw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6I7DQK--EeycyaimoEJA7g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_X-p2fapmEeyvQpsAWKX1xw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_c2IiRqpmEeyvQpsAWKX1xw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -241,6 +246,10 @@
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_hp9g0KpqEey_2b_21Do3Pg" elementId="underProjectExplorerArea(IDEWindow).(com.ibm.xtools.modeler.internal.ui.perspectives.ModelingPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_d2IlQK_NEeycyaimoEJA7g" elementId="PartStack@4083e5d7(IDEWindow).(com.ibm.xtools.modeler.internal.ui.perspectives.ModelingPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
@@ -2622,7 +2631,7 @@
   <addons xmi:id="_Xm1L4apmEeyvQpsAWKX1xw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_Xm1L4qpmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_XxQ6MKpmEeyvQpsAWKX1xw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_NSR2AapqEey_2b_21Do3Pg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_X-oAwKpmEeyvQpsAWKX1xw" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_X-oAwapmEeyvQpsAWKX1xw" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
