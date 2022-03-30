@@ -43,11 +43,11 @@ public class Main {
         t2.start();
 
         // Tao giao dien de bat su kien key event
-//        JFrame jFrame = new JFrame("Key Event");
-//        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        jFrame.setSize(450, 500);
-//        jFrame.addKeyListener(new KeyEvent());
-//        jFrame.setVisible(true);
+       JFrame jFrame = new JFrame("Key Event");
+       jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       jFrame.setSize(450, 500);
+       jFrame.addKeyListener(new KeyEvent());
+       jFrame.setVisible(true);
 
 //        Scanner scanner = new Scanner(System.in);
 //        scanner.next();
