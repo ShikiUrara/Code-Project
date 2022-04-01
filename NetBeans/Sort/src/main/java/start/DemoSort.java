@@ -92,7 +92,7 @@ public class DemoSort extends javax.swing.JFrame {
         jPanelMain.setLayout(jPanelMainLayout);
         jPanelMainLayout.setHorizontalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
+            .addGroup(jPanelMainLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelCountSwap)
                 .addGap(197, 197, 197))
@@ -216,7 +216,7 @@ public class DemoSort extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -531,6 +531,7 @@ public class DemoSort extends javax.swing.JFrame {
                 DemoSort main = new DemoSort();
                 main.setVisible(true);
                 main.setLocationRelativeTo(null);
+                
             }
         });
     }
@@ -805,40 +806,52 @@ public class DemoSort extends javax.swing.JFrame {
 		countThread ++;
                 countSwap ++;
 		
+                
+                
+                
 		int temp = countThread;
 		threads[temp] = new Thread(new Runnable() {
 		    @Override
 		    public void run() {
 		    	try {
-		    		if (temp != 0) {
-			    		threads[temp-1].join();
-			    	}
-			        while (lb1.getY() > 100) {
-			        	lb1.setLocation(lb1.getX(), lb1.getY() - 10);
-			        	lb2.setLocation(lb2.getX(), lb2.getY() + 10);
-			        	Thread.sleep(time);
-			        }
-			        while (lb1.getX() < x2) {
-			        	lb1.setLocation(lb1.getX() + 10, lb1.getY());
-			        	lb2.setLocation(lb2.getX() - 10, lb2.getY());
-			        	Thread.sleep(time);
-			        }
-			        while (lb1.getY() < 140) {
-			        	lb1.setLocation(lb1.getX(), lb1.getY() + 10);
-			        	lb2.setLocation(lb2.getX(), lb2.getY() - 10);
-			        	Thread.sleep(time);
-			        }
-			        String txtLb1 = lb1.getText();
-			        lb1.setText(lb2.getText());
-			        lb2.setText(txtLb1);
-			        lb1.setLocation(x1, 160);
-		        	lb2.setLocation(x2, 160);
+                            if (temp != 0) {
+                                    threads[temp-1].join();
+                            }
+                            while (lb1.getY() > 100) {
+                                lb1.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb2.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb1.setLocation(lb1.getX(), lb1.getY() - 10);
+                                lb2.setLocation(lb2.getX(), lb2.getY() + 10);
+                                Thread.sleep(time);
+                            }
+                            while (lb1.getX() < x2) {
+                                lb1.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb2.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb1.setLocation(lb1.getX() + 10, lb1.getY());
+                                lb2.setLocation(lb2.getX() - 10, lb2.getY());
+                                Thread.sleep(time);
+                            }
+                            while (lb1.getY() < 140) {
+                                lb1.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb2.setBorder(BorderFactory.createLineBorder(new Color(255, 78, 69), 4));
+                                lb1.setLocation(lb1.getX(), lb1.getY() + 10);
+                                lb2.setLocation(lb2.getX(), lb2.getY() - 10);
+                                Thread.sleep(time);
+                            }
+                            String txtLb1 = lb1.getText();
+                            lb1.setText(lb2.getText());
+                            lb2.setText(txtLb1);
+                            lb1.setLocation(x1, 160);
+                            lb2.setLocation(x2, 160);
+                            lb1.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+                            lb2.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
 		    	} catch (Exception e) {
                             e.printStackTrace();
 		    	}
 		    }
 		});
 		threads[temp].start();
+                
 	}
         
         // Phuong thuc hoan doi mang thuc te
@@ -858,22 +871,6 @@ public class DemoSort extends javax.swing.JFrame {
                 }
             catch(Exception e) {
                 e.getStackTrace();
-            }
-        }
-        
-        // Truong hop chay
-        public void runUse(int use) {
-            switch(use) {
-                case 0: // Dang sap xep
-                    jMenuRun.setEnabled(false);
-                    jMenuCreateArr.setEnabled(false);
-                    jButtonCreateArr.setEnabled(false);
-                    jButtonRun.setEnabled(false);
-                case 1: // Chua sap xep
-                    jMenuRun.setEnabled(true);
-                    jMenuCreateArr.setEnabled(true);
-                    jButtonCreateArr.setEnabled(true);
-                    jButtonRun.setEnabled(true);
             }
         }
 }
