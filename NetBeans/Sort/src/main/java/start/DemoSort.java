@@ -71,6 +71,8 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuCreateArr = new javax.swing.JMenu();
         jMenuItemRandom = new javax.swing.JMenuItem();
         jMenuItemReadFile = new javax.swing.JMenuItem();
+        jMenuItemReverse = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuGUI = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -309,6 +311,22 @@ public class DemoSort extends javax.swing.JFrame {
         });
         jMenuCreateArr.add(jMenuItemReadFile);
 
+        jMenuItemReverse.setText("Đảo ngược");
+        jMenuItemReverse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemReverseMousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItemReverse);
+
+        jMenuItem1.setText("Gần được sắp xếp");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem1MousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItem1);
+
         jMenuMain.add(jMenuCreateArr);
 
         jMenuGUI.setText("Hướng dẫn");
@@ -495,6 +513,14 @@ public class DemoSort extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCreateArrActionPerformed
 
+    private void jMenuItemReverseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemReverseMousePressed
+        createArrayReverse(this);
+    }//GEN-LAST:event_jMenuItemReverseMousePressed
+
+    private void jMenuItem1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MousePressed
+        createArrayAlmostSorted(this);
+    }//GEN-LAST:event_jMenuItem1MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -548,8 +574,10 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuAlgo;
     private javax.swing.JMenu jMenuCreateArr;
     private javax.swing.JMenu jMenuGUI;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemRandom;
     private javax.swing.JMenuItem jMenuItemReadFile;
+    private javax.swing.JMenuItem jMenuItemReverse;
     private javax.swing.JMenuItem jMenuItemRun;
     private javax.swing.JMenuBar jMenuMain;
     private javax.swing.JMenu jMenuRun;
@@ -595,7 +623,7 @@ public class DemoSort extends javax.swing.JFrame {
             else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(50, 50);
+            arrLabel[i].setSize(45, 45);
             arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
             
             // Them gia tri vao mang sap xep
@@ -604,6 +632,105 @@ public class DemoSort extends javax.swing.JFrame {
         }
         a.jPanelMain.setVisible(true);
     }
+    
+    public static void createArrayReverse(DemoSort a) {
+        deleteArray(a);
+        Random random = new Random();
+        try {
+            a.jSpinnerArrLength.commitEdit();
+        } catch (ParseException ex) {
+            Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        num = ( Integer ) a.jSpinnerArrLength.getValue();
+        arrLabel = new JLabel[num];
+        arrValue = new int[num];
+
+        
+                
+        int[] temp = new int[num];
+        
+        // Them data vao mang temp
+        for(int i=0; i<num; i++) {
+            int rd = random.nextInt(100);
+            temp[i] = rd;
+        }
+        // Sap xep nguoc
+        bubbleSortReverse(temp);
+        a.printArray(temp);
+        
+        for(int i=0; i<num; i++) {
+            // Them gia tri vao nhan
+            int tempValue = temp[i];
+            arrLabel[i] = new JLabel("" + tempValue, JLabel.CENTER);
+            if (i == 0)
+                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+            else
+                arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
+            a.jPanelMain.add(arrLabel[i]);
+            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
+            
+            // Them gia tri vao mang sap xep
+            arrValue[i]= tempValue;
+        }
+        a.jPanelMain.setVisible(true);
+    }
+    
+    public static void createArrayAlmostSorted(DemoSort a) {
+        deleteArray(a);
+        Random random = new Random();
+        try {
+            a.jSpinnerArrLength.commitEdit();
+        } catch (ParseException ex) {
+            Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        num = ( Integer ) a.jSpinnerArrLength.getValue();
+        arrLabel = new JLabel[num];
+        arrValue = new int[num];
+
+        
+                
+        int[] temp = new int[num];
+        
+        // Them data vao mang temp
+        for(int i=0; i<num; i++) {
+            int rd = random.nextInt(100);
+            temp[i] = rd;
+        }
+        // Sap xep nguoc
+        a.bubbleSortNomar(temp);
+        a.printArray(temp);
+        
+        
+        // Tao mang gan duoc sap xep
+        for(int i=0; i<num/5; i++) {
+            int rd = random.nextInt(num-1);
+            int rd1 = random.nextInt(num-1);
+            if(rd != rd1)
+                swap(temp, rd, rd1);
+            else
+                i--;
+        }
+
+        
+        for(int i=0; i<num; i++) {
+            // Them gia tri vao nhan
+            int tempValue = temp[i];
+            arrLabel[i] = new JLabel("" + tempValue, JLabel.CENTER);
+            if (i == 0)
+                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+            else
+                arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
+            a.jPanelMain.add(arrLabel[i]);
+            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
+            
+            // Them gia tri vao mang sap xep
+            arrValue[i]= tempValue;
+        }
+        a.jPanelMain.setVisible(true);
+    }
+    
     public static void deleteArray(DemoSort a) {
         countSwap = 0;
         jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
@@ -617,7 +744,7 @@ public class DemoSort extends javax.swing.JFrame {
     }
     public static void readFile(DemoSort a) {
         deleteArray(a);
-        File file = new File("C:\\Users\\time0\\OneDrive\\Desktop\\Web\\NetBeans\\Sort\\src\\main\\java\\start\\array.txt");
+        File file = new File("C:\\Users\\time0\\OneDrive\\Desktop\\Code\\NetBeans\\Sort\\src\\main\\java\\start\\array.txt");
         try {
             Scanner scanner = new Scanner(file);
             int i=0;
@@ -633,7 +760,7 @@ public class DemoSort extends javax.swing.JFrame {
                 else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
                 a.jPanelMain.add(arrLabel[i]);
-                arrLabel[i].setSize(50,50);
+                arrLabel[i].setSize(45,45);
                 arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
                 i++;
             }
@@ -657,6 +784,33 @@ public class DemoSort extends javax.swing.JFrame {
 //                    arr[j+1] = temp;
                     swap(arr, j+1, j);
                     Swap(arrLabel[j], arrLabel[j+1]);
+                }
+    }
+        public void bubbleSortNomar(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if ( (Integer) arr[j] > (Integer) arr[j+1])
+                {
+                    // swap arr[j+1] and arr[j]
+//                    int temp = ( Integer ) arr[j];
+//                    arr[j] = arr[j+1];
+//                    arr[j+1] = temp;
+                    swap(arr, j+1, j);
+                }
+    }
+    public static void bubbleSortReverse(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if ( (Integer) arr[j] < (Integer) arr[j+1])
+                {
+                    // swap arr[j+1] and arr[j]
+//                    int temp = ( Integer ) arr[j];
+//                    arr[j] = arr[j+1];
+//                    arr[j+1] = temp;
+                    swap(arr, j+1, j);
                 }
     }
     
