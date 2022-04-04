@@ -46,17 +46,34 @@ public class DemoSort extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanelMain = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jLabelCountSwap = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jRadioButtonBubble = new javax.swing.JRadioButton();
+        jRadioButtonSelection = new javax.swing.JRadioButton();
+        jRadioButtonInsertion = new javax.swing.JRadioButton();
+        jRadioButtonHeap = new javax.swing.JRadioButton();
+        jRadioButtonQuick = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabelAlgo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jSpinnerArrLength = new javax.swing.JSpinner();
-        jButtonCreateArr = new javax.swing.JButton();
-        jButtonRun = new javax.swing.JButton();
-        jLabelBestCase = new javax.swing.JLabel();
-        jLabelWorstCase = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabelBestCase = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabelWorstCase = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabelAlgo = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabelLevelAlg = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jSpinnerArrLength = new javax.swing.JSpinner();
+        jButtonRun = new javax.swing.JButton();
+        jButtonCreateArr = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescription = new javax.swing.JTextArea();
         jMenuMain = new javax.swing.JMenuBar();
@@ -80,50 +97,285 @@ public class DemoSort extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         setForeground(java.awt.Color.white);
+        setMinimumSize(new java.awt.Dimension(1280, 720));
         setName("frameMain"); // NOI18N
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanelMain.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelMain.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 255, 204)));
+        jPanelMain.setBackground(new java.awt.Color(84, 125, 206));
         jPanelMain.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jPanel5.setBackground(new java.awt.Color(120, 168, 252));
+
         jLabelCountSwap.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabelCountSwap.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCountSwap.setText("Số lần hoán đổi");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCountSwap, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCountSwap)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel8.setBackground(new java.awt.Color(120, 168, 252));
+
+        buttonGroup1.add(jRadioButtonBubble);
+        jRadioButtonBubble.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonBubble.setSelected(true);
+        jRadioButtonBubble.setText("Bubble");
+        jRadioButtonBubble.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonBubbleMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonSelection);
+        jRadioButtonSelection.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonSelection.setText("Selection");
+        jRadioButtonSelection.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonSelectionMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonInsertion);
+        jRadioButtonInsertion.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonInsertion.setText("Insertion");
+        jRadioButtonInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonInsertionMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonHeap);
+        jRadioButtonHeap.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonHeap.setText("Heap");
+        jRadioButtonHeap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonHeapMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonQuick);
+        jRadioButtonQuick.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonQuick.setText("Quick");
+        jRadioButtonQuick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonQuickMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jRadioButtonBubble)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonSelection)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonInsertion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonHeap)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQuick)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonBubble)
+                    .addComponent(jRadioButtonSelection)
+                    .addComponent(jRadioButtonInsertion)
+                    .addComponent(jRadioButtonHeap)
+                    .addComponent(jRadioButtonQuick))
+                .addGap(17, 17, 17))
+        );
 
         javax.swing.GroupLayout jPanelMainLayout = new javax.swing.GroupLayout(jPanelMain);
         jPanelMain.setLayout(jPanelMainLayout);
         jPanelMainLayout.setHorizontalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMainLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelCountSwap)
-                .addGap(197, 197, 197))
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 559, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanelMainLayout.setVerticalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMainLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCountSwap)
-                .addContainerGap(389, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
+                .addContainerGap(415, Short.MAX_VALUE)
+                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 204, 204)));
+        getContentPane().add(jPanelMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 1150, 450));
 
-        jLabelAlgo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabelAlgo.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(71, 120, 197));
+
+        jPanel2.setBackground(new java.awt.Color(120, 168, 252));
+
+        jLabelBestCase.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabelBestCase.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelBestCase, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelBestCase)
+                .addContainerGap())
+        );
+
+        jPanel4.setBackground(new java.awt.Color(120, 168, 252));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabelWorstCase.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabelWorstCase.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelWorstCase, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelWorstCase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel6.setBackground(new java.awt.Color(120, 168, 252));
+
+        jLabelAlgo.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelAlgo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nổi bọt - Bubble sort ");
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setText("Số lượng phần tử mảng");
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelAlgo, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabelAlgo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel7.setBackground(new java.awt.Color(7, 51, 105));
+
+        jLabelLevelAlg.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
+        jLabelLevelAlg.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelLevelAlg, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelLevelAlg)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(146, 146, 146)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 1150, 100));
+
+        jPanel3.setBackground(new java.awt.Color(26, 35, 71));
 
         jSpinnerArrLength.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jSpinnerArrLength.setModel(new javax.swing.SpinnerNumberModel(5, 5, 15, 1));
+        jSpinnerArrLength.setToolTipText("");
+        jSpinnerArrLength.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerArrLength.setMaximumSize(new java.awt.Dimension(5, 15));
         jSpinnerArrLength.setMinimumSize(new java.awt.Dimension(0, 5));
 
-        jButtonCreateArr.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButtonCreateArr.setText("Tạo mảng ngẫu nhiên");
+        jButtonRun.setBackground(new java.awt.Color(71, 120, 197));
+        jButtonRun.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButtonRun.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRun.setText("Sắp xếp");
+        jButtonRun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonRunMousePressed(evt);
+            }
+        });
+
+        jButtonCreateArr.setBackground(new java.awt.Color(71, 120, 197));
+        jButtonCreateArr.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonCreateArr.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCreateArr.setText("Ngẫu nhiên");
         jButtonCreateArr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButtonCreateArr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -136,65 +388,104 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        jButtonRun.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButtonRun.setText("Sắp xếp");
-        jButtonRun.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonRunMouseClicked(evt);
+        jPanel9.setBackground(new java.awt.Color(7, 51, 105));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel1.setText("Số phần tử");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jButton1.setBackground(new java.awt.Color(71, 120, 197));
+        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Đảo ngược");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
             }
         });
 
-        jLabelBestCase.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
+        jButton2.setBackground(new java.awt.Color(71, 120, 197));
+        jButton2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Gần được sắp xếp");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+        });
 
-        jLabelWorstCase.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jButton3.setBackground(new java.awt.Color(71, 120, 197));
+        jButton3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Đọc từ tập tin");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton3MousePressed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelAlgo)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonCreateArr)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonRun)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelWorstCase)
-                    .addComponent(jLabelBestCase))
-                .addGap(117, 117, 117))
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButtonRun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addComponent(jButtonCreateArr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelAlgo)
-                    .addComponent(jLabelBestCase))
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButtonCreateArr)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinnerArrLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCreateArr)
-                    .addComponent(jButtonRun)
-                    .addComponent(jLabelWorstCase))
-                .addGap(18, 18, 18))
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
+                .addComponent(jButtonRun)
+                .addGap(132, 132, 132))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 204, 204)));
-        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 680));
+
+        jScrollPane1.setBorder(null);
 
         jTextAreaDescription.setEditable(false);
-        jTextAreaDescription.setBackground(new java.awt.Color(255, 255, 255));
+        jTextAreaDescription.setBackground(new java.awt.Color(220, 231, 246));
         jTextAreaDescription.setColumns(20);
         jTextAreaDescription.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
         jTextAreaDescription.setLineWrap(true);
@@ -205,22 +496,9 @@ public class DemoSort extends javax.swing.JFrame {
         jTextAreaDescription.setMargin(new java.awt.Insets(8, 8, 8, 8));
         jScrollPane1.setViewportView(jTextAreaDescription);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 1150, 130));
+
+        jMenuMain.setRequestFocusEnabled(false);
 
         jMenuAlgo.setText("Giải Thuật");
         jMenuAlgo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -228,7 +506,7 @@ public class DemoSort extends javax.swing.JFrame {
         buttonGroup.add(jRadioBubble);
         jRadioBubble.setSelected(true);
         jRadioBubble.setText("Sắp xếp nổi bọt - Bubble sort ");
-        jRadioBubble.setName("Sắp xếp nổi bọt ( Bubble sort )"); // NOI18N
+        jRadioBubble.setName("Sắp xếp nổi bọt - Bubble sort "); // NOI18N
         jRadioBubble.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jRadioBubbleMousePressed(evt);
@@ -340,24 +618,6 @@ public class DemoSort extends javax.swing.JFrame {
 
         setJMenuBar(jMenuMain);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -369,6 +629,8 @@ public class DemoSort extends javax.swing.JFrame {
         jTextAreaDescription.setText("Thuật toán sắp xếp lựa chọn sắp xếp một mảng bằng cách liên tục tìm phần tử tối thiểu (xét theo thứ tự tăng dần) từ phần chưa được sắp xếp và đặt nó ở đầu. Thuật toán duy trì hai mảng con trong một mảng nhất định.\n" +
             "1) Mảng con đã được sắp xếp. \n" +
             "2) Mảng con còn lại chưa được sắp xếp.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioButtonSelection.setSelected(true);
     }//GEN-LAST:event_jRadioSelectionMousePressed
 
     private void jRadioBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioBubbleMousePressed
@@ -377,6 +639,8 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioButtonBubble.setSelected(true);
     }//GEN-LAST:event_jRadioBubbleMousePressed
 
     private void jRadioQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioQuickMousePressed
@@ -385,6 +649,8 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
+        jLabelLevelAlg.setText("Cấp độ: trung bình");
+        jRadioButtonQuick.setSelected(true);
     }//GEN-LAST:event_jRadioQuickMousePressed
 
     private void jRadioInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioInsertionMousePressed
@@ -395,6 +661,8 @@ public class DemoSort extends javax.swing.JFrame {
         jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. "
                 + "Mảng hầu như được chia thành một phần được sắp xếp và một phần chưa được sắp xếp. "
                 + "Các giá trị từ phần chưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioButtonInsertion.setSelected(true);
     }//GEN-LAST:event_jRadioInsertionMousePressed
 
     private void jButtonCreateArrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCreateArrMousePressed
@@ -404,48 +672,15 @@ public class DemoSort extends javax.swing.JFrame {
     private void jMenuItemReadFileMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemReadFileMousePressed
         readFile(this);
     }//GEN-LAST:event_jMenuItemReadFileMousePressed
-    private void jButtonRunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMouseClicked
-
-        if(num==0) {
-                jLabelArrEmpty.setLocation(560 , 160);
-                jPanelMain.add(jLabelArrEmpty);
-                jLabelArrEmpty.setSize(120,50);
-                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
-            return;
-        }
-        if(jRadioBubble.isSelected()) {
-            bubbleSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-
-        }
-        if(jRadioSelection.isSelected()) {
-            selectionSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioInsertion.isSelected()) {
-            insertionSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioHeap.isSelected()) {
-            heapSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioQuick.isSelected()) {
-            quickSort(arrValue, 0, arrValue.length-1);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-    }//GEN-LAST:event_jButtonRunMouseClicked
 
     private void jRadioHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioHeapMousePressed
         jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
-        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
+        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. "
+                + "Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
+        jLabelLevelAlg.setText("Cấp độ: trung bình");
+        jRadioButtonHeap.setSelected(true);
     }//GEN-LAST:event_jRadioHeapMousePressed
 
     private void jMenuGUIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuGUIMousePressed
@@ -521,6 +756,103 @@ public class DemoSort extends javax.swing.JFrame {
         createArrayAlmostSorted(this);
     }//GEN-LAST:event_jMenuItem1MousePressed
 
+    private void jButtonRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMousePressed
+        if(num==0) {
+            jLabelArrEmpty.setLocation(560 , 160);
+            jPanelMain.add(jLabelArrEmpty);
+            jLabelArrEmpty.setSize(120,50);
+            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+            return;
+        }
+        if(jRadioBubble.isSelected() || jRadioButtonBubble.isSelected()) {
+            bubbleSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioSelection.isSelected() || jRadioButtonSelection.isSelected()) {
+            selectionSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioInsertion.isSelected() || jRadioButtonInsertion.isSelected()) {
+            insertionSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioHeap.isSelected() || jRadioButtonHeap.isSelected()) {
+            heapSort(arrValue);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioQuick.isSelected() || jRadioButtonQuick.isSelected()) {
+            quickSort(arrValue, 0, arrValue.length-1);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+    }//GEN-LAST:event_jButtonRunMousePressed
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        createArrayReverse(this);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        createArrayAlmostSorted(this);
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+        readFile(this);
+    }//GEN-LAST:event_jButton3MousePressed
+
+    private void jRadioButtonBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonBubbleMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioBubble.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioBubble.setSelected(true);
+    }//GEN-LAST:event_jRadioButtonBubbleMousePressed
+
+    private void jRadioButtonSelectionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonSelectionMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioSelection.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n^2)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Thuật toán sắp xếp lựa chọn sắp xếp một mảng bằng cách liên tục tìm phần tử tối thiểu (xét theo thứ tự tăng dần) từ phần chưa được sắp xếp và đặt nó ở đầu. Thuật toán duy trì hai mảng con trong một mảng nhất định.\n" +
+            "1) Mảng con đã được sắp xếp. \n" +
+            "2) Mảng con còn lại chưa được sắp xếp.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioSelection.setSelected(true);
+    }//GEN-LAST:event_jRadioButtonSelectionMousePressed
+
+    private void jRadioButtonInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonInsertionMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioInsertion.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. "
+                + "Mảng hầu như được chia thành một phần được sắp xếp và một phần chưa được sắp xếp. "
+                + "Các giá trị từ phần chưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
+        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jRadioInsertion.setSelected(true);
+    }//GEN-LAST:event_jRadioButtonInsertionMousePressed
+
+    private void jRadioButtonHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonHeapMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
+        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. "
+                + "Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
+        jLabelLevelAlg.setText("Cấp độ: trung bình");
+        jRadioHeap.setSelected(true);
+    }//GEN-LAST:event_jRadioButtonHeapMousePressed
+
+    private void jRadioButtonQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonQuickMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioQuick.getName());
+        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
+        jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
+        jLabelLevelAlg.setText("Cấp độ: trung bình");
+        jRadioQuick.setSelected(true);
+    }//GEN-LAST:event_jRadioButtonQuickMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -564,12 +896,17 @@ public class DemoSort extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonCreateArr;
     private javax.swing.JButton jButtonRun;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAlgo;
     private javax.swing.JLabel jLabelBestCase;
     private static javax.swing.JLabel jLabelCountSwap;
+    private javax.swing.JLabel jLabelLevelAlg;
     private javax.swing.JLabel jLabelWorstCase;
     private javax.swing.JMenu jMenuAlgo;
     private javax.swing.JMenu jMenuCreateArr;
@@ -583,8 +920,20 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuRun;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JRadioButtonMenuItem jRadioBubble;
+    private javax.swing.JRadioButton jRadioButtonBubble;
+    private javax.swing.JRadioButton jRadioButtonHeap;
+    private javax.swing.JRadioButton jRadioButtonInsertion;
+    private javax.swing.JRadioButton jRadioButtonQuick;
+    private javax.swing.JRadioButton jRadioButtonSelection;
     private javax.swing.JRadioButtonMenuItem jRadioHeap;
     private javax.swing.JRadioButtonMenuItem jRadioInsertion;
     private javax.swing.JRadioButtonMenuItem jRadioQuick;
@@ -619,12 +968,13 @@ public class DemoSort extends javax.swing.JFrame {
             int rd = random.nextInt(100);
             arrLabel[i] = new JLabel("" + rd, JLabel.CENTER);
             if (i == 0)
-                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
             else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
             arrLabel[i].setSize(45, 45);
-            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            arrLabel[i].setForeground(Color.white);
             
             // Them gia tri vao mang sap xep
             arrValue[i]= rd;
@@ -663,12 +1013,13 @@ public class DemoSort extends javax.swing.JFrame {
             int tempValue = temp[i];
             arrLabel[i] = new JLabel("" + tempValue, JLabel.CENTER);
             if (i == 0)
-                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
             else
                 arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
             arrLabel[i].setSize(45, 45);
-            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            arrLabel[i].setForeground(Color.white);
             
             // Them gia tri vao mang sap xep
             arrValue[i]= tempValue;
@@ -718,12 +1069,13 @@ public class DemoSort extends javax.swing.JFrame {
             int tempValue = temp[i];
             arrLabel[i] = new JLabel("" + tempValue, JLabel.CENTER);
             if (i == 0)
-                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
             else
                 arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
             arrLabel[i].setSize(45, 45);
-            arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255) , 4));
+            arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            arrLabel[i].setForeground(Color.white);
             
             // Them gia tri vao mang sap xep
             arrValue[i]= tempValue;
@@ -756,12 +1108,13 @@ public class DemoSort extends javax.swing.JFrame {
                 arrValue[i] = temp;
                 arrLabel[i] = new JLabel("" + temp, JLabel.CENTER);
                 if (i == 0)
-                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 80, 160);
+                    arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
                 else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
                 a.jPanelMain.add(arrLabel[i]);
                 arrLabel[i].setSize(45,45);
-                arrLabel[i].setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+                arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+                arrLabel[i].setForeground(Color.white);
                 i++;
             }
 //            System.out.println(num);
@@ -997,8 +1350,8 @@ public class DemoSort extends javax.swing.JFrame {
                             lb2.setText(txtLb1);
                             lb1.setLocation(x1, 160);
                             lb2.setLocation(x2, 160);
-                            lb1.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
-                            lb2.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+                            lb1.setBorder(BorderFactory.createLineBorder(Color.white, 4));
+                            lb2.setBorder(BorderFactory.createLineBorder(Color.white, 4));
 		    	} catch (Exception e) {
                             e.printStackTrace();
 		    	}
