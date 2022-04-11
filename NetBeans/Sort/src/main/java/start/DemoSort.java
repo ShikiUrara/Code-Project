@@ -5,6 +5,7 @@
 package start;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
@@ -57,6 +58,9 @@ public class DemoSort extends javax.swing.JFrame {
         jRadioButtonInsertion = new javax.swing.JRadioButton();
         jRadioButtonHeap = new javax.swing.JRadioButton();
         jRadioButtonQuick = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
         jPanel12 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -193,6 +197,15 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("jRadioButton1");
+
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("jRadioButton2");
+
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setText("jRadioButton3");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -208,6 +221,12 @@ public class DemoSort extends javax.swing.JFrame {
                 .addComponent(jRadioButtonHeap)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonQuick)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -219,7 +238,10 @@ public class DemoSort extends javax.swing.JFrame {
                     .addComponent(jRadioButtonSelection)
                     .addComponent(jRadioButtonInsertion)
                     .addComponent(jRadioButtonHeap)
-                    .addComponent(jRadioButtonQuick))
+                    .addComponent(jRadioButtonQuick)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton3))
                 .addGap(17, 17, 17))
         );
 
@@ -252,7 +274,7 @@ public class DemoSort extends javax.swing.JFrame {
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 559, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
                 .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -959,10 +981,12 @@ public class DemoSort extends javax.swing.JFrame {
 
     private void jMenuItemRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRunMousePressed
         if(num==0) {
-                jLabelArrEmpty.setLocation(560 , 160);
+                jLabelArrEmpty.setLocation(460 , 160);
                 jPanelMain.add(jLabelArrEmpty);
-                jLabelArrEmpty.setSize(120,50);
-                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+                jLabelArrEmpty.setSize(200,55);
+                jLabelArrEmpty.setFont(new Font("Arial", Font.PLAIN, 25));
+                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(Color.white , 4));
+                jLabelArrEmpty.setForeground(Color.white);
             return;
         }
         if(jRadioBubble.isSelected()) {
@@ -1007,10 +1031,12 @@ public class DemoSort extends javax.swing.JFrame {
 
     private void jButtonRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMousePressed
         if(num==0) {
-            jLabelArrEmpty.setLocation(560 , 160);
+            jLabelArrEmpty.setLocation(460 , 160);
             jPanelMain.add(jLabelArrEmpty);
-            jLabelArrEmpty.setSize(120,50);
-            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+            jLabelArrEmpty.setSize(200,55);
+            jLabelArrEmpty.setFont(new Font("Arial", Font.PLAIN, 25));
+            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            jLabelArrEmpty.setForeground(Color.white);
             return;
         }
         if(jRadioBubble.isSelected() || jRadioButtonBubble.isSelected()) {
@@ -1225,6 +1251,9 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JRadioButtonMenuItem jRadioBubble;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButtonBubble;
     private javax.swing.JRadioButton jRadioButtonHeap;
     private javax.swing.JRadioButton jRadioButtonInsertion;
@@ -1254,10 +1283,12 @@ public class DemoSort extends javax.swing.JFrame {
     public void saveArrayHistory(DemoSort a) {
         
         if(num==0) {
-            jLabelArrEmpty.setLocation(560 , 160);
+            jLabelArrEmpty.setLocation(460 , 160);
             jPanelMain.add(jLabelArrEmpty);
-            jLabelArrEmpty.setSize(120,50);
-            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(new Color(45, 166, 255), 4));
+            jLabelArrEmpty.setSize(200,55);
+            jLabelArrEmpty.setFont(new Font("Arial", Font.PLAIN, 25));
+            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            jLabelArrEmpty.setForeground(Color.white);
         } else {
             arrValueHistory = new int[arrValue.length];
             
@@ -1266,6 +1297,17 @@ public class DemoSort extends javax.swing.JFrame {
                 arrValueHistory[i]=arrValue[i];
             }
             System.out.println("Da luu mang");
+            
+            JDialog jDialogGUI = new JDialog();
+            jDialogGUI.setTitle("Thông báo");
+            jDialogGUI.setSize(250, 150);
+            jDialogGUI.setLocationRelativeTo(null);
+
+            // Tao noi dung
+            JTextArea jTextAreaGUI = new JTextArea("Đã lưu mảng thành công");
+            jTextAreaGUI.setEditable(false);
+            jDialogGUI.add(jTextAreaGUI);
+            jDialogGUI.setVisible(true);
         }
     }
     public static void outPutArrayHistory(DemoSort a) {
@@ -1286,7 +1328,8 @@ public class DemoSort extends javax.swing.JFrame {
             else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setSize(55, 55);
+            arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
             arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
             arrLabel[i].setForeground(Color.white);
             
@@ -1318,7 +1361,8 @@ public class DemoSort extends javax.swing.JFrame {
             else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setSize(55, 55);
+            arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
             arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
             arrLabel[i].setForeground(Color.white);
             
@@ -1363,7 +1407,8 @@ public class DemoSort extends javax.swing.JFrame {
             else
                 arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setSize(55, 55);
+            arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
             arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
             arrLabel[i].setForeground(Color.white);
             
@@ -1419,7 +1464,8 @@ public class DemoSort extends javax.swing.JFrame {
             else
                 arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
             a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(45, 45);
+            arrLabel[i].setSize(55, 55);
+            arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
             arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
             arrLabel[i].setForeground(Color.white);
             
@@ -1465,7 +1511,8 @@ public class DemoSort extends javax.swing.JFrame {
                 else
                     arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
                 a.jPanelMain.add(arrLabel[i]);
-                arrLabel[i].setSize(45,45);
+                arrLabel[i].setSize(55, 55);
+                arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
                 arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
                 arrLabel[i].setForeground(Color.white);
                 i++;
