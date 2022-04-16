@@ -49,6 +49,21 @@ public class DemoSort extends javax.swing.JFrame {
 
         buttonGroup = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jMenuMain = new javax.swing.JMenuBar();
+        jMenuAlgo = new javax.swing.JMenu();
+        jRadioBubble = new javax.swing.JRadioButtonMenuItem();
+        jRadioSelection = new javax.swing.JRadioButtonMenuItem();
+        jRadioInsertion = new javax.swing.JRadioButtonMenuItem();
+        jRadioHeap = new javax.swing.JRadioButtonMenuItem();
+        jRadioQuick = new javax.swing.JRadioButtonMenuItem();
+        jMenuRun = new javax.swing.JMenu();
+        jMenuItemRun = new javax.swing.JMenuItem();
+        jMenuCreateArr = new javax.swing.JMenu();
+        jMenuItemRandom = new javax.swing.JMenuItem();
+        jMenuItemReadFile = new javax.swing.JMenuItem();
+        jMenuItemReverse = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuGUI = new javax.swing.JMenu();
         jPanelMain = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabelCountSwap = new javax.swing.JLabel();
@@ -93,23 +108,130 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescription = new javax.swing.JTextArea();
-        jMenuMain = new javax.swing.JMenuBar();
-        jMenuAlgo = new javax.swing.JMenu();
-        jRadioBubble = new javax.swing.JRadioButtonMenuItem();
-        jRadioSelection = new javax.swing.JRadioButtonMenuItem();
-        jRadioInsertion = new javax.swing.JRadioButtonMenuItem();
-        jRadioHeap = new javax.swing.JRadioButtonMenuItem();
-        jRadioQuick = new javax.swing.JRadioButtonMenuItem();
-        jMenuRun = new javax.swing.JMenu();
-        jMenuItemRun = new javax.swing.JMenuItem();
-        jMenuCreateArr = new javax.swing.JMenu();
-        jMenuItemRandom = new javax.swing.JMenuItem();
-        jMenuItemReadFile = new javax.swing.JMenuItem();
-        jMenuItemReverse = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuGUI = new javax.swing.JMenu();
+
+        jMenuMain.setOpaque(true);
+        jMenuMain.setRequestFocusEnabled(false);
+
+        jMenuAlgo.setText("Giải Thuật");
+        jMenuAlgo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        buttonGroup.add(jRadioBubble);
+        jRadioBubble.setSelected(true);
+        jRadioBubble.setText("Sắp xếp nổi bọt - Bubble sort ");
+        jRadioBubble.setName("Sắp xếp nổi bọt - Bubble sort "); // NOI18N
+        jRadioBubble.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioBubbleMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioBubble);
+
+        buttonGroup.add(jRadioSelection);
+        jRadioSelection.setText("Sắp xếp chọn - Selection sort");
+        jRadioSelection.setName("Sắp xếp chọn - Selection sort"); // NOI18N
+        jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioSelectionMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioSelection);
+
+        buttonGroup.add(jRadioInsertion);
+        jRadioInsertion.setText("Sắp xếp chèn - Insertion sort");
+        jRadioInsertion.setName("Sắp xếp chèn - Insertion sort"); // NOI18N
+        jRadioInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioInsertionMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioInsertion);
+        jRadioInsertion.getAccessibleContext().setAccessibleName("Sắp xếp chèn - Selection sort");
+
+        buttonGroup.add(jRadioHeap);
+        jRadioHeap.setText("Sắp xếp vun đống - Heap sort");
+        jRadioHeap.setName("Sắp xếp vun đống - Heap sort"); // NOI18N
+        jRadioHeap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioHeapMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioHeap);
+
+        buttonGroup.add(jRadioQuick);
+        jRadioQuick.setText("Sắp xếp nhanh - Quick sort ");
+        jRadioQuick.setName("Sắp xếp nhanh - Quick sort "); // NOI18N
+        jRadioQuick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioQuickMousePressed(evt);
+            }
+        });
+        jMenuAlgo.add(jRadioQuick);
+
+        jMenuMain.add(jMenuAlgo);
+
+        jMenuRun.setText("Chạy");
+        jMenuRun.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jMenuItemRun.setText("Chạy");
+        jMenuItemRun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemRunMousePressed(evt);
+            }
+        });
+        jMenuRun.add(jMenuItemRun);
+
+        jMenuMain.add(jMenuRun);
+
+        jMenuCreateArr.setText("Tạo mảng");
+        jMenuCreateArr.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jMenuItemRandom.setText("Lấy ngẫu nhiên");
+        jMenuItemRandom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemRandomMousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItemRandom);
+
+        jMenuItemReadFile.setText("Đọc file");
+        jMenuItemReadFile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemReadFileMousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItemReadFile);
+
+        jMenuItemReverse.setText("Đảo ngược");
+        jMenuItemReverse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemReverseMousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItemReverse);
+
+        jMenuItem1.setText("Gần được sắp xếp");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem1MousePressed(evt);
+            }
+        });
+        jMenuCreateArr.add(jMenuItem1);
+
+        jMenuMain.add(jMenuCreateArr);
+
+        jMenuGUI.setText("Hướng dẫn");
+        jMenuGUI.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuGUI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuGUIMousePressed(evt);
+            }
+        });
+        jMenuMain.add(jMenuGUI);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mô Phỏng Giải Thuật Sắp Xếp");
@@ -426,7 +548,7 @@ public class DemoSort extends javax.swing.JFrame {
                 jButtonRunMousePressed(evt);
             }
         });
-        jPanel3.add(jButtonRun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 110, 30));
+        jPanel3.add(jButtonRun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 110, 30));
 
         jPanel9.setBackground(new java.awt.Color(7, 51, 105));
 
@@ -453,7 +575,6 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 130, -1));
 
         jPanel10.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel10.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 1, new java.awt.Color(204, 255, 255)));
         jPanel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel10MousePressed(evt);
@@ -486,7 +607,7 @@ public class DemoSort extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(0, 43, Short.MAX_VALUE))
+                .addGap(0, 45, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -502,7 +623,6 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 40));
 
         jPanel13.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jPanel13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel13MousePressed(evt);
@@ -551,7 +671,6 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 130, -1));
 
         jPanel15.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel15MousePressed(evt);
@@ -600,7 +719,6 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel3.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 130, -1));
 
         jPanel17.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel17MousePressed(evt);
@@ -649,7 +767,6 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel3.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 130, -1));
 
         jPanel19.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jPanel19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel19MousePressed(evt);
@@ -695,10 +812,9 @@ public class DemoSort extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
+        jPanel3.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 130, -1));
 
         jPanel21.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jPanel21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel21MousePressed(evt);
@@ -731,7 +847,7 @@ public class DemoSort extends javax.swing.JFrame {
                 .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addGap(0, 53, Short.MAX_VALUE))
+                .addGap(0, 55, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -744,7 +860,55 @@ public class DemoSort extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 130, -1));
+        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 130, -1));
+
+        jPanel23.setBackground(new java.awt.Color(26, 35, 71));
+        jPanel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel23MousePressed(evt);
+            }
+        });
+
+        jPanel24.setOpaque(false);
+        jPanel24.setPreferredSize(new java.awt.Dimension(3, 40));
+
+        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
+        jPanel24.setLayout(jPanel24Layout);
+        jPanel24Layout.setHorizontalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3, Short.MAX_VALUE)
+        );
+        jPanel24Layout.setVerticalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Nhập tay");
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addGap(0, 61, Short.MAX_VALUE))
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel3.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 680));
 
@@ -763,126 +927,6 @@ public class DemoSort extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextAreaDescription);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 1150, 130));
-
-        jMenuMain.setRequestFocusEnabled(false);
-
-        jMenuAlgo.setText("Giải Thuật");
-        jMenuAlgo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        buttonGroup.add(jRadioBubble);
-        jRadioBubble.setSelected(true);
-        jRadioBubble.setText("Sắp xếp nổi bọt - Bubble sort ");
-        jRadioBubble.setName("Sắp xếp nổi bọt - Bubble sort "); // NOI18N
-        jRadioBubble.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioBubbleMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioBubble);
-
-        buttonGroup.add(jRadioSelection);
-        jRadioSelection.setText("Sắp xếp chọn - Selection sort");
-        jRadioSelection.setName("Sắp xếp chọn - Selection sort"); // NOI18N
-        jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioSelectionMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioSelection);
-
-        buttonGroup.add(jRadioInsertion);
-        jRadioInsertion.setText("Sắp xếp chèn - Insertion sort");
-        jRadioInsertion.setName("Sắp xếp chèn - Insertion sort"); // NOI18N
-        jRadioInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioInsertionMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioInsertion);
-        jRadioInsertion.getAccessibleContext().setAccessibleName("Sắp xếp chèn - Selection sort");
-
-        buttonGroup.add(jRadioHeap);
-        jRadioHeap.setText("Sắp xếp vun đống - Heap sort");
-        jRadioHeap.setName("Sắp xếp vun đống - Heap sort"); // NOI18N
-        jRadioHeap.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioHeapMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioHeap);
-
-        buttonGroup.add(jRadioQuick);
-        jRadioQuick.setText("Sắp xếp nhanh - Quick sort ");
-        jRadioQuick.setName("Sắp xếp nhanh - Quick sort "); // NOI18N
-        jRadioQuick.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioQuickMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioQuick);
-
-        jMenuMain.add(jMenuAlgo);
-
-        jMenuRun.setText("Chạy");
-        jMenuRun.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        jMenuItemRun.setText("Chạy");
-        jMenuItemRun.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemRunMousePressed(evt);
-            }
-        });
-        jMenuRun.add(jMenuItemRun);
-
-        jMenuMain.add(jMenuRun);
-
-        jMenuCreateArr.setText("Tạo mảng");
-        jMenuCreateArr.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        jMenuItemRandom.setText("Lấy ngẫu nhiên");
-        jMenuItemRandom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemRandomMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemRandom);
-
-        jMenuItemReadFile.setText("Đọc file");
-        jMenuItemReadFile.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemReadFileMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemReadFile);
-
-        jMenuItemReverse.setText("Đảo ngược");
-        jMenuItemReverse.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemReverseMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemReverse);
-
-        jMenuItem1.setText("Gần được sắp xếp");
-        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItem1MousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItem1);
-
-        jMenuMain.add(jMenuCreateArr);
-
-        jMenuGUI.setText("Hướng dẫn");
-        jMenuGUI.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuGUI.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuGUIMousePressed(evt);
-            }
-        });
-        jMenuMain.add(jMenuGUI);
-
-        setJMenuBar(jMenuMain);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1107,44 +1151,53 @@ public class DemoSort extends javax.swing.JFrame {
         createArrayRandom(this);
         setColor(jPanel10);
         jPanel11.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel17, jPanel19, jPanel21}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20});
+        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel10MousePressed
 
     private void jPanel15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MousePressed
         createArrayReverse(this);
         setColor(jPanel15);
         jPanel16.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel10, jPanel17, jPanel19, jPanel21}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20});
+        resetColor(new JPanel[]{jPanel13, jPanel10, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel15MousePressed
 
     private void jPanel17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MousePressed
         readFile(this);
         setColor(jPanel17);
         jPanel18.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel10, jPanel19, jPanel21}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20});
+        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel10, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel17MousePressed
 
     private void jPanel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MousePressed
         createArrayAlmostSorted(this);
         setColor(jPanel13);
         jPanel14.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel19, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel13MousePressed
 
     private void jPanel19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MousePressed
         saveArrayHistory(this);
         setColor(jPanel19);
         jPanel20.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel21, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14, jPanel24});
     }//GEN-LAST:event_jPanel19MousePressed
 
     private void jPanel21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel21MousePressed
         outPutArrayHistory(this);
-        saveArrayHistory(this);
         setColor(jPanel21);
         jPanel22.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel21MousePressed
+
+    private void jPanel23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel23MousePressed
+        // Nhap tay
+        
+        setColor(jPanel23);
+        jPanel24.setOpaque(true);
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel22});
+        InputDialog input = new InputDialog(this, true);
+        input.setVisible(true);
+    }//GEN-LAST:event_jPanel23MousePressed
 
     /**
      * @param args the command line arguments
@@ -1199,6 +1252,7 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelAlgo;
     private javax.swing.JLabel jLabelBestCase;
     private static javax.swing.JLabel jLabelCountSwap;
@@ -1229,6 +1283,8 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1236,7 +1292,7 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanelMain;
+    private static javax.swing.JPanel jPanelMain;
     private javax.swing.JRadioButtonMenuItem jRadioBubble;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButtonBubble;
@@ -1296,33 +1352,42 @@ public class DemoSort extends javax.swing.JFrame {
         }
     }
     public static void outPutArrayHistory(DemoSort a) {
-        deleteArray(a);
-        arrLabel = new JLabel[arrValueHistory.length];
-        arrValue = new int[arrValueHistory.length];
-        try {
-                a.jSpinnerArrLength.commitEdit();
-                a.jSpinnerArrLength.setValue(arrValueHistory.length);
-            } catch (ParseException ex) {
-                Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+        if(num==0) {
+            jLabelArrEmpty.setLocation(460 , 160);
+            jPanelMain.add(jLabelArrEmpty);
+            jLabelArrEmpty.setSize(200,55);
+            jLabelArrEmpty.setFont(new Font("Arial", Font.PLAIN, 25));
+            jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(Color.white , 4));
+            jLabelArrEmpty.setForeground(Color.white);
+        } else {
+            deleteArray(a);
+            arrLabel = new JLabel[arrValueHistory.length];
+            arrValue = new int[arrValueHistory.length];
+            try {
+                    a.jSpinnerArrLength.commitEdit();
+                    a.jSpinnerArrLength.setValue(arrValueHistory.length);
+                } catch (ParseException ex) {
+                    Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            for(int i=0; i<arrValueHistory.length; i++) {
+                // Them gia tri vao nhan
+                arrLabel[i] = new JLabel("" + arrValueHistory[i], JLabel.CENTER);
+                if (i == 0)
+                        arrLabel[i].setLocation(((int) ((18 - arrValueHistory.length) * 0.5) * 65) + 0, 160);
+                else
+                        arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
+                a.jPanelMain.add(arrLabel[i]);
+                arrLabel[i].setSize(55, 55);
+                arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
+                arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+                arrLabel[i].setForeground(Color.white);
+
+                // Them gia tri vao mang sap xep
+                arrValue[i]= arrValueHistory[i];
+    //            System.out.println(arrValue[i]);
+            }
+            a.jPanelMain.setVisible(true);
         }
-        for(int i=0; i<arrValueHistory.length; i++) {
-            // Them gia tri vao nhan
-            arrLabel[i] = new JLabel("" + arrValueHistory[i], JLabel.CENTER);
-            if (i == 0)
-                    arrLabel[i].setLocation(((int) ((18 - arrValueHistory.length) * 0.5) * 65) + 0, 160);
-            else
-                    arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
-            a.jPanelMain.add(arrLabel[i]);
-            arrLabel[i].setSize(55, 55);
-            arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
-            arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
-            arrLabel[i].setForeground(Color.white);
-            
-            // Them gia tri vao mang sap xep
-            arrValue[i]= arrValueHistory[i];
-//            System.out.println(arrValue[i]);
-        }
-        a.jPanelMain.setVisible(true);
     }
     
     
