@@ -21,6 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.text.NumberFormatter;
@@ -64,6 +65,7 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuItemReverse = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuGUI = new javax.swing.JMenu();
+        jButtonHand = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabelCountSwap = new javax.swing.JLabel();
@@ -232,6 +234,15 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
         jMenuMain.add(jMenuGUI);
+
+        jButtonHand.setBackground(new java.awt.Color(71, 120, 197));
+        jButtonHand.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jButtonHand.setText("Tạo mảng");
+        jButtonHand.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonHandMousePressed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mô Phỏng Giải Thuật Sắp Xếp");
@@ -1195,9 +1206,81 @@ public class DemoSort extends javax.swing.JFrame {
         setColor(jPanel23);
         jPanel24.setOpaque(true);
         resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel22});
-        InputDialog input = new InputDialog(this, true);
-        input.setVisible(true);
+        
+        // Tao bang nhap du lieu tay
+        JDialog jDialogHand = new JDialog();
+        jDialogHand.setTitle("Nhập tay");
+        jDialogHand.setSize(370, 330);
+        jDialogHand.setLocationRelativeTo(null);
+        JPanel jPanel = new JPanel();
+        jPanel.setBackground(new Color(245,255,255));
+        jDialogHand.add(jPanel);
+        try {
+            this.jSpinnerArrLength.commitEdit();
+        } catch (ParseException ex) {
+            Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        num = ( Integer ) this.jSpinnerArrLength.getValue();
+        handLabel = new JLabel[num];
+        handTextField = new JTextField[num];
+        for(int i=0; i<num; i++) {
+            if(i<9) {
+                handLabel[i] = new JLabel("Phần tử " + (i+1) + "");
+                handTextField[i] = new JTextField();
+                handTextField[i].setColumns(4);
+            } else {
+                handLabel[i] = new JLabel("Phần tử " + (i+1));
+                handTextField[i] = new JTextField();
+                handTextField[i].setColumns(4);
+            }
+            jPanel.add(handLabel[i]);
+            handLabel[i].setFont(new Font("Arial", Font.PLAIN, 16));
+            handLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 5));
+            handLabel[i].setForeground(Color.BLACK);
+            jPanel.add(handTextField[i]);
+            handTextField[i].setFont(new Font("Arial", Font.PLAIN, 16));
+            handTextField[i].setBorder(BorderFactory.createLineBorder(Color.BLACK , 1));
+            handTextField[i].setForeground(Color.BLACK);
+        }
+        jPanel.add(jButtonHand);
+        jDialogHand.setResizable(false);
+        jDialogHand.setVisible(true);
     }//GEN-LAST:event_jPanel23MousePressed
+
+    private void jButtonHandMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonHandMousePressed
+        try {
+            if(num!=0)
+                deleteArray(this);
+            try {
+                this.jSpinnerArrLength.commitEdit();
+            } catch (ParseException ex) {
+                Logger.getLogger(DemoSort.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            num = ( Integer ) this.jSpinnerArrLength.getValue();
+            arrLabel = new JLabel[num];
+            arrValue = new int[num];
+            for(int i=0; i<num; i++) {
+                // Them gia tri vao nhan
+                arrLabel[i] = new JLabel(handTextField[i].getText(), JLabel.CENTER);
+                if (i == 0)
+                        arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
+                else
+                        arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
+                this.jPanelMain.add(arrLabel[i]);
+                arrLabel[i].setSize(55, 55);
+                arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
+                arrLabel[i].setBorder(BorderFactory.createLineBorder(Color.white , 4));
+                arrLabel[i].setForeground(Color.white);
+
+                // Them gia tri vao mang sap xep
+                arrValue[i]= Integer.valueOf(handTextField[i].getText());
+            }
+            this.jPanelMain.setVisible(true);
+        } catch (NumberFormatException e) {
+            // Loi nhap
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButtonHandMousePressed
 
     /**
      * @param args the command line arguments
@@ -1243,6 +1326,7 @@ public class DemoSort extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButtonHand;
     private javax.swing.JButton jButtonRun;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1317,6 +1401,8 @@ public class DemoSort extends javax.swing.JFrame {
     private static int countThread = -1;
     private static int countSwap = 0;
     private static int arrValueHistory[];
+    private JLabel[] handLabel;
+    private JTextField[] handTextField;
     
     // Hand code
     
@@ -1531,7 +1617,7 @@ public class DemoSort extends javax.swing.JFrame {
         stopThread();
         jLabelArrEmpty.setVisible(false);
         a.jPanelMain.remove(jLabelArrEmpty);
-        if(arrValue != null)
+        if(arrValue != null || arrLabel != null)
             for(int i=0; i<arrValue.length; i++) {
                 arrLabel[i].setVisible(false);
                 a.jPanelMain.remove(arrLabel[i]);
