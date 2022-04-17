@@ -67,17 +67,6 @@ public class DemoSort extends javax.swing.JFrame {
         jMenuGUI = new javax.swing.JMenu();
         jButtonHand = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabelCountSwap = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jRadioButtonBubble = new javax.swing.JRadioButton();
-        jRadioButtonSelection = new javax.swing.JRadioButton();
-        jRadioButtonInsertion = new javax.swing.JRadioButton();
-        jRadioButtonHeap = new javax.swing.JRadioButton();
-        jRadioButtonQuick = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabelBestCase = new javax.swing.JLabel();
@@ -115,6 +104,16 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescription = new javax.swing.JTextArea();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabelCountSwap = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jRadioButtonBubble = new javax.swing.JRadioButton();
+        jRadioButtonSelection = new javax.swing.JRadioButton();
+        jRadioButtonInsertion = new javax.swing.JRadioButton();
+        jRadioButtonHeap = new javax.swing.JRadioButton();
+        jRadioButtonQuick = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
 
         jMenuMain.setOpaque(true);
         jMenuMain.setRequestFocusEnabled(false);
@@ -257,161 +256,18 @@ public class DemoSort extends javax.swing.JFrame {
         jPanelMain.setBackground(new java.awt.Color(84, 125, 206));
         jPanelMain.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jPanel5.setBackground(new java.awt.Color(120, 168, 252));
-
-        jLabelCountSwap.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabelCountSwap.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelCountSwap.setText("Số lần hoán đổi");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCountSwap, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCountSwap)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel8.setBackground(new java.awt.Color(120, 168, 252));
-
-        buttonGroup1.add(jRadioButtonBubble);
-        jRadioButtonBubble.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonBubble.setSelected(true);
-        jRadioButtonBubble.setText("Bubble");
-        jRadioButtonBubble.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonBubbleMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButtonSelection);
-        jRadioButtonSelection.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonSelection.setText("Selection");
-        jRadioButtonSelection.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonSelectionMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButtonInsertion);
-        jRadioButtonInsertion.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonInsertion.setText("Insertion");
-        jRadioButtonInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonInsertionMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButtonHeap);
-        jRadioButtonHeap.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonHeap.setText("Heap");
-        jRadioButtonHeap.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonHeapMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButtonQuick);
-        jRadioButtonQuick.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonQuick.setText("Quick");
-        jRadioButtonQuick.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonQuickMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Shell");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButtonBubble)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButtonSelection)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButtonInsertion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButtonHeap)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButtonQuick)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButtonBubble)
-                    .addComponent(jRadioButtonSelection)
-                    .addComponent(jRadioButtonInsertion)
-                    .addComponent(jRadioButtonHeap)
-                    .addComponent(jRadioButtonQuick)
-                    .addComponent(jRadioButton1))
-                .addGap(17, 17, 17))
-        );
-
-        jPanel12.setBackground(new java.awt.Color(120, 168, 252));
-
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Thời gian chạy ");
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addContainerGap(8, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout jPanelMainLayout = new javax.swing.GroupLayout(jPanelMain);
         jPanelMain.setLayout(jPanelMainLayout);
         jPanelMainLayout.setHorizontalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 495, Short.MAX_VALUE)
-                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGap(0, 1150, Short.MAX_VALUE)
         );
         jPanelMainLayout.setVerticalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
-                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap())
+            .addGap(0, 390, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanelMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 1150, 450));
+        getContentPane().add(jPanelMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 1150, 390));
 
         jPanel1.setBackground(new java.awt.Color(71, 120, 197));
 
@@ -939,6 +795,140 @@ public class DemoSort extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 1150, 130));
 
+        jPanel12.setBackground(new java.awt.Color(84, 125, 206));
+
+        jPanel5.setBackground(new java.awt.Color(120, 168, 252));
+
+        jLabelCountSwap.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabelCountSwap.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCountSwap.setText("Số lần hoán đổi");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCountSwap, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCountSwap)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel8.setBackground(new java.awt.Color(120, 168, 252));
+
+        buttonGroup1.add(jRadioButtonBubble);
+        jRadioButtonBubble.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonBubble.setSelected(true);
+        jRadioButtonBubble.setText("Bubble");
+        jRadioButtonBubble.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonBubbleMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonSelection);
+        jRadioButtonSelection.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonSelection.setText("Selection");
+        jRadioButtonSelection.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonSelectionMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonInsertion);
+        jRadioButtonInsertion.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonInsertion.setText("Insertion");
+        jRadioButtonInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonInsertionMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonHeap);
+        jRadioButtonHeap.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonHeap.setText("Heap");
+        jRadioButtonHeap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonHeapMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonQuick);
+        jRadioButtonQuick.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonQuick.setText("Quick");
+        jRadioButtonQuick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonQuickMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("Shell");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jRadioButtonBubble)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonSelection)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonInsertion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonHeap)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQuick)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonBubble)
+                    .addComponent(jRadioButtonSelection)
+                    .addComponent(jRadioButtonInsertion)
+                    .addComponent(jRadioButtonHeap)
+                    .addComponent(jRadioButtonQuick)
+                    .addComponent(jRadioButton1))
+                .addGap(17, 17, 17))
+        );
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 495, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(15, 15, 15))
+        );
+
+        getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 1150, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1278,7 +1268,9 @@ public class DemoSort extends javax.swing.JFrame {
             this.jPanelMain.setVisible(true);
         } catch (NumberFormatException e) {
             // Loi nhap
-            System.exit(0);
+            jPanelMain.removeAll();
+            num=0;
+//            System.exit(0);
         }
     }//GEN-LAST:event_jButtonHandMousePressed
 
@@ -1335,7 +1327,6 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelAlgo;
     private javax.swing.JLabel jLabelBestCase;
@@ -1612,16 +1603,18 @@ public class DemoSort extends javax.swing.JFrame {
     }
     
     public static void deleteArray(DemoSort a) {
-        countSwap = 0;
-        jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        stopThread();
-        jLabelArrEmpty.setVisible(false);
-        a.jPanelMain.remove(jLabelArrEmpty);
-        if(arrValue != null || arrLabel != null)
-            for(int i=0; i<arrValue.length; i++) {
-                arrLabel[i].setVisible(false);
-                a.jPanelMain.remove(arrLabel[i]);
-            }
+        if(num!=0) {
+            countSwap = 0;
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+            stopThread();
+            jLabelArrEmpty.setVisible(false);
+            a.jPanelMain.remove(jLabelArrEmpty);
+            if(arrValue != null || arrLabel != null)
+                for(int i=0; i<arrValue.length; i++) {
+                    arrLabel[i].setVisible(false);
+                    a.jPanelMain.remove(arrLabel[i]);
+                }
+        }
     }
     public static void readFile(DemoSort a) {
         deleteArray(a);
