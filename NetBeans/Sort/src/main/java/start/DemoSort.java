@@ -50,21 +50,6 @@ public class DemoSort extends javax.swing.JFrame {
 
         buttonGroup = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jMenuMain = new javax.swing.JMenuBar();
-        jMenuAlgo = new javax.swing.JMenu();
-        jRadioBubble = new javax.swing.JRadioButtonMenuItem();
-        jRadioSelection = new javax.swing.JRadioButtonMenuItem();
-        jRadioInsertion = new javax.swing.JRadioButtonMenuItem();
-        jRadioHeap = new javax.swing.JRadioButtonMenuItem();
-        jRadioQuick = new javax.swing.JRadioButtonMenuItem();
-        jMenuRun = new javax.swing.JMenu();
-        jMenuItemRun = new javax.swing.JMenuItem();
-        jMenuCreateArr = new javax.swing.JMenu();
-        jMenuItemRandom = new javax.swing.JMenuItem();
-        jMenuItemReadFile = new javax.swing.JMenuItem();
-        jMenuItemReverse = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuGUI = new javax.swing.JMenu();
         jButtonHand = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -113,126 +98,7 @@ public class DemoSort extends javax.swing.JFrame {
         jRadioButtonInsertion = new javax.swing.JRadioButton();
         jRadioButtonHeap = new javax.swing.JRadioButton();
         jRadioButtonQuick = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-
-        jMenuMain.setOpaque(true);
-        jMenuMain.setRequestFocusEnabled(false);
-
-        jMenuAlgo.setText("Giải Thuật");
-        jMenuAlgo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        buttonGroup.add(jRadioBubble);
-        jRadioBubble.setSelected(true);
-        jRadioBubble.setText("Sắp xếp nổi bọt - Bubble sort ");
-        jRadioBubble.setName("Sắp xếp nổi bọt - Bubble sort "); // NOI18N
-        jRadioBubble.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioBubbleMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioBubble);
-
-        buttonGroup.add(jRadioSelection);
-        jRadioSelection.setText("Sắp xếp chọn - Selection sort");
-        jRadioSelection.setName("Sắp xếp chọn - Selection sort"); // NOI18N
-        jRadioSelection.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioSelectionMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioSelection);
-
-        buttonGroup.add(jRadioInsertion);
-        jRadioInsertion.setText("Sắp xếp chèn - Insertion sort");
-        jRadioInsertion.setName("Sắp xếp chèn - Insertion sort"); // NOI18N
-        jRadioInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioInsertionMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioInsertion);
-        jRadioInsertion.getAccessibleContext().setAccessibleName("Sắp xếp chèn - Selection sort");
-
-        buttonGroup.add(jRadioHeap);
-        jRadioHeap.setText("Sắp xếp vun đống - Heap sort");
-        jRadioHeap.setName("Sắp xếp vun đống - Heap sort"); // NOI18N
-        jRadioHeap.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioHeapMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioHeap);
-
-        buttonGroup.add(jRadioQuick);
-        jRadioQuick.setText("Sắp xếp nhanh - Quick sort ");
-        jRadioQuick.setName("Sắp xếp nhanh - Quick sort "); // NOI18N
-        jRadioQuick.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioQuickMousePressed(evt);
-            }
-        });
-        jMenuAlgo.add(jRadioQuick);
-
-        jMenuMain.add(jMenuAlgo);
-
-        jMenuRun.setText("Chạy");
-        jMenuRun.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        jMenuItemRun.setText("Chạy");
-        jMenuItemRun.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemRunMousePressed(evt);
-            }
-        });
-        jMenuRun.add(jMenuItemRun);
-
-        jMenuMain.add(jMenuRun);
-
-        jMenuCreateArr.setText("Tạo mảng");
-        jMenuCreateArr.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        jMenuItemRandom.setText("Lấy ngẫu nhiên");
-        jMenuItemRandom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemRandomMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemRandom);
-
-        jMenuItemReadFile.setText("Đọc file");
-        jMenuItemReadFile.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemReadFileMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemReadFile);
-
-        jMenuItemReverse.setText("Đảo ngược");
-        jMenuItemReverse.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItemReverseMousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItemReverse);
-
-        jMenuItem1.setText("Gần được sắp xếp");
-        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItem1MousePressed(evt);
-            }
-        });
-        jMenuCreateArr.add(jMenuItem1);
-
-        jMenuMain.add(jMenuCreateArr);
-
-        jMenuGUI.setText("Hướng dẫn");
-        jMenuGUI.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuGUI.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuGUIMousePressed(evt);
-            }
-        });
-        jMenuMain.add(jMenuGUI);
+        jRadioButtonShell = new javax.swing.JRadioButton();
 
         jButtonHand.setBackground(new java.awt.Color(71, 120, 197));
         jButtonHand.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -868,9 +734,14 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Shell");
+        buttonGroup1.add(jRadioButtonShell);
+        jRadioButtonShell.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonShell.setText("Shell");
+        jRadioButtonShell.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonShellMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -888,7 +759,7 @@ public class DemoSort extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonQuick)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jRadioButtonShell, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -901,7 +772,7 @@ public class DemoSort extends javax.swing.JFrame {
                     .addComponent(jRadioButtonInsertion)
                     .addComponent(jRadioButtonHeap)
                     .addComponent(jRadioButtonQuick)
-                    .addComponent(jRadioButton1))
+                    .addComponent(jRadioButtonShell))
                 .addGap(17, 17, 17))
         );
 
@@ -932,135 +803,6 @@ public class DemoSort extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioSelectionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioSelectionMousePressed
-        // TODO add your handling code here:
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioSelection.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n^2)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("Thuật toán sắp xếp lựa chọn sắp xếp một mảng bằng cách liên tục tìm phần tử tối thiểu (xét theo thứ tự tăng dần) từ phần chưa được sắp xếp và đặt nó ở đầu. Thuật toán duy trì hai mảng con trong một mảng nhất định.\n" +
-            "1) Mảng con đã được sắp xếp. \n" +
-            "2) Mảng con còn lại chưa được sắp xếp.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioButtonSelection.setSelected(true);
-    }//GEN-LAST:event_jRadioSelectionMousePressed
-
-    private void jRadioBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioBubbleMousePressed
-        // TODO add your handling code here:
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioBubble.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioButtonBubble.setSelected(true);
-    }//GEN-LAST:event_jRadioBubbleMousePressed
-
-    private void jRadioQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioQuickMousePressed
-        // TODO add your handling code here:
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioQuick.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
-        jLabelLevelAlg.setText("Cấp độ: trung bình");
-        jRadioButtonQuick.setSelected(true);
-    }//GEN-LAST:event_jRadioQuickMousePressed
-
-    private void jRadioInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioInsertionMousePressed
-        // TODO add your handling code here:
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioInsertion.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. "
-                + "Mảng hầu như được chia thành một phần được sắp xếp và một phần chưa được sắp xếp. "
-                + "Các giá trị từ phần chưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioButtonInsertion.setSelected(true);
-    }//GEN-LAST:event_jRadioInsertionMousePressed
-
-    private void jMenuItemReadFileMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemReadFileMousePressed
-        readFile(this);
-    }//GEN-LAST:event_jMenuItemReadFileMousePressed
-
-    private void jRadioHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioHeapMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
-        jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
-        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. "
-                + "Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
-        jLabelLevelAlg.setText("Cấp độ: trung bình");
-        jRadioButtonHeap.setSelected(true);
-    }//GEN-LAST:event_jRadioHeapMousePressed
-
-    private void jMenuGUIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuGUIMousePressed
-        JDialog jDialogGUI = new JDialog();
-        jDialogGUI.setTitle("Hướng dẫn sử dụng");
-        jDialogGUI.setSize(500, 200);
-        jDialogGUI.setLocationRelativeTo(null);
-        
-        // Tao noi dung
-        JTextArea jTextAreaGUI = new JTextArea("Bước 1: Chọn giải thuật\n"
-                + "- Trên thanh menu Chọn Giải thuật -> Chọn một giải thuật\n"
-                + "Bước 2: Chọn số lượng phần tử của mảng\n"
-                + "Theo mặc định số phần tử của mảng là 5\n"
-                + "Bước 3: Tạo mảng\n"
-                + "- Trên thanh menu Chọn Tạo mảng -> Chọn một cách tạo mảng\n"
-                + "Theo mặc định thì sẽ tạo ra mảng ngẫu nhiên\n"
-                + "Bước 4: Chạy mô phỏng\n"
-                + "Chúc bạn thành công!");
-        jTextAreaGUI.setEditable(false);
-        jDialogGUI.add(jTextAreaGUI);
-        jDialogGUI.setVisible(true);
-    }//GEN-LAST:event_jMenuGUIMousePressed
-
-    private void jMenuItemRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRunMousePressed
-        if(num==0) {
-                jLabelArrEmpty.setLocation(460 , 160);
-                jPanelMain.add(jLabelArrEmpty);
-                jLabelArrEmpty.setSize(200,55);
-                jLabelArrEmpty.setFont(new Font("Arial", Font.PLAIN, 25));
-                jLabelArrEmpty.setBorder(BorderFactory.createLineBorder(Color.white , 4));
-                jLabelArrEmpty.setForeground(Color.white);
-            return;
-        }
-        if(jRadioBubble.isSelected()) {
-            bubbleSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-            
-        }
-        if(jRadioSelection.isSelected()) {
-            selectionSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioInsertion.isSelected()) {
-            insertionSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioHeap.isSelected()) {
-            heapSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-        if(jRadioQuick.isSelected()) {
-            quickSort(arrValue, 0, arrValue.length-1);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
-    }//GEN-LAST:event_jMenuItemRunMousePressed
-
-    private void jMenuItemRandomMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRandomMousePressed
-        createArrayRandom(this);
-    }//GEN-LAST:event_jMenuItemRandomMousePressed
-
-    private void jMenuItemReverseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemReverseMousePressed
-        createArrayReverse(this);
-    }//GEN-LAST:event_jMenuItemReverseMousePressed
-
-    private void jMenuItem1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MousePressed
-        createArrayAlmostSorted(this);
-    }//GEN-LAST:event_jMenuItem1MousePressed
-
     private void jButtonRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMousePressed
         if(num==0) {
             jLabelArrEmpty.setLocation(460 , 160);
@@ -1071,81 +813,82 @@ public class DemoSort extends javax.swing.JFrame {
             jLabelArrEmpty.setForeground(Color.white);
             return;
         }
-        if(jRadioBubble.isSelected() || jRadioButtonBubble.isSelected()) {
+        if(jRadioButtonBubble.isSelected()) {
             bubbleSort(arrValue);
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-        if(jRadioSelection.isSelected() || jRadioButtonSelection.isSelected()) {
+        if(jRadioButtonSelection.isSelected()) {
             selectionSort(arrValue);
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-        if(jRadioInsertion.isSelected() || jRadioButtonInsertion.isSelected()) {
+        if(jRadioButtonInsertion.isSelected()) {
             insertionSort(arrValue);
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-        if(jRadioHeap.isSelected() || jRadioButtonHeap.isSelected()) {
+        if(jRadioButtonHeap.isSelected()) {
             heapSort(arrValue);
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-        if(jRadioQuick.isSelected() || jRadioButtonQuick.isSelected()) {
+        if(jRadioButtonQuick.isSelected()) {
             quickSort(arrValue, 0, arrValue.length-1);
+            printArray(arrValue);
+            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
+        }
+        if(jRadioButtonShell.isSelected()) {
+            System.out.println("Shell Sort");
+            shellSort(arrValue);
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
     }//GEN-LAST:event_jButtonRunMousePressed
 
     private void jRadioButtonBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonBubbleMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioBubble.getName());
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nổi bọt - Bubble sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n+k)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("Bubble Sort là thuật toán sắp xếp đơn giản nhất hoạt động bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng không đúng thứ tự.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioBubble.setSelected(true);
+        jLabelLevelAlg.setText("Cấp độ: Dễ");
     }//GEN-LAST:event_jRadioButtonBubbleMousePressed
 
     private void jRadioButtonSelectionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonSelectionMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioSelection.getName());
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp chọn - Selection sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n^2)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("Thuật toán sắp xếp lựa chọn sắp xếp một mảng bằng cách liên tục tìm phần tử tối thiểu (xét theo thứ tự tăng dần) từ phần chưa được sắp xếp và đặt nó ở đầu. Thuật toán duy trì hai mảng con trong một mảng nhất định.\n" +
             "1) Mảng con đã được sắp xếp. \n" +
             "2) Mảng con còn lại chưa được sắp xếp.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioSelection.setSelected(true);
+        jLabelLevelAlg.setText("Cấp độ: Dễ");
     }//GEN-LAST:event_jRadioButtonSelectionMousePressed
 
     private void jRadioButtonInsertionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonInsertionMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioInsertion.getName());
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp chèn - Insertion sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. "
                 + "Mảng hầu như được chia thành một phần được sắp xếp và một phần chưa được sắp xếp. "
                 + "Các giá trị từ phần chưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
-        jLabelLevelAlg.setText("Cấp độ: dễ");
-        jRadioInsertion.setSelected(true);
+        jLabelLevelAlg.setText("Cấp độ: Dễ");
     }//GEN-LAST:event_jRadioButtonInsertionMousePressed
 
     private void jRadioButtonHeapMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonHeapMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: " + jRadioHeap.getName());
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp vung đống - Heap sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
         jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. "
                 + "Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
-        jLabelLevelAlg.setText("Cấp độ: trung bình");
-        jRadioHeap.setSelected(true);
+        jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonHeapMousePressed
 
     private void jRadioButtonQuickMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonQuickMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: "+ jRadioQuick.getName());
+        jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nhanh - Quick sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
         jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
-        jLabelLevelAlg.setText("Cấp độ: trung bình");
-        jRadioQuick.setSelected(true);
+        jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonQuickMousePressed
 
     private void jPanel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MousePressed
@@ -1274,6 +1017,14 @@ public class DemoSort extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonHandMousePressed
 
+    private void jRadioButtonShellMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonShellMousePressed
+        jLabelAlgo.setText("Giải thuật sử dụng: ");
+        jLabelBestCase.setText("Trường hợp tốt nhất: ");
+        jLabelWorstCase.setText("Trường hợp xấu nhất: ");
+        jTextAreaDescription.setText("");
+        jLabelLevelAlg.setText("Cấp độ: Trung bình");
+    }//GEN-LAST:event_jRadioButtonShellMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -1333,16 +1084,6 @@ public class DemoSort extends javax.swing.JFrame {
     private static javax.swing.JLabel jLabelCountSwap;
     private javax.swing.JLabel jLabelLevelAlg;
     private javax.swing.JLabel jLabelWorstCase;
-    private javax.swing.JMenu jMenuAlgo;
-    private javax.swing.JMenu jMenuCreateArr;
-    private javax.swing.JMenu jMenuGUI;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItemRandom;
-    private javax.swing.JMenuItem jMenuItemReadFile;
-    private javax.swing.JMenuItem jMenuItemReverse;
-    private javax.swing.JMenuItem jMenuItemRun;
-    private javax.swing.JMenuBar jMenuMain;
-    private javax.swing.JMenu jMenuRun;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1368,17 +1109,12 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private static javax.swing.JPanel jPanelMain;
-    private javax.swing.JRadioButtonMenuItem jRadioBubble;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButtonBubble;
     private javax.swing.JRadioButton jRadioButtonHeap;
     private javax.swing.JRadioButton jRadioButtonInsertion;
     private javax.swing.JRadioButton jRadioButtonQuick;
     private javax.swing.JRadioButton jRadioButtonSelection;
-    private javax.swing.JRadioButtonMenuItem jRadioHeap;
-    private javax.swing.JRadioButtonMenuItem jRadioInsertion;
-    private javax.swing.JRadioButtonMenuItem jRadioQuick;
-    private javax.swing.JRadioButtonMenuItem jRadioSelection;
+    private javax.swing.JRadioButton jRadioButtonShell;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerArrLength;
     private javax.swing.JTextArea jTextAreaDescription;
@@ -1824,6 +1560,38 @@ public class DemoSort extends javax.swing.JFrame {
             quickSort(arr, low, pi - 1);
             quickSort(arr, pi + 1, high);
         }
+    }
+    
+    int shellSort(int[] arr)
+    {
+        int n = arr.length;
+ 
+        // Start with a big gap, then reduce the gap
+        for (int gap = n/2; gap > 0; gap /= 2)
+        {
+            // Do a gapped insertion sort for this gap size.
+            // The first gap elements a[0..gap-1] are already
+            // in gapped order keep adding one more element
+            // until the entire array is gap sorted
+            for (int i = gap; i < n; i += 1)
+            {
+                // add a[i] to the elements that have been gap
+                // sorted save a[i] in temp and make a hole at
+                // position i
+                int temp = arr[i];
+ 
+                // shift earlier gap-sorted elements up until
+                // the correct location for a[i] is found
+                int j;
+                for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+                    arr[j] = arr[j - gap];
+ 
+                // put temp (the original a[i]) in its correct
+                // location
+                arr[j] = temp;
+            }
+        }
+        return 0;
     }
     
     // In mang test

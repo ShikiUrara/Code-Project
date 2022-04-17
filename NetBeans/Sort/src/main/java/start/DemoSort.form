@@ -6,163 +6,6 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
-    <Container class="javax.swing.JMenuBar" name="jMenuMain">
-      <Properties>
-        <Property name="opaque" type="boolean" value="true"/>
-        <Property name="requestFocusEnabled" type="boolean" value="false"/>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-        <Property name="useNullLayout" type="boolean" value="true"/>
-      </Layout>
-      <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenuAlgo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gi&#x1ea3;i Thu&#x1ead;t"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioBubble">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="selected" type="boolean" value="true"/>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p n&#x1ed5;i b&#x1ecd;t - Bubble sort "/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p n&#x1ed5;i b&#x1ecd;t - Bubble sort " noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioBubbleMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioSelection">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n - Selection sort"/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#x1ecd;n - Selection sort" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioSelectionMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioInsertion">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#xe8;n - Insertion sort"/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#xe8;n - Insertion sort" noResource="true"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p ch&#xe8;n - Selection sort"/>
-              </AccessibilityProperties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioInsertionMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioHeap">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p vun &#x111;&#x1ed1;ng - Heap sort"/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p vun &#x111;&#x1ed1;ng - Heap sort" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioHeapMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioQuick">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p nhanh - Quick sort "/>
-                <Property name="name" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p nhanh - Quick sort " noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioQuickMousePressed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenuRun">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ch&#x1ea1;y"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemRun">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ch&#x1ea1;y"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItemRunMousePressed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenuCreateArr">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="T&#x1ea1;o m&#x1ea3;ng"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemRandom">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="L&#x1ea5;y ng&#x1eab;u nhi&#xea;n"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItemRandomMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemReadFile">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#x110;&#x1ecd;c file"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItemReadFileMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemReverse">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#x110;&#x1ea3;o ng&#x1b0;&#x1ee3;c"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItemReverseMousePressed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="G&#x1ea7;n &#x111;&#x1b0;&#x1ee3;c s&#x1eaf;p x&#x1ebf;p"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem1MousePressed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenuGUI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="H&#x1b0;&#x1edb;ng d&#x1eab;n"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuGUIMousePressed"/>
-          </Events>
-        </Menu>
-      </SubComponents>
-    </Container>
     <Component class="javax.swing.JButton" name="jButtonHand">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1246,7 +1089,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jRadioButtonQuick" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jRadioButton1" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jRadioButtonShell" min="-2" pref="58" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1261,7 +1104,7 @@
                           <Component id="jRadioButtonInsertion" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jRadioButtonHeap" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jRadioButtonQuick" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonShell" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
@@ -1340,7 +1183,7 @@
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButtonQuickMousePressed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonShell">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
@@ -1350,6 +1193,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Shell"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButtonShellMousePressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
