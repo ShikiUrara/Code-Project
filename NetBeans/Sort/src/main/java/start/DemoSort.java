@@ -51,6 +51,7 @@ public class DemoSort extends javax.swing.JFrame {
         buttonGroup = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButtonHand = new javax.swing.JButton();
+        jRadioButtonShell = new javax.swing.JRadioButton();
         jPanelMain = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -98,7 +99,6 @@ public class DemoSort extends javax.swing.JFrame {
         jRadioButtonInsertion = new javax.swing.JRadioButton();
         jRadioButtonHeap = new javax.swing.JRadioButton();
         jRadioButtonQuick = new javax.swing.JRadioButton();
-        jRadioButtonShell = new javax.swing.JRadioButton();
 
         jButtonHand.setBackground(new java.awt.Color(71, 120, 197));
         jButtonHand.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -106,6 +106,15 @@ public class DemoSort extends javax.swing.JFrame {
         jButtonHand.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonHandMousePressed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonShell);
+        jRadioButtonShell.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonShell.setText("Shell");
+        jRadioButtonShell.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jRadioButtonShellMousePressed(evt);
             }
         });
 
@@ -211,7 +220,7 @@ public class DemoSort extends javax.swing.JFrame {
 
         jLabelLevelAlg.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         jLabelLevelAlg.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelLevelAlg.setText("Cấp độ: dễ");
+        jLabelLevelAlg.setText("Cấp độ: Dễ");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -734,15 +743,6 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(jRadioButtonShell);
-        jRadioButtonShell.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonShell.setText("Shell");
-        jRadioButtonShell.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonShellMousePressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -758,9 +758,7 @@ public class DemoSort extends javax.swing.JFrame {
                 .addComponent(jRadioButtonHeap)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonQuick)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButtonShell, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(70, 70, 70))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -771,8 +769,7 @@ public class DemoSort extends javax.swing.JFrame {
                     .addComponent(jRadioButtonSelection)
                     .addComponent(jRadioButtonInsertion)
                     .addComponent(jRadioButtonHeap)
-                    .addComponent(jRadioButtonQuick)
-                    .addComponent(jRadioButtonShell))
+                    .addComponent(jRadioButtonQuick))
                 .addGap(17, 17, 17))
         );
 
@@ -781,8 +778,8 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 495, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 552, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -1130,6 +1127,7 @@ public class DemoSort extends javax.swing.JFrame {
     private static int arrValueHistory[];
     private JLabel[] handLabel;
     private JTextField[] handTextField;
+    private int Red=0, Green=0, Blue=0;
     
     // Hand code
     
@@ -1339,12 +1337,15 @@ public class DemoSort extends javax.swing.JFrame {
     }
     
     public static void deleteArray(DemoSort a) {
+        if(jLabelArrEmpty.isVisible()) {
+            jLabelArrEmpty.setVisible(false);
+            a.jPanelMain.remove(jLabelArrEmpty);
+        }
         if(num!=0) {
             countSwap = 0;
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
             stopThread();
-            jLabelArrEmpty.setVisible(false);
-            a.jPanelMain.remove(jLabelArrEmpty);
+            
             if(arrValue != null || arrLabel != null)
                 for(int i=0; i<arrValue.length; i++) {
                     arrLabel[i].setVisible(false);
@@ -1554,10 +1555,17 @@ public class DemoSort extends javax.swing.JFrame {
             // pi is partitioning index, arr[p]
             // is now at right place
             int pi = partition(arr, low, high);
+                    
+            // To mau pivot 
+            arrLabel[high].setForeground(Color.GREEN);
     
             // Separately sort elements before
             // partition and after partition
+            
+            // Phan vung ben trai
             quickSort(arr, low, pi - 1);
+            
+            // Phan vung ben phai
             quickSort(arr, pi + 1, high);
         }
     }
