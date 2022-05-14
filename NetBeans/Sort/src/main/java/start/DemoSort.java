@@ -281,10 +281,12 @@ public class DemoSort extends javax.swing.JFrame {
         jSpinnerArrLength.setMinimumSize(new java.awt.Dimension(0, 5));
         jPanel3.add(jSpinnerArrLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 128, 72, -1));
 
-        jButtonRun.setBackground(new java.awt.Color(71, 120, 197));
-        jButtonRun.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButtonRun.setBackground(new java.awt.Color(71, 120, 225));
+        jButtonRun.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonRun.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRun.setText("Sắp xếp");
+        jButtonRun.setBorder(null);
+        jButtonRun.setMargin(new java.awt.Insets(2, 4, 2, 4));
         jButtonRun.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonRunMousePressed(evt);
@@ -295,7 +297,7 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(7, 51, 105));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(240, 255, 255));
         jLabel1.setText("Số phần tử");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -698,6 +700,7 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(120, 168, 252));
 
         buttonGroup1.add(jRadioButtonBubble);
+        jRadioButtonBubble.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonBubble.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonBubble.setSelected(true);
         jRadioButtonBubble.setText("Bubble");
@@ -708,6 +711,7 @@ public class DemoSort extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButtonSelection);
+        jRadioButtonSelection.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonSelection.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSelection.setText("Selection");
         jRadioButtonSelection.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -717,6 +721,7 @@ public class DemoSort extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButtonInsertion);
+        jRadioButtonInsertion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonInsertion.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonInsertion.setText("Insertion");
         jRadioButtonInsertion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -726,6 +731,7 @@ public class DemoSort extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButtonHeap);
+        jRadioButtonHeap.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonHeap.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonHeap.setText("Heap");
         jRadioButtonHeap.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -735,6 +741,7 @@ public class DemoSort extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButtonQuick);
+        jRadioButtonQuick.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonQuick.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonQuick.setText("Quick");
         jRadioButtonQuick.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -778,8 +785,8 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 552, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 540, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -865,9 +872,9 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp chèn - Insertion sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("Sắp xếp chèn là một thuật toán sắp xếp đơn giản hoạt động tương tự như cách bạn sắp xếp các thẻ chơi trong tay của mình. "
-                + "Mảng hầu như được chia thành một phần được sắp xếp và một phần chưa được sắp xếp. "
-                + "Các giá trị từ phần chưa được sắp xếp được chọn và đặt ở vị trí chính xác trong phần được sắp xếp.");
+        jTextAreaDescription.setText("Sắp xếp chèn ( Insertion sort ), là một thuật toán sắp xếp đặt một phần tử chưa được sắp xếp vào vị trí thích hợp của nó trong mỗi lần lặp. Nó kém hiệu quả hơn nhiều trên các danh sách lớn so với các giải thuật nâng cao hơn như sắp xếp nhanh. Tuy nhiên, sắp xếp chèn cũng có điểm mạnh\n" +
+            "1) Giải thuật đơn giản, dễ triển khai\n" +
+            "2) Khá hiệu quả đối với các tập dữ liệu nhỏ, giống như các thuật toán sắp xếp bậc hai khác");
         jLabelLevelAlg.setText("Cấp độ: Dễ");
     }//GEN-LAST:event_jRadioButtonInsertionMousePressed
 
@@ -875,8 +882,7 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp vung đống - Heap sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(nLogn)");
-        jTextAreaDescription.setText("Heap sort là một kỹ thuật sắp xếp dựa trên so sánh dựa trên cấu trúc dữ liệu Binary Heap. "
-                + "Nó tương tự như sắp xếp lựa chọn trong đó trước tiên chúng ta tìm phần tử tối thiểu và đặt phần tử tối thiểu ở đầu. ");
+        jTextAreaDescription.setText("Sắp xếp theo heap ( Heap sort ), là một kỹ thuật sắp xếp dựa vào so sánh trên cấu trúc dữ liệu nhị phân Heap. Sắp xếp theo heap là một thuật toán sắp xếp phổ biến và hiệu quả trong lập trình máy tính. Để có thể học cách viết thuật toán sắp xếp theo đòi hỏi kiến thức về hai loại cấu trúc dữ liệu là mảng và cây. Sắp xếp theo heap hoạt động bằng cách xem các phần tử của mảng như một cây nhị phân hoàn chỉnh đặc biệt được gọi là nhị phân Heap ( Binary Heap ).");
         jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonHeapMousePressed
 
@@ -884,7 +890,9 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nhanh - Quick sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(nLogn)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("QuickSort là một thuật toán Chia và Chinh phục. Nó chọn một phần tử làm trục và phân vùng mảng đã cho xung quanh trục đã chọn");
+        jTextAreaDescription.setText("Sắp xếp nhanh ( Quick sort ), là một thuật toán chia để trị trong đó\n" +
+            "1) Một mảng được chia thành các mảng con bằng cách chọn một phần tử làm trục hay pivot ( phần tử được chọn từ mảng ). Trong khi phân chia mảng, phần tử pivot phải được định vị theo cách sao cho các phần tử nhỏ hơn pivot được giữ ở phía bên trái và các phần tử lớn hơn pivot nằm ở phía bên phải pivot. Có nhiều biến thể khác nhau của sắp xếp nhanh trong đó phần tử pivot được chọn ở các vị trí khác nhau. ( Trong ứng dụng mô phỏng này, phần tử bên phải sẽ được chọn làm pivot )\n" +
+            "2) Các mảng con bên trái và bên phải cũng được chia theo cùng một cách tiếp cận. Quá trình này tiếp tục cho đến khi mỗi mảng con chứa một phần tử duy nhất");
         jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonQuickMousePressed
 
@@ -1355,7 +1363,7 @@ public class DemoSort extends javax.swing.JFrame {
     }
     public static void readFile(DemoSort a) {
         deleteArray(a);
-        File file = new File("C:\\Users\\time0\\OneDrive\\Desktop\\Code\\NetBeans\\Sort\\src\\main\\java\\start\\array.txt");
+        File file = new File("/Users/kizuna/Library/Mobile Documents/com~apple~CloudDocs/Documents/Git/Code/NetBeans/Sort/src/main/java/start/array.txt");
         try {
                 Scanner scanner = new Scanner(file);
                 int i=0;
@@ -1405,7 +1413,9 @@ public class DemoSort extends javax.swing.JFrame {
                     Swap(arrLabel[j], arrLabel[j+1]);
                 }
     }
-        public void bubbleSortNomar(int arr[])
+    
+    // Sap xep tao du lieu gan sap xep
+    public void bubbleSortNomar(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n-1; i++)
@@ -1419,6 +1429,8 @@ public class DemoSort extends javax.swing.JFrame {
                     swap(arr, j+1, j);
                 }
     }
+    
+    // Sap xep tao du lieu nguoc
     public static void bubbleSortReverse(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n-1; i++)
@@ -1570,6 +1582,7 @@ public class DemoSort extends javax.swing.JFrame {
         }
     }
     
+    // Bo
     int shellSort(int[] arr)
     {
         int n = arr.length;
