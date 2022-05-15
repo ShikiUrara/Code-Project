@@ -1582,7 +1582,7 @@ public class DemoSort extends javax.swing.JFrame {
         }
     }
     
-    // Bo
+    // chua lam 
     int shellSort(int[] arr)
     {
         int n = arr.length;
