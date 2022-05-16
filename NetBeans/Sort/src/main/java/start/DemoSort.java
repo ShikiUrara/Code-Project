@@ -48,10 +48,8 @@ public class DemoSort extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jButtonHand = new javax.swing.JButton();
-        jRadioButtonShell = new javax.swing.JRadioButton();
+        jButtonHandCreateArray = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -85,7 +83,7 @@ public class DemoSort extends javax.swing.JFrame {
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
+        jPanelHandCreateArray = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -100,21 +98,12 @@ public class DemoSort extends javax.swing.JFrame {
         jRadioButtonHeap = new javax.swing.JRadioButton();
         jRadioButtonQuick = new javax.swing.JRadioButton();
 
-        jButtonHand.setBackground(new java.awt.Color(71, 120, 197));
-        jButtonHand.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jButtonHand.setText("Tạo mảng");
-        jButtonHand.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonHandCreateArray.setBackground(new java.awt.Color(71, 120, 197));
+        jButtonHandCreateArray.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jButtonHandCreateArray.setText("Tạo mảng");
+        jButtonHandCreateArray.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButtonHandMousePressed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButtonShell);
-        jRadioButtonShell.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonShell.setText("Shell");
-        jRadioButtonShell.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jRadioButtonShellMousePressed(evt);
+                jButtonHandCreateArrayMousePressed(evt);
             }
         });
 
@@ -606,10 +595,10 @@ public class DemoSort extends javax.swing.JFrame {
 
         jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 130, -1));
 
-        jPanel23.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel23.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelHandCreateArray.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelHandCreateArray.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel23MousePressed(evt);
+                jPanelHandCreateArrayMousePressed(evt);
             }
         });
 
@@ -631,28 +620,28 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nhập tay");
 
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelHandCreateArrayLayout = new javax.swing.GroupLayout(jPanelHandCreateArray);
+        jPanelHandCreateArray.setLayout(jPanelHandCreateArrayLayout);
+        jPanelHandCreateArrayLayout.setHorizontalGroup(
+            jPanelHandCreateArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHandCreateArrayLayout.createSequentialGroup()
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addGap(0, 61, Short.MAX_VALUE))
         );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+        jPanelHandCreateArrayLayout.setVerticalGroup(
+            jPanelHandCreateArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHandCreateArrayLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel23Layout.createSequentialGroup()
+            .addGroup(jPanelHandCreateArrayLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
+        jPanel3.add(jPanelHandCreateArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 680));
 
@@ -842,12 +831,6 @@ public class DemoSort extends javax.swing.JFrame {
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-        if(jRadioButtonShell.isSelected()) {
-            System.out.println("Shell Sort");
-            shellSort(arrValue);
-            printArray(arrValue);
-            jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
-        }
     }//GEN-LAST:event_jButtonRunMousePressed
 
     private void jRadioButtonBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonBubbleMousePressed
@@ -895,53 +878,53 @@ public class DemoSort extends javax.swing.JFrame {
             "2) Các mảng con bên trái và bên phải cũng được chia theo cùng một cách tiếp cận. Quá trình này tiếp tục cho đến khi mỗi mảng con chứa một phần tử duy nhất");
         jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonQuickMousePressed
-
+// Cac ham thay doi mau sac menu khi duoc chon
     private void jPanel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MousePressed
         createArrayRandom(this);
         setColor(jPanel10);
         jPanel11.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
+        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel10MousePressed
 
     private void jPanel15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MousePressed
         createArrayReverse(this);
         setColor(jPanel15);
         jPanel16.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel10, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20, jPanel24});
+        resetColor(new JPanel[]{jPanel13, jPanel10, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel15MousePressed
 
     private void jPanel17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MousePressed
         readFile(this);
         setColor(jPanel17);
         jPanel18.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel10, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20, jPanel24});
+        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel10, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel17MousePressed
 
     private void jPanel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MousePressed
         createArrayAlmostSorted(this);
         setColor(jPanel13);
         jPanel14.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel19, jPanel21, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel13MousePressed
 
     private void jPanel19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MousePressed
         saveArrayHistory(this);
         setColor(jPanel19);
         jPanel20.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel21, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14, jPanel24});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14, jPanel24});
     }//GEN-LAST:event_jPanel19MousePressed
 
     private void jPanel21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel21MousePressed
         outPutArrayHistory(this);
         setColor(jPanel21);
         jPanel22.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel23}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel24});
+        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel24});
     }//GEN-LAST:event_jPanel21MousePressed
-
-    private void jPanel23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel23MousePressed
+// Nhap tay
+    private void jPanelHandCreateArrayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelHandCreateArrayMousePressed
         // Nhap tay
         
-        setColor(jPanel23);
+        setColor(jPanelHandCreateArray);
         jPanel24.setOpaque(true);
         resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel22});
         
@@ -980,15 +963,15 @@ public class DemoSort extends javax.swing.JFrame {
             handTextField[i].setBorder(BorderFactory.createLineBorder(Color.BLACK , 1));
             handTextField[i].setForeground(Color.BLACK);
         }
-        jPanel.add(jButtonHand);
+        jPanel.add(jButtonHandCreateArray);
         jDialogHand.setResizable(false);
         jDialogHand.setVisible(true);
-    }//GEN-LAST:event_jPanel23MousePressed
-
-    private void jButtonHandMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonHandMousePressed
+    }//GEN-LAST:event_jPanelHandCreateArrayMousePressed
+// Nhap tay - Ok
+    private void jButtonHandCreateArrayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonHandCreateArrayMousePressed
         try {
             if(num!=0)
-                deleteArray(this);
+            deleteArray(this);
             try {
                 this.jSpinnerArrLength.commitEdit();
             } catch (ParseException ex) {
@@ -1001,9 +984,9 @@ public class DemoSort extends javax.swing.JFrame {
                 // Them gia tri vao nhan
                 arrLabel[i] = new JLabel(handTextField[i].getText(), JLabel.CENTER);
                 if (i == 0)
-                        arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
+                arrLabel[i].setLocation(((int) ((18 - num) * 0.5) * 65) + 0, 160);
                 else
-                        arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
+                arrLabel[i].setLocation(arrLabel[i-1].getX() + 70, 160);
                 this.jPanelMain.add(arrLabel[i]);
                 arrLabel[i].setSize(55, 55);
                 arrLabel[i].setFont(new Font("Arial", Font.PLAIN, 25));
@@ -1018,17 +1001,9 @@ public class DemoSort extends javax.swing.JFrame {
             // Loi nhap
             jPanelMain.removeAll();
             num=0;
-//            System.exit(0);
+            //            System.exit(0);
         }
-    }//GEN-LAST:event_jButtonHandMousePressed
-
-    private void jRadioButtonShellMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonShellMousePressed
-        jLabelAlgo.setText("Giải thuật sử dụng: ");
-        jLabelBestCase.setText("Trường hợp tốt nhất: ");
-        jLabelWorstCase.setText("Trường hợp xấu nhất: ");
-        jTextAreaDescription.setText("");
-        jLabelLevelAlg.setText("Cấp độ: Trung bình");
-    }//GEN-LAST:event_jRadioButtonShellMousePressed
+    }//GEN-LAST:event_jButtonHandCreateArrayMousePressed
 
     /**
      * @param args the command line arguments
@@ -1072,9 +1047,8 @@ public class DemoSort extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButtonHand;
+    private javax.swing.JButton jButtonHandCreateArray;
     private javax.swing.JButton jButtonRun;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1104,7 +1078,6 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1113,13 +1086,13 @@ public class DemoSort extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelHandCreateArray;
     private static javax.swing.JPanel jPanelMain;
     private javax.swing.JRadioButton jRadioButtonBubble;
     private javax.swing.JRadioButton jRadioButtonHeap;
     private javax.swing.JRadioButton jRadioButtonInsertion;
     private javax.swing.JRadioButton jRadioButtonQuick;
     private javax.swing.JRadioButton jRadioButtonSelection;
-    private javax.swing.JRadioButton jRadioButtonShell;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerArrLength;
     private javax.swing.JTextArea jTextAreaDescription;
@@ -1686,7 +1659,7 @@ public class DemoSort extends javax.swing.JFrame {
             arr[j] = temp;
         }
         
-        // Dung cac luong
+        // Dung cac luong - thread
         public static void stopThread() {
             try {
                     for( int i = 0; i <= countThread; i++) {
