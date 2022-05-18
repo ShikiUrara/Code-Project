@@ -48,7 +48,7 @@ public class DemoSort extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup = new javax.swing.ButtonGroup();
+        buttonGroupAgl = new javax.swing.ButtonGroup();
         jButtonHandCreateArray = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -688,7 +688,7 @@ public class DemoSort extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(120, 168, 252));
 
-        buttonGroup.add(jRadioButtonBubble);
+        buttonGroupAgl.add(jRadioButtonBubble);
         jRadioButtonBubble.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonBubble.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonBubble.setSelected(true);
@@ -699,7 +699,7 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup.add(jRadioButtonSelection);
+        buttonGroupAgl.add(jRadioButtonSelection);
         jRadioButtonSelection.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonSelection.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSelection.setText("Selection");
@@ -709,7 +709,7 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup.add(jRadioButtonInsertion);
+        buttonGroupAgl.add(jRadioButtonInsertion);
         jRadioButtonInsertion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonInsertion.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonInsertion.setText("Insertion");
@@ -719,7 +719,7 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup.add(jRadioButtonHeap);
+        buttonGroupAgl.add(jRadioButtonHeap);
         jRadioButtonHeap.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonHeap.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonHeap.setText("Heap");
@@ -729,7 +729,7 @@ public class DemoSort extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup.add(jRadioButtonQuick);
+        buttonGroupAgl.add(jRadioButtonQuick);
         jRadioButtonQuick.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jRadioButtonQuick.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonQuick.setText("Quick");
@@ -1047,7 +1047,7 @@ public class DemoSort extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.ButtonGroup buttonGroupAgl;
     private javax.swing.JButton jButtonHandCreateArray;
     private javax.swing.JButton jButtonRun;
     private javax.swing.JLabel jLabel1;
