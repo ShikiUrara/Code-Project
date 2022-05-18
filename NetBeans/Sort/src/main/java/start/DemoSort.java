@@ -806,6 +806,19 @@ public class DemoSort extends javax.swing.JFrame {
             jLabelArrEmpty.setForeground(Color.white);
             return;
         }
+        if(isSort(arrValue) == 1) {
+            JDialog jDialog = new JDialog();
+            jDialog.setTitle("Thông báo");
+            jDialog.setSize(200, 100);
+            jDialog.setLocationRelativeTo(null);
+            jDialog.setResizable(false);
+            JTextArea jTextArea = new JTextArea();
+            jTextArea.setText("Mảng đã sắp xếp");
+            jTextArea.setEditable(false);
+            jDialog.add(jTextArea);
+            jDialog.setVisible(true);
+            this.jPanelMain.add(jDialog);
+        }
         if(jRadioButtonBubble.isSelected()) {
             bubbleSort(arrValue);
             printArray(arrValue);
@@ -1684,6 +1697,16 @@ public class DemoSort extends javax.swing.JFrame {
             opaque[i].setOpaque(false);
         for(int i=0; i<jPanel.length; i++)
             jPanel[i].setBorder(null);
+    }
+    
+    // Kiem tra mang da sap xep?
+    private int isSort(int arr[]) {
+        int n = arr.length;
+        for(int i=0; i<n-1; i++) {
+            if(arr[i]>arr[i+1])
+                return 0;
+        }
+        return 1;
     }
 }
 
