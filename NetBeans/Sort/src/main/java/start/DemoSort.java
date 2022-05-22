@@ -51,7 +51,7 @@ public class DemoSort extends javax.swing.JFrame {
         buttonGroupAgl = new javax.swing.ButtonGroup();
         jButtonHandCreateArray = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelSub1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabelBestCase = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -60,35 +60,35 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabelLevelAlg = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanelMenu = new javax.swing.JPanel();
         jSpinnerArrLength = new javax.swing.JSpinner();
         jButtonRun = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
+        jPanelSoluong = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
+        jPanelRandom = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
+        jPanelAlmostSorted = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
+        jPanelReverse = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
+        jPanelReadFile = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
+        jPanelSaveArray = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
+        jPanelTakeArray = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jPanelHandCreateArray = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPaneContentAgl = new javax.swing.JScrollPane();
         jTextAreaDescription = new javax.swing.JTextArea();
-        jPanel12 = new javax.swing.JPanel();
+        jPanel1Sub2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabelCountSwap = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
@@ -133,7 +133,7 @@ public class DemoSort extends javax.swing.JFrame {
 
         getContentPane().add(jPanelMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 1150, 390));
 
-        jPanel1.setBackground(new java.awt.Color(71, 120, 197));
+        jPanelSub1.setBackground(new java.awt.Color(71, 120, 197));
 
         jPanel2.setBackground(new java.awt.Color(120, 168, 252));
 
@@ -228,39 +228,39 @@ public class DemoSort extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSub1Layout = new javax.swing.GroupLayout(jPanelSub1);
+        jPanelSub1.setLayout(jPanelSub1Layout);
+        jPanelSub1Layout.setHorizontalGroup(
+            jPanelSub1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSub1Layout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(146, 146, 146)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanelSub1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelSub1Layout.setVerticalGroup(
+            jPanelSub1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSub1Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanelSub1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 1150, 100));
+        getContentPane().add(jPanelSub1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 1150, 100));
 
-        jPanel3.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelMenu.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSpinnerArrLength.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jSpinnerArrLength.setModel(new javax.swing.SpinnerNumberModel(5, 5, 15, 1));
@@ -268,7 +268,7 @@ public class DemoSort extends javax.swing.JFrame {
         jSpinnerArrLength.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerArrLength.setMaximumSize(new java.awt.Dimension(5, 15));
         jSpinnerArrLength.setMinimumSize(new java.awt.Dimension(0, 5));
-        jPanel3.add(jSpinnerArrLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 128, 72, -1));
+        jPanelMenu.add(jSpinnerArrLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 128, 72, -1));
 
         jButtonRun.setBackground(new java.awt.Color(71, 120, 225));
         jButtonRun.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -278,39 +278,39 @@ public class DemoSort extends javax.swing.JFrame {
         jButtonRun.setMargin(new java.awt.Insets(2, 4, 2, 4));
         jButtonRun.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButtonRunMousePressed(evt);
+                runSort(evt);
             }
         });
-        jPanel3.add(jButtonRun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 110, 30));
+        jPanelMenu.add(jButtonRun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 110, 30));
 
-        jPanel9.setBackground(new java.awt.Color(7, 51, 105));
+        jPanelSoluong.setBackground(new java.awt.Color(7, 51, 105));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 255, 255));
         jLabel1.setText("Số phần tử");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSoluongLayout = new javax.swing.GroupLayout(jPanelSoluong);
+        jPanelSoluong.setLayout(jPanelSoluongLayout);
+        jPanelSoluongLayout.setHorizontalGroup(
+            jPanelSoluongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSoluongLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+        jPanelSoluongLayout.setVerticalGroup(
+            jPanelSoluongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSoluongLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 130, -1));
+        jPanelMenu.add(jPanelSoluong, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 130, -1));
 
-        jPanel10.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel10.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelRandom.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelRandom.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel10MousePressed(evt);
+                jPanelRandomMousePressed(evt);
             }
         });
 
@@ -332,33 +332,33 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ngẫu nhiên");
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelRandomLayout = new javax.swing.GroupLayout(jPanelRandom);
+        jPanelRandom.setLayout(jPanelRandomLayout);
+        jPanelRandomLayout.setHorizontalGroup(
+            jPanelRandomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRandomLayout.createSequentialGroup()
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(0, 45, Short.MAX_VALUE))
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelRandomLayout.setVerticalGroup(
+            jPanelRandomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRandomLayout.createSequentialGroup()
+                .addGroup(jPanelRandomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
+                    .addGroup(jPanelRandomLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(60, 60, 60))
         );
 
-        jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 40));
+        jPanelMenu.add(jPanelRandom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 40));
 
-        jPanel13.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel13.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelAlmostSorted.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelAlmostSorted.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel13MousePressed(evt);
+                jPanelAlmostSortedMousePressed(evt);
             }
         });
 
@@ -380,33 +380,33 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Gần sắp xếp");
 
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelAlmostSortedLayout = new javax.swing.GroupLayout(jPanelAlmostSorted);
+        jPanelAlmostSorted.setLayout(jPanelAlmostSortedLayout);
+        jPanelAlmostSortedLayout.setHorizontalGroup(
+            jPanelAlmostSortedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAlmostSortedLayout.createSequentialGroup()
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+        jPanelAlmostSortedLayout.setVerticalGroup(
+            jPanelAlmostSortedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAlmostSortedLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel13Layout.createSequentialGroup()
+            .addGroup(jPanelAlmostSortedLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 130, -1));
+        jPanelMenu.add(jPanelAlmostSorted, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 130, -1));
 
-        jPanel15.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelReverse.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelReverse.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel15MousePressed(evt);
+                jPanelReverseMousePressed(evt);
             }
         });
 
@@ -428,33 +428,33 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Đảo ngược ");
 
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelReverseLayout = new javax.swing.GroupLayout(jPanelReverse);
+        jPanelReverse.setLayout(jPanelReverseLayout);
+        jPanelReverseLayout.setHorizontalGroup(
+            jPanelReverseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelReverseLayout.createSequentialGroup()
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+        jPanelReverseLayout.setVerticalGroup(
+            jPanelReverseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelReverseLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel15Layout.createSequentialGroup()
+            .addGroup(jPanelReverseLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 130, -1));
+        jPanelMenu.add(jPanelReverse, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 130, -1));
 
-        jPanel17.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelReadFile.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelReadFile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel17MousePressed(evt);
+                jPanelReadFileMousePressed(evt);
             }
         });
 
@@ -476,33 +476,33 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Đọc file");
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelReadFileLayout = new javax.swing.GroupLayout(jPanelReadFile);
+        jPanelReadFile.setLayout(jPanelReadFileLayout);
+        jPanelReadFileLayout.setHorizontalGroup(
+            jPanelReadFileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelReadFileLayout.createSequentialGroup()
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+        jPanelReadFileLayout.setVerticalGroup(
+            jPanelReadFileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelReadFileLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel17Layout.createSequentialGroup()
+            .addGroup(jPanelReadFileLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 130, -1));
+        jPanelMenu.add(jPanelReadFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 130, -1));
 
-        jPanel19.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelSaveArray.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelSaveArray.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel19MousePressed(evt);
+                jPanelSaveArrayMousePressed(evt);
             }
         });
 
@@ -524,33 +524,33 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Lưu mảng");
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSaveArrayLayout = new javax.swing.GroupLayout(jPanelSaveArray);
+        jPanelSaveArray.setLayout(jPanelSaveArrayLayout);
+        jPanelSaveArrayLayout.setHorizontalGroup(
+            jPanelSaveArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSaveArrayLayout.createSequentialGroup()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+        jPanelSaveArrayLayout.setVerticalGroup(
+            jPanelSaveArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSaveArrayLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel19Layout.createSequentialGroup()
+            .addGroup(jPanelSaveArrayLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 130, -1));
+        jPanelMenu.add(jPanelSaveArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 130, -1));
 
-        jPanel21.setBackground(new java.awt.Color(26, 35, 71));
-        jPanel21.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelTakeArray.setBackground(new java.awt.Color(26, 35, 71));
+        jPanelTakeArray.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel21MousePressed(evt);
+                jPanelTakeArrayMousePressed(evt);
             }
         });
 
@@ -572,28 +572,28 @@ public class DemoSort extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Lấy mảng");
 
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelTakeArrayLayout = new javax.swing.GroupLayout(jPanelTakeArray);
+        jPanelTakeArray.setLayout(jPanelTakeArrayLayout);
+        jPanelTakeArrayLayout.setHorizontalGroup(
+            jPanelTakeArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTakeArrayLayout.createSequentialGroup()
                 .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addGap(0, 55, Short.MAX_VALUE))
         );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+        jPanelTakeArrayLayout.setVerticalGroup(
+            jPanelTakeArrayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTakeArrayLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel21Layout.createSequentialGroup()
+            .addGroup(jPanelTakeArrayLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 130, -1));
+        jPanelMenu.add(jPanelTakeArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 130, -1));
 
         jPanelHandCreateArray.setBackground(new java.awt.Color(26, 35, 71));
         jPanelHandCreateArray.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -641,11 +641,11 @@ public class DemoSort extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanelHandCreateArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
+        jPanelMenu.add(jPanelHandCreateArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 130, -1));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 680));
+        getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 680));
 
-        jScrollPane1.setBorder(null);
+        jScrollPaneContentAgl.setBorder(null);
 
         jTextAreaDescription.setEditable(false);
         jTextAreaDescription.setBackground(new java.awt.Color(220, 231, 246));
@@ -657,11 +657,11 @@ public class DemoSort extends javax.swing.JFrame {
         jTextAreaDescription.setToolTipText("Mô tả giải thuật sử dụng");
         jTextAreaDescription.setWrapStyleWord(true);
         jTextAreaDescription.setMargin(new java.awt.Insets(8, 8, 8, 8));
-        jScrollPane1.setViewportView(jTextAreaDescription);
+        jScrollPaneContentAgl.setViewportView(jTextAreaDescription);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 1150, 130));
+        getContentPane().add(jScrollPaneContentAgl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 1150, 130));
 
-        jPanel12.setBackground(new java.awt.Color(84, 125, 206));
+        jPanel1Sub2.setBackground(new java.awt.Color(84, 125, 206));
 
         jPanel5.setBackground(new java.awt.Color(120, 168, 252));
 
@@ -769,34 +769,34 @@ public class DemoSort extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Sub2Layout = new javax.swing.GroupLayout(jPanel1Sub2);
+        jPanel1Sub2.setLayout(jPanel1Sub2Layout);
+        jPanel1Sub2Layout.setHorizontalGroup(
+            jPanel1Sub2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Sub2Layout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 540, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
+        jPanel1Sub2Layout.setVerticalGroup(
+            jPanel1Sub2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Sub2Layout.createSequentialGroup()
+                .addGroup(jPanel1Sub2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Sub2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
+                    .addGroup(jPanel1Sub2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(15, 15, 15))
         );
 
-        getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 1150, -1));
+        getContentPane().add(jPanel1Sub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 1150, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonRunMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRunMousePressed
+    private void runSort(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_runSort
         if(num==0) {
             jLabelArrEmpty.setLocation(460 , 160);
             jPanelMain.add(jLabelArrEmpty);
@@ -844,7 +844,7 @@ public class DemoSort extends javax.swing.JFrame {
             printArray(arrValue);
             jLabelCountSwap.setText("Số lần hoán đổi: " + countSwap);
         }
-    }//GEN-LAST:event_jButtonRunMousePressed
+    }//GEN-LAST:event_runSort
 
     private void jRadioButtonBubbleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonBubbleMousePressed
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp nổi bọt - Bubble sort");
@@ -868,7 +868,7 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelAlgo.setText("Giải thuật sử dụng: Sắp xếp chèn - Insertion sort");
         jLabelBestCase.setText("Trường hợp tốt nhất: θ(n)");
         jLabelWorstCase.setText("Trường hợp xấu nhất: θ(n^2)");
-        jTextAreaDescription.setText("Sắp xếp chèn ( Insertion sort ), là một thuật toán sắp xếp đặt một phần tử chưa được sắp xếp vào vị trí thích hợp của nó trong mỗi lần lặp. Nó kém hiệu quả hơn nhiều trên các danh sách lớn so với các giải thuật nâng cao hơn như sắp xếp nhanh. Tuy nhiên, sắp xếp chèn cũng có điểm mạnh\n" +
+        jTextAreaDescription.setText("Sắp xếp chèn ( Insertion sort ), là một thuật toán sắp xếp đặt một phần tử chưa được sắp xếp vào vị trí thích hợp trong mỗi lần lặp. Nó kém hiệu quả hơn nhiều trên các danh sách lớn so với các giải thuật nâng cao hơn như sắp xếp nhanh. Tuy nhiên, sắp xếp chèn cũng có điểm mạnh\n" +
             "1) Giải thuật đơn giản, dễ triển khai\n" +
             "2) Khá hiệu quả đối với các tập dữ liệu nhỏ, giống như các thuật toán sắp xếp bậc hai khác");
         jLabelLevelAlg.setText("Cấp độ: Dễ");
@@ -892,54 +892,54 @@ public class DemoSort extends javax.swing.JFrame {
         jLabelLevelAlg.setText("Cấp độ: Trung bình");
     }//GEN-LAST:event_jRadioButtonQuickMousePressed
 // Cac ham thay doi mau sac menu khi duoc chon
-    private void jPanel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MousePressed
+    private void jPanelRandomMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRandomMousePressed
         createArrayRandom(this);
-        setColor(jPanel10);
+        setColor(jPanelRandom);
         jPanel11.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
-    }//GEN-LAST:event_jPanel10MousePressed
+        resetColor(new JPanel[]{jPanelAlmostSorted, jPanelReverse, jPanelReadFile, jPanelSaveArray, jPanelTakeArray, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
+    }//GEN-LAST:event_jPanelRandomMousePressed
 
-    private void jPanel15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MousePressed
+    private void jPanelReverseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelReverseMousePressed
         createArrayReverse(this);
-        setColor(jPanel15);
+        setColor(jPanelReverse);
         jPanel16.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel10, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20, jPanel24});
-    }//GEN-LAST:event_jPanel15MousePressed
+        resetColor(new JPanel[]{jPanelAlmostSorted, jPanelRandom, jPanelReadFile, jPanelSaveArray, jPanelTakeArray, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel11, jPanel18, jPanel22, jPanel20, jPanel24});
+    }//GEN-LAST:event_jPanelReverseMousePressed
 
-    private void jPanel17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MousePressed
+    private void jPanelReadFileMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelReadFileMousePressed
         readFile(this);
-        setColor(jPanel17);
+        setColor(jPanelReadFile);
         jPanel18.setOpaque(true);
-        resetColor(new JPanel[]{jPanel13, jPanel15, jPanel10, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20, jPanel24});
-    }//GEN-LAST:event_jPanel17MousePressed
+        resetColor(new JPanel[]{jPanelAlmostSorted, jPanelReverse, jPanelRandom, jPanelSaveArray, jPanelTakeArray, jPanelHandCreateArray}, new JPanel[]{jPanel14, jPanel16, jPanel11, jPanel22, jPanel20, jPanel24});
+    }//GEN-LAST:event_jPanelReadFileMousePressed
 
-    private void jPanel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MousePressed
+    private void jPanelAlmostSortedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlmostSortedMousePressed
         createArrayAlmostSorted(this);
-        setColor(jPanel13);
+        setColor(jPanelAlmostSorted);
         jPanel14.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel19, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
-    }//GEN-LAST:event_jPanel13MousePressed
+        resetColor(new JPanel[]{jPanelRandom, jPanelReverse, jPanelReadFile, jPanelSaveArray, jPanelTakeArray, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel20, jPanel24});
+    }//GEN-LAST:event_jPanelAlmostSortedMousePressed
 
-    private void jPanel19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MousePressed
+    private void jPanelSaveArrayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSaveArrayMousePressed
         saveArrayHistory(this);
-        setColor(jPanel19);
+        setColor(jPanelSaveArray);
         jPanel20.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel21, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14, jPanel24});
-    }//GEN-LAST:event_jPanel19MousePressed
+        resetColor(new JPanel[]{jPanelRandom, jPanelReverse, jPanelReadFile, jPanelAlmostSorted, jPanelTakeArray, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel22, jPanel14, jPanel24});
+    }//GEN-LAST:event_jPanelSaveArrayMousePressed
 
-    private void jPanel21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel21MousePressed
+    private void jPanelTakeArrayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTakeArrayMousePressed
         outPutArrayHistory(this);
-        setColor(jPanel21);
+        setColor(jPanelTakeArray);
         jPanel22.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel24});
-    }//GEN-LAST:event_jPanel21MousePressed
+        resetColor(new JPanel[]{jPanelRandom, jPanelReverse, jPanelReadFile, jPanelAlmostSorted, jPanelSaveArray, jPanelHandCreateArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel24});
+    }//GEN-LAST:event_jPanelTakeArrayMousePressed
 // Nhap tay
     private void jPanelHandCreateArrayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelHandCreateArrayMousePressed
         // Nhap tay
         
         setColor(jPanelHandCreateArray);
         jPanel24.setOpaque(true);
-        resetColor(new JPanel[]{jPanel10, jPanel15, jPanel17, jPanel13, jPanel19, jPanel21}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel22});
+        resetColor(new JPanel[]{jPanelRandom, jPanelReverse, jPanelReadFile, jPanelAlmostSorted, jPanelSaveArray, jPanelTakeArray}, new JPanel[]{jPanel11, jPanel16, jPanel18, jPanel14, jPanel20, jPanel22});
         
         // Tao bang nhap du lieu tay
         JDialog jDialogHand = new JDialog();
@@ -1076,37 +1076,37 @@ public class DemoSort extends javax.swing.JFrame {
     private static javax.swing.JLabel jLabelCountSwap;
     private javax.swing.JLabel jLabelLevelAlg;
     private javax.swing.JLabel jLabelWorstCase;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel1Sub2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelAlmostSorted;
     private javax.swing.JPanel jPanelHandCreateArray;
     private static javax.swing.JPanel jPanelMain;
+    private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPanel jPanelRandom;
+    private javax.swing.JPanel jPanelReadFile;
+    private javax.swing.JPanel jPanelReverse;
+    private javax.swing.JPanel jPanelSaveArray;
+    private javax.swing.JPanel jPanelSoluong;
+    private javax.swing.JPanel jPanelSub1;
+    private javax.swing.JPanel jPanelTakeArray;
     private javax.swing.JRadioButton jRadioButtonBubble;
     private javax.swing.JRadioButton jRadioButtonHeap;
     private javax.swing.JRadioButton jRadioButtonInsertion;
     private javax.swing.JRadioButton jRadioButtonQuick;
     private javax.swing.JRadioButton jRadioButtonSelection;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPaneContentAgl;
     private javax.swing.JSpinner jSpinnerArrLength;
     private javax.swing.JTextArea jTextAreaDescription;
     // End of variables declaration//GEN-END:variables
@@ -1146,7 +1146,8 @@ public class DemoSort extends javax.swing.JFrame {
             
             JDialog jDialogGUI = new JDialog();
             jDialogGUI.setTitle("Thông báo");
-            jDialogGUI.setSize(250, 150);
+            jDialogGUI.setSize(200, 100);
+            jDialogGUI.setResizable(false);
             jDialogGUI.setLocationRelativeTo(null);
 
             // Tao noi dung
